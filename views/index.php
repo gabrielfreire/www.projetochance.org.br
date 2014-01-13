@@ -18,10 +18,10 @@
     <!--<img src="_imagens/banner.jpg" height="190" width="260" style="float:right;" />
     <img src="_imagens/texto.jpg" style="float:left" /> -->     
 
-                <a href="matricula">
+<!--                <a href="matricula">
                     <img src="_banners/banner_inscricoes.png" alt="Banner original" id="banner_inscricoes" />
-                </a>
-<!--                <div id="banner_home">                
+                </a>-->
+                <div id="banner_home">                
                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="600" height="180" id="banner" align="middle">
                             <param name="movie" value="_banners/banner.swf" />
                             <param name="quality" value="high" />
@@ -34,7 +34,7 @@
                             <param name="devicefont" value="false" />
                             <param name="salign" value="" />
                             <param name="allowScriptAccess" value="sameDomain" />
-                            [if !IE]>
+                            <!--[if !IE]-->
                             <object type="application/x-shockwave-flash" data="_banners/banner.swf" width="600" height="180">
                                     <param name="movie" value="_banners/banner.swf" />
                                     <param name="quality" value="high" />
@@ -47,15 +47,15 @@
                                     <param name="devicefont" value="false" />
                                     <param name="salign" value="" />
                                     <param name="allowScriptAccess" value="sameDomain" />
-                            <![endif]
+                            <!--[endif]-->
                                     <a href="http://www.adobe.com/go/getflash">
                                             <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Obter Adobe Flash Player" />
                                     </a>
-                            [if !IE]>
+                            <!--[if !IE]-->
                             </object>
-                            <![endif]
+                            <!--[endif]-->
                     </object>
-                </div>        -->
+                </div>        
 
 
                 <div class="info_home">

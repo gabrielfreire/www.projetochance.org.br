@@ -1,5 +1,5 @@
 <!------TOPO-------->
-    <div id="toposite">
+<!--    <div id="toposite">
         <div class="centraliza">
             <div id="menusuperior">
                 <li><a href="o-projeto-chance">O Projeto Chance</a>&nbsp;|&nbsp;</li>                
@@ -11,7 +11,7 @@
                 </div>                
             </div>     
         </div>
-    </div>
+    </div>-->
     
 
     <!-- Div 'centraliza' e div fundo branco são fechadas na view_rodape -->
@@ -29,111 +29,54 @@
             </div>           
 
 
-            <div id="barracentral">           
-                <?php            
-                $portal = isset ( $_GET['portal'] ) ? $_GET['portal'] : null; 
-
-                if ( Session::getIdAluno() ):					
-                    $portal_href = "portal";			
-                else:					
-                    $portal_href = "index?portal=1";
-                endif;
-                ?>
-
-                <div id="menuhorizontal">
-                    <a href="contato"><div>Contato</div></a>
-                    <a href="<?php echo $portal_href; ?>"><div>Portal do Aluno</div></a>
-                    <a href="matricula"><div>Matrícula</div></a>
-                    <a href="index"><div>Home</div></a>
+            <div id="menu_horizontal"> 
+                <div class="item">
+                    <a href="#">Proposta pedagógica</a>
+                </div>
+                <div class="item">
+                    <a href="matricula">Matrícula</a>
+                </div>                
+                <div class="item">
+                    <a href="#">Aprovados</a>
+                </div>
+                <div class="item">
+                    <a href="fotos">Galeria de fotos</a>
+                </div>
+                <div class="item">
+                    <a href="contato">Contato</a>
                 </div>
                 
-<!--                <div id="n_visitante">
-                     Inicio Codigo contador de visitas gratis opromo.com  
-                    <script language="Javascript" src="http://www.opromo.com/servicos/contador/contador.php?fdb=36&site=sitehttpprojetochanceorgbr&tipo=verdana&formato=normal&tamanho=3&corfont1=003651&modulo=1" type="text/javascript"></script>
-                    visitante(s) online
-                     Fim Codigo contador de visitas gratis opromo.com  
-                </div>                    -->
-                
-                <!--<div id="n_visitante">
-                    <script language="Javascript" src="http://www.opromo.com/servicos/usuariosonline/useronline.php?site=sitewwwprojetochanceorgbr&corfont1=000000&texto=2&formato=normal&tipo=arial&tamanho=3&simbo=1" type="text/javascript"></script>
-                </div>-->
-
-                <?php if ( $portal && ! Session::getIdAluno() ): ?>
-
-                    <form action="portal_action.php" method="post">                
-                        <table cellspacing="0" id="tb_portal">
-                            <tr>
-                                <td align="right"><strong>E-mail:</strong></td>
-                                <td><input type="text" name="txt_email" /></td>
-                                <td rowspan="2"><input type="image" src="_imagens/seta_portal.png" /></td>
-                                <td><a href="#" onclick="novaJanela('como-acessar.php')">Como acessar?</a></td>
-                            </tr>
-                            <tr>
-                                <td align="right"><strong>Senha:</strong></td>
-                                <td><input type="password" name="txt_senha" /></td>  
-                                <td><a href="#" onclick="novaJanela('enviar-senha.php')">Esqueci minha senha</a></td>
-                            </tr>
-                        </table>                
-                    </form>
-
-                <?php else:?>          
-                    <?php if ( Session::getIdAluno() ): ?>
-                    
-                        <table id="tb_portal_logado">
-                            <tr>
-                                <td>
-                                    Nome: <?php echo Session::getNomeAluno(); ?><br/>                       
-                                    E-mail: <?php echo Session::getEmailAluno(); ?>&nbsp;-&nbsp;<a href="matricula">(minha conta)</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="logout.php?logout=1">[&nbsp;Sair&nbsp;]</a>
-                                </td>
-                            </tr>                        
-                        </table>                      
-
-                    <?php else: ?>
-                        <div id="busca">
-                            <form action="busca" method="post">
-                                <input type="text" name="txtbusca" value="Buscar no Chance" onfocus="limpar(this);" onblur="escrever(this);" />
-                                <input type="submit" value="ok" />
-                                <!--<input type="image" src="_imagens/btbuscar.jpg" />-->
-                            </form>
-                        </div>
-
-                    <?php endif; ?>            
-                <?php endif; ?>
             </div>
 
 
             <div id="esquerdo">
 
-                <?php if ( $portal || Session::getIdAluno()): ?>                
-                    <div id="busca2">
+                <?php // if ( $portal || Session::getIdAluno()): ?>                
+<!--                    <div id="busca2">
                         <form action="busca.php" method="post">
                             <input type="text" name="txtbusca" value="Buscar no Chance" 
                                    onfocus="limpar(this);" onblur="escrever(this);" />
                             <input type="submit" name="btbusca" value="OK" />
                         </form>
-                    </div>
+                    </div>-->
 
-                <?php endif; ?>
+                <?php // endif; ?>
 
                 <div id="menuvertical">        
                     <!--<div><a href="universidades">Universidades</a></div>-->
                     <!--<div><a href="cursos">Cursos</a></div>-->
+                    <!--<div><a href="palavra-presidente">Palavra do presidente</a></div>-->
                     <div><a href="vestibulares">Vestibulares</a></div>
                     <div><a href="depoimentos">Depoimentos</a></div>
-                    <div><a href="carreiras">Carreiras</a></div>
+                    <!--<div><a href="carreiras">Carreiras</a></div>-->
                     <!--<div><a href="ouvidoria">Ouvidoria</a></div>-->
-                    <div><a href="parceiros">Parceiros</a></div>                    
+                    <!--<div><a href="parceiros">Parceiros</a></div>-->                    
                 </div> 
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FProjetoChance&amp;width=207&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23999&amp;header=true" scrolling="no" frameborder="0" id="likebox" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProjeto-Chance%2F289102257871728%3Ffref%3Dts&amp;width=215&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:215px; height:290px; margin-left: 15px;" allowTransparency="true"></iframe>
             </div>
 
-            <div id="direito">
+<!--            <div id="direito">
                 <a href="fotos"><img src="_imagens/fotos.jpg" /><br /><label>Fotos</label></a><br /><br />
                 <a href="tv-chance"><img src="_imagens/videos.jpg" /><br /><label>Vídeos</label></a>
-            </div>
+            </div>-->
 <!-------FIM DO TOPO------->

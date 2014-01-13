@@ -72,7 +72,7 @@
             <br/><br/>
             >> <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a>
             <br/><br/><br/>
-            <i>Fale com o desenvolvedor: (11)97465-4654</i>
+            <!--<i>Fale com o desenvolvedor: (11)97465-4654</i>-->
         </p>
        
     
