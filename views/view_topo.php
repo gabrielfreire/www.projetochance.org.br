@@ -7,7 +7,7 @@
                 <li><a href="localizacao">Localização</a>&nbsp;|&nbsp;</li>
                 <li><a href="tv-chance">TV Chance</a>&nbsp;|&nbsp;</li>
                 <div id="data"> 
-                    <?php echo FuncAux::getSaudacao().", hoje é ".FuncAux::getSemana().", ".date("j")." de ".FuncAux::getMes()." de ".date("Y").""; ?>
+                    <?php // echo FuncAux::getSaudacao().", hoje é ".FuncAux::getSemana().", ".date("j")." de ".FuncAux::getMes()." de ".date("Y").""; ?>
                 </div>                
             </div>     
         </div>
@@ -32,6 +32,13 @@
             <div id="menu_horizontal"> 
                 <div class="item">
                     <a href="#">Proposta pedagógica</a>
+                    
+                    <ul>
+                        <li><a href="#">item 1</a></li>
+                        <li><a href="#">item 2</a></li>
+                        <li><a href="#">item 3</a></li>
+                        <li><a href="#">item 4</a></li>
+                    </ul>
                 </div>
                 <div class="item">
                     <a href="matricula">Matrícula</a>
