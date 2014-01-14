@@ -347,8 +347,8 @@ div#content{
 div#content a{
         text-decoration:none;
         font-size: 14px;
-        color:#C00;
-        margin-left:10px;}
+        color:#017ec5;
+}
 
 div#content a:hover{
     text-decoration: underline;}
@@ -361,20 +361,21 @@ div#content h1{
         font-size:22px;
         font-style: italic;
         font-weight: normal;
-        border:solid 0px black;
-        background: url(../_imagens/fundo_titulo.png) no-repeat top center;
+        background: url(../_imagens/fundo_titulo.png) no-repeat top left;
         height: 40px;
-        color:#666;
+        color:#000;
+        /*color:#017ec5;*/
         margin:0;        
-        padding:2px;
-        padding-left: 50px;}
+        padding-top:10px;
+        padding-left: 15px;
+}
 
 div#content h2{
         font-size:17px;
         border-bottom:solid 1px #CCC;
         color:#666;
         font-style: italic;
-        margin:20px 0 0 10px;
+        margin:20px 0 5px 10px;
 }
 
 div#content h3{
@@ -440,7 +441,7 @@ div#content1 h3{
         color:#000;
         margin:0;
         padding:5px;
-        }
+}
 
 div#content1 h4{
         font-size:14px;
@@ -514,7 +515,7 @@ form#form_matricula input[type=text], form#form_matricula input[type=password]{
 
 form#form_matricula input:focus, form#form_matricula select:focus, 
 form#form_matricula input:hover, form#form_matricula select:hover{
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 form#form_matricula input[type=submit]{
         border:0;
@@ -524,7 +525,7 @@ form#form_matricula input[type=submit]{
         padding:5px 10px 5px 10px;}
 
 form#form_matricula input[type=submit]:hover{
-        background-color:#900;}	
+        background-color:#017ec5;}	
 
 #marq{
         border:solid 1px #666;
@@ -614,11 +615,11 @@ div#video_home b{
         margin-left:10px;}
 
 #form_depoimento input[type=text]:hover{
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_depoimento input[type=text]:focus{
         outline:none;
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_depoimento textarea{
         border:solid 1px #7f8089;
@@ -628,11 +629,11 @@ div#video_home b{
         min-height:75px;}
 
 #form_depoimento textarea:hover{
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_depoimento textarea:focus{
         outline:none;
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_depoimento input[type=submit]{
         border:0;
@@ -642,7 +643,7 @@ div#video_home b{
         padding:5px 10px 5px 10px;}
 
 #form_depoimento input[type=submit]:hover{
-        background-color:#900;}
+        background-color:#017ec5;}
 
 #comentarios{
         width: 620px;
@@ -702,11 +703,11 @@ div#video_home b{
         margin-left:10px;}
 
 #form_contato input[type=text]:hover{
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_contato input[type=text]:focus{
         outline:none;
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_contato textarea{
         border:solid 1px #7f8089;
@@ -716,11 +717,11 @@ div#video_home b{
         min-height:100px;}
 
 #form_contato textarea:hover{
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_contato textarea:focus{
         outline:none;
-        border:solid 1px #900;}
+        border:solid 1px #017ec5;}
 
 #form_contato input[type=submit], #form_contato input[type=button]{
         border:0;
@@ -730,7 +731,7 @@ div#video_home b{
         padding:5px 10px 5px 10px;}
 
 #form_contato input[type=submit]:hover, #form_contato input[type=button]:hover{
-        background-color:#900;}
+        background-color:#017ec5;}
 
 
 

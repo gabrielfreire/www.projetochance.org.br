@@ -70,11 +70,8 @@
         </form> 
                        
     	<p id="contato">
-            (11)2866-3441
-            <br/><br/>
-            >> <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a>
-            <br/><br/><br/>
-            <!--<i>Fale com o desenvolvedor: (11)97465-4654</i>-->
+            (11)2866-3441<br/><br/>            
+            <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a>
         </p>
        
     
