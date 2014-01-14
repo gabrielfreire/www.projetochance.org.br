@@ -15,10 +15,12 @@
     <div id="content">
     	<h1>Contato</h1>
         
-        <?php if (isset($view->msg_erro)) echo "<h5 id=\"erro\">".$view->msg_erro."</h5>"; ?>
-        
-       	<form name="form1" id="form_contato" action="contato" method="post">
+        <?php if (isset($view->msg_erro)): ?>
+            <h5 id="erro"><?php echo $view->msg_erro ?></h5> 
             
+        <?php endif; ?>
+        
+       	<form name="form1" id="form_contato" action="contato" method="post">            
             <table>
                 <tr>
                     <td><label>* Seu nome:</label></td>

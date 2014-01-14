@@ -110,7 +110,6 @@ div#data{
         float:right;}
 
 div#logo{
-        /*border: solid 1px #000;*/
         float:left;}
 
 div#logo a{
@@ -309,27 +308,167 @@ div#menuvertical{
         background:url(../_imagens/caderno_azul_pequeno.jpg) no-repeat;
         float:left;
         margin-top:15px;
-        padding:22px 0 0 50px;
+        padding:22px 0 0 45px;
         height:240px;
         width:200px;
         float:left;}	
 
 div#menuvertical div{
-        border-bottom:solid 1px #999;
+        border-bottom:solid 1px #000;
+        border-bottom-style: dotted;
         padding:20px 7px 0px 7px;
         height:21px;
-        width:150px;}
+        width:155px;}
 
 div#menuvertical div a{
         font-family:MV Boli;
         text-align:justify;
 	font-style:italic;
         font-size:14px;
-        color:#039;}
+        color:#666;}
 
 div#menuvertical div a:hover{
-        color:#006;
-        font-weight:bold;}
+        color:#000;
+}
+
+
+/***Content***/
+div#content{
+        border-right:solid 1px #333;
+        border-left:solid 1px #333;
+        border-right-style:dotted;
+        border-left-style:dotted;
+        float:left;
+        margin:20px 0;
+        width:640px;
+        min-height:600px;
+        padding:0 5px;}
+
+div#content a{
+        text-decoration:none;
+        font-size: 14px;
+        color:#C00;
+        margin-left:10px;}
+
+div#content a:hover{
+    text-decoration: underline;}
+
+div#content a:active{
+        color:#009;}
+
+div#content h1{
+        font-family:Arial;
+        font-size:22px;
+        font-style: italic;
+        font-weight: normal;
+        border:solid 0px black;
+        background: url(../_imagens/fundo_titulo.png) no-repeat top center;
+        height: 40px;
+        color:#666;
+        margin:0;        
+        padding:2px;
+        padding-left: 50px;}
+
+div#content h2{
+        font-size:17px;
+        border-bottom:solid 1px #CCC;
+        color:#666;
+        font-style: italic;
+        margin:20px 0 0 10px;
+}
+
+div#content h3{
+        font-size:20px;
+        color:#000;
+        margin:0;
+        padding:5px;}
+
+div#content h4{
+        font-size:18px;
+        color:#333;
+        color:#017ec5;
+        margin-bottom:0;
+        margin-left: 5px;
+        padding:5px;}
+
+div#content h5{
+    margin-bottom: 0;
+    margin-left: 10px;
+    color:#017ec5;
+}
+
+div#content p{
+        font-family:Arial;
+        line-height:20px;
+        font-size:12px;
+        margin:5px;
+        color:#333;
+        padding:5px;}
+
+div#content1{
+        border:solid 1px #333;
+        float:left;
+        margin:15px 0 0 15px;
+        height:auto;
+        width:577px;
+        padding-bottom:15px;
+        padding-top:15px;}
+
+div#content1 a{
+        text-decoration:none;
+        color:#06F;
+        margin-left:10px;}
+
+div#content1 a:hover{
+        text-decoration:underline;
+        color:#06F;}
+
+div#content1 h1{
+        font-size:20px;
+        color:#06F;
+        margin:0;
+        padding:5px;}
+
+div#content1 h2{
+        font-size:16px;
+        color:#000;
+        margin:0;
+        padding:5px;}
+
+div#content1 h3{
+        font-size:20px;
+        color:#000;
+        margin:0;
+        padding:5px;
+        }
+
+div#content1 h4{
+        font-size:14px;
+        color:#06F;
+        margin:0;
+        padding:5px;}
+
+div#content1 p{
+        font-size:14px;
+        color:#000;
+        margin-left:-5px;
+        margin-top:0;
+        padding:5px;
+        float:left;}
+/**Fim da content**/
+
+#tbPadrao{
+    margin: 10px;
+    width: 450px;
+    font-size: 14px;
+    color:#000;
+}
+
+#tbPadrao tr td{
+    border: solid 1px #CCC;
+    color:#333;
+    padding:4px;
+}
 
 div#carregando{
         margin:0 auto 280px 170px;
@@ -392,117 +531,6 @@ form#form_matricula input[type=submit]:hover{
         height:120px;
         width:200px;
         margin:0 20px;
-        float:left;}
-
-div#content{
-        border-right:solid 1px #333;
-        border-left:solid 1px #333;
-        border-right-style:dotted;
-        border-left-style:dotted;
-        float:left;
-        margin:20px 0;
-        width:640px;
-        min-height:600px;
-        padding:0 5px;}
-
-div#content a{
-        text-decoration:none;
-        font-size: 14px;
-        color:#C00;
-        margin-left:10px;}
-
-div#content a:hover{
-    text-decoration: underline;}
-
-div#content a:active{
-        color:#009;}
-
-div#content h1{
-        font-family:MV Boli ;
-        border:solid 0px black;
-        background: url(../_imagens/fundo_titulo.png) no-repeat top center;
-        font-size:22px;
-        height: 40px;
-        color:#666;
-        margin:0;        
-        padding:2px;
-        padding-left: 50px;}
-
-div#content h2{
-        font-size:17px;
-        border-bottom:solid 1px #CCC;
-        color:#666;
-        font-style: italic;
-        margin:20px 0 0 10px;}
-
-div#content h3{
-        font-size:20px;
-        color:#000;
-        margin:0;
-        padding:5px;}
-
-div#content h4{
-        font-size:18px;
-        color:#333;
-        margin:0;
-        padding:5px;}
-
-div#content p{
-        line-height:20px;
-        font-size:12px;
-        margin:5px;
-        color:#333;
-        padding:5px;}
-
-div#content1{
-        border:solid 1px #333;
-        float:left;
-        margin:15px 0 0 15px;
-        height:auto;
-        width:577px;
-        padding-bottom:15px;
-        padding-top:15px;}
-
-div#content1 a{
-        text-decoration:none;
-        color:#06F;
-        margin-left:10px;}
-
-div#content1 a:hover{
-        text-decoration:underline;
-        color:#06F;}
-
-div#content1 h1{
-        font-size:20px;
-        color:#06F;
-        margin:0;
-        padding:5px;}
-
-div#content1 h2{
-        font-size:16px;
-        color:#000;
-        margin:0;
-        padding:5px;}
-
-div#content1 h3{
-        font-size:20px;
-        color:#000;
-        margin:0;
-        padding:5px;
-        }
-
-div#content1 h4{
-        font-size:14px;
-        color:#06F;
-        margin:0;
-        padding:5px;}
-
-div#content1 p{
-        font-size:14px;
-        color:#000;
-        margin-left:-5px;
-        margin-top:0;
-        padding:5px;
         float:left;}
 
 div.info_home{
@@ -802,7 +830,7 @@ p#contato{
         width:550px;
         float:left;}
 
-table#meioambi{
+/*table#meioambi{
     text-align: center;
     margin: 0 auto;
     width: 550px;
@@ -813,7 +841,7 @@ table#meioambi{
 table#meioambi tr td{
     background: #CCC;
     padding:4px 2px;
-}
+}*/
 
 ul#listaimg{
         margin:0;

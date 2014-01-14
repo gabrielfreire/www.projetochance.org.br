@@ -31,7 +31,13 @@
 
             <div id="menu_horizontal"> 
                 <div class="item">
-                    <a href="#">Proposta pedagógica</a>
+                    <a href="o-projeto-chance">O Projeto <br/>Chance</a>
+                </div> 
+                <div class="item">
+                    <a href="matricula">Matrícula</a>
+                </div>  
+                <div class="item">
+                    <a href="proposta-pedagogica">Proposta pedagógica</a>
                     
                     <ul>
                         <li><a href="#">item 1</a></li>
@@ -39,10 +45,7 @@
                         <li><a href="#">item 3</a></li>
                         <li><a href="#">item 4</a></li>
                     </ul>
-                </div>
-                <div class="item">
-                    <a href="matricula">Matrícula</a>
-                </div>                
+                </div>                              
                 <div class="item">
                     <a href="#">Aprovados</a>
                 </div>
@@ -72,7 +75,7 @@
                 <div id="menuvertical">        
                     <!--<div><a href="universidades">Universidades</a></div>-->
                     <!--<div><a href="cursos">Cursos</a></div>-->
-                    <!--<div><a href="palavra-presidente">Palavra do presidente</a></div>-->
+                    <div><a href="palavra-do-presidente">Palavra do presidente</a></div>
                     <div><a href="vestibulares">Vestibulares</a></div>
                     <div><a href="depoimentos">Depoimentos</a></div>
                     <!--<div><a href="carreiras">Carreiras</a></div>-->
