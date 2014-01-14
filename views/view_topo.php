@@ -72,7 +72,7 @@
 
                 <?php // endif; ?>
 
-                <div id="menuvertical">        
+                <div id="menu_vertical">        
                     <!--<div><a href="universidades">Universidades</a></div>-->
                     <!--<div><a href="cursos">Cursos</a></div>-->
                     <div><a href="palavra-do-presidente">Palavra do presidente</a></div>
