@@ -145,7 +145,6 @@ img#banner_inscricoes:hover{
 
 /****Menu horizontal***/
 div#menu_horizontal{
-        /*border:solid 1px #000;*/
         -moz-border-radius: 6px;
         -webkit-border-radius: 6px;
         -o-border-radius: 6px;
@@ -164,7 +163,6 @@ div#menu_horizontal{
         float:left;}
 
 div#menu_horizontal div{
-        /*border:solid 1px #000;*/
         text-align: center;
         width: 100px;
         height: 52px;
@@ -176,7 +174,6 @@ div#menu_horizontal div:first-of-type{
         margin-left: 50px;}
 
 div#menu_horizontal div > a{
-        /*border:solid 1px #F00;*/
         color:#FFF;        
         font-size:12px;
         display: table-cell;
@@ -190,26 +187,20 @@ div#menu_horizontal div:hover > a {
     background: -o-linear-gradient(bottom, #C2C2C2, #FFFFFF);/* opera */
     background: -ms-linear-gradient(bottom, #C2C2C2, #FFFFFF);/* ie10+ */
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#C2C2C2', EndColorStr='#FFFFFF');/* ie7+ */
-    /*background: #017ec5;*/
+    background: #017ec5;/**temp*/
     color: #333;
+    color: #FFF;/**temp*/
 }
 
 /**Menu dropdown**/
 div#menu_horizontal div ul {
-    /*border:solid 1px #000;*/
-/*    -webkit-border-radius: 0 0 6px 6px;
-    -moz-border-radius: 0 0 6px 6px;
-    -o-border-radius: 0 0 6px 6px;
-    border-radius: 0 0 6px 6px;*/
-    
-    
-    background: -moz-linear-gradient(bottom, #C2C2C2, #FFFFFF); /*firefox3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C2C2C2));  /*chrome*/ 
-    background: -o-linear-gradient(bottom, #C2C2C2, #FFFFFF); /*opera*/ 
-    background: -ms-linear-gradient(bottom, #C2C2C2, #FFFFFF); /*ie10+*/ 
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#C2C2C2', EndColorStr='#FFFFFF'); /*ie7+ */
-    /*background: #017ec5;*/
-    
+    background: -moz-linear-gradient(bottom, #FFFFFF, #C2C2C2); /*firefox3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(#C2C2C2), to(#FFFFFF));  /*chrome*/ 
+    background: -o-linear-gradient(bottom, #FFFFFF, #C2C2C2); /*opera*/ 
+    background: -ms-linear-gradient(bottom, #FFFFFF, #C2C2C2); /*ie10+*/ 
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#FFFFFF', EndColorStr='#C2C2C2'); /*ie7+ */
+    background: #017ec5;/**temp*/
+    box-shadow: 2px 2px 5px 0px #333;
     width: 175px;
     position:absolute;
     top:36px;
@@ -218,33 +209,26 @@ div#menu_horizontal div ul {
 }
 
 div#menu_horizontal div:hover ul {
-    /*border:solid 1px #000;*/
     display: inline;
 }
 
 div#menu_horizontal div ul li {
-    border-bottom: solid 1px #CCC;
+    border-bottom: solid 1px #999;
+    border-bottom: solid 1px #CCC;/**temp*/
     border-bottom-style: dotted;
 }
 
 div#menu_horizontal div ul li a {
-    /*border:solid 1px #000;*/
     text-align: left;
     padding: 8px;
     font-size:12px;
     display: block;
     color:#000;
+    color:#FFF;/**temp*/    
 }
 
 div#menu_horizontal div ul li:last-of-type {
     border-bottom: none;
-}
-
-div#menu_horizontal div ul li:last-of-type a {
-/*    -webkit-border-radius:6px;
-    -moz-border-radius:6px;
-    -o-border-radius:6px;
-    border-radius:0 0 6px 6px;*/
 }
 
 div#menu_horizontal div ul li:hover a {
@@ -256,6 +240,7 @@ div#menu_horizontal div ul li:hover a {
     background: -ms-linear-gradient(bottom, #C2C2C2, #FFFFFF); ie10+ 
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#C2C2C2', EndColorStr='#FFFFFF'); ie7+ */
     background: url(../_imagens/meio.png) repeat-x;
+    font-weight: bold;
     color:#FFF;
 }
 /***Fim do menu dropdown***/

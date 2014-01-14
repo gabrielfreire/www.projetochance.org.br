@@ -81,7 +81,7 @@
                 </div> 
                 <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProjeto-Chance%2F289102257871728%3Ffref%3Dts&amp;width=215&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:215px; height:290px; margin-left: 15px;" allowTransparency="true"></iframe>
             </div>
-
+            
 <!--            <div id="direito">
                 <a href="fotos"><img src="_imagens/fotos.jpg" /><br /><label>Fotos</label></a><br /><br />
                 <a href="tv-chance"><img src="_imagens/videos.jpg" /><br /><label>Vídeos</label></a>
