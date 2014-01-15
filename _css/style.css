@@ -245,6 +245,15 @@ div#menu_horizontal div ul li:hover a {
 }
 /***Fim do menu dropdown***/
 
+
+/*Busca*/
+/*div#search {
+    border: solid 1px #000;
+    width: 500px;
+    float: left;
+}*/
+
+
 /***Fim do menu***/
 
 div#busca{
@@ -272,7 +281,7 @@ div#busca2{
         background:url(../_imagens/busca2.png) no-repeat top left;
         width:175px;
         height:35px;
-        margin-top:20px;
+        margin:15px;
         float:left;}
 
 div#busca2 input[type=text]{
@@ -302,12 +311,12 @@ ul#resultado_busca li p{
         margin:0;}
 
 div#esquerdo{
+        margin-left: 20px;
         width:260px;
         float:left;}
 
 div#menu_vertical{
-        background:url(../_imagens/caderno_azul_pequeno.jpg) no-repeat;
-        float:left;
+        background:url(../_imagens/caderno_azul_pequeno.jpg) no-repeat;        
         margin-top:15px;
         padding:22px 0 0 45px;
         height:240px;
@@ -340,7 +349,8 @@ div#content{
         border-left-style:dotted;
         float:left;
         margin:20px 0;
-        width:640px;
+        /*width:640px;*/
+        width:695px;
         min-height:600px;
         padding:0 5px;}
 
@@ -400,6 +410,7 @@ div#content h5{
 div#content p{
         line-height:20px;
         font-size:12px;
+        text-align: justify;
         margin:5px;
         color:#333;
         padding:5px;}
@@ -477,20 +488,27 @@ div#carregando{
         color:#666;}
 
 form#form_matricula{
+        /*border:solid 1px #000;*/
+        width: 650px;
+        margin-top: 25px;
+        margin-left: 10px;
         font-size:11px;}
 
 form#form_matricula fieldset{
-        padding:10px;
         border:solid 1px #CCC;
+        border-style: dashed;
+        border-radius: 5px;
+        padding:10px;
         margin:0 auto 20px auto;}
 
 form#form_matricula fieldset legend{
         font-size:14px;
         font-weight:bold;
-        color:#000;	
-        padding:0 2px;}
+        color:#017ec5;	
+        padding:0 5px;}
 
 form#form_matricula table{
+    /*border:solid 1px #CCC;*/
         margin:0 auto;
         width:600px;}
 
@@ -843,21 +861,23 @@ table#meioambi tr td{
 }*/
 
 ul#listaimg{
+        /*border: solid 1px #000;*/
         margin:0;
         padding:0;
-        margin-top: 20px;
+        margin: 20px;
         float:left;}
 
 img.imagem{
-        height:140px; 
-        width:190px;}
+        max-height:100px; 
+        max-width:150px;}
 
 ul#listaimg li.img{
-        padding:10px 7px 7px 0;
+        /*border: solid 1px #000;*/
+        width: 150px;
+        height: 110px;
         float:left;}
 
-ul#listaimg li.img a img:hover{
-            
+ul#listaimg li.img a img:hover{            
         opacity:0.70; 
 	/*-moz-opacity: 0.95;*/
 	filter: alpha(opacity=65);}

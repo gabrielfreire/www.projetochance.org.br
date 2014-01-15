@@ -21,9 +21,9 @@
         <a class="prova" href="ENEM/gabarito amarela 1º dia.rar">Gabarito da Prova Amarela</a><br />
         <a class="prova" href="ENEM/1º dia - prova azul.rar">Prova Azul</a><br />
         <a class="prova" href="ENEM/gabarito azul 1º dia.rar">Gabarito da Prova Azul</a><br />
-        <a class="prova" href="ENEM/1º dia - prova branca pdf.rar">Prova Branca</a><br />
-        <a class="prova" href="ENEM/gabarito branco1º dia.pdf ..rar">Gabarito da Prova Branca</a><br />
-        <a class="prova" href="ENEM/1º dia -prova rosa.rar">Prova Rosa</a><br />
+        <a class="prova" href="ENEM/1º dia - prova branca.rar">Prova Branca</a><br />
+        <a class="prova" href="ENEM/gabarito branco 1º dia.rar">Gabarito da Prova Branca</a><br />
+        <a class="prova" href="ENEM/1º dia - prova rosa.rar">Prova Rosa</a><br />
         <a class="prova" href="ENEM/gabarito rosa 1º dia.rar">Gabarito da Prova Rosa</a><br /><br />
         <h2>2º dia</h2>
         <a class="prova" href="ENEM/2º dia - prova amarela.rar">Prova Amarela</a><br />

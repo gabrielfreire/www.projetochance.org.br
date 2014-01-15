@@ -16,9 +16,12 @@
     <div id="content">    
         <h1>Ficha de matrícula</h1>
         
-	<?php if (isset($view->msg_erro)) echo "<h5 id=\"erro\">".$view->msg_erro."</h5>"; ?>        
-        <center><p><i>(*) Campos obrigatórios</i></p></center>
-           
+	<?php if (isset($view->msg_erro)): ?>
+            <h5 id="erro"><?php echo $view->msg_erro ?></h5> 
+            
+        <?php endif; ?>
+            
+        <p><em>(*) Campos obrigatórios</em></p>
     	<form action="matricula" method="post" id="form_matricula">
               
         	<!-- /**************************************************/

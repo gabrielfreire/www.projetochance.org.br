@@ -30,12 +30,12 @@
             </li>
             <li class="img">
                 <a href="javascript:openFoto('img2.jpg')">
-                    <img src="_imagens/_projeto/img2.JPG" class="imagem" />
+                    <img src="_imagens/_projeto/img2.jpg" class="imagem" />
                 </a>
             </li>
             <li class="img">
                 <a href="javascript:openFoto('img3.jpg')">
-                    <img src="_imagens/_projeto/img3.JPG" class="imagem" />
+                    <img src="_imagens/_projeto/img3.jpg" class="imagem" />
                 </a>
             </li>
             <li class="img">

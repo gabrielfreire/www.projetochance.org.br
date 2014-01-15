@@ -56,22 +56,16 @@
                     <a href="contato">Contato</a>
                 </div>
                 
+                
+<!--                <div id="search">
+                    <input type="text" name="search" />
+                </div>-->
+                
             </div>
 
 
             <div id="esquerdo">
-
-                <?php // if ( $portal || Session::getIdAluno()): ?>                
-<!--                    <div id="busca2">
-                        <form action="busca.php" method="post">
-                            <input type="text" name="txtbusca" value="Buscar no Chance" 
-                                   onfocus="limpar(this);" onblur="escrever(this);" />
-                            <input type="submit" name="btbusca" value="OK" />
-                        </form>
-                    </div>-->
-
-                <?php // endif; ?>
-
+               
                 <div id="menu_vertical">        
                     <!--<div><a href="universidades">Universidades</a></div>-->
                     <!--<div><a href="cursos">Cursos</a></div>-->
@@ -82,6 +76,17 @@
                     <!--<div><a href="ouvidoria">Ouvidoria</a></div>-->
                     <!--<div><a href="parceiros">Parceiros</a></div>-->                    
                 </div> 
+                
+                
+<!--                <div id="busca2">
+                    <form action="busca.php" method="post">
+                        <input type="text" name="txtbusca" value="Buscar no Chance" 
+                               onfocus="limpar(this);" onblur="escrever(this);" />
+                        <input type="submit" name="btbusca" value="OK" />
+                    </form>
+                </div>-->
+                
+                
                 <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProjeto-Chance%2F289102257871728%3Ffref%3Dts&amp;width=215&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:215px; height:290px; margin-left: 15px;" allowTransparency="true"></iframe>
             </div>
             
