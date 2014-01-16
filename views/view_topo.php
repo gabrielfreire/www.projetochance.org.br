@@ -57,9 +57,12 @@
                 </div>
                 
                 
-<!--                <div id="search">
-                    <input type="text" name="search" />
-                </div>-->
+                <blockquote id="search">
+                    <form action="busca.php" method="post">
+                        <input type="text" name="search" placeholder="Pesquisar..." />
+                        <input type="submit" value="" name="btbusca" />
+                    </form>
+                </blockquote>
                 
             </div>
 
