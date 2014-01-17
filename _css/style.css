@@ -356,6 +356,7 @@ ul#resultado_busca{
 
 ul#resultado_busca li{
         border-bottom:solid 1px #CCC;
+        border-bottom-style: dotted;
         margin-bottom:20px;}
 
 ul#resultado_busca li p{

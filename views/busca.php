@@ -36,43 +36,53 @@
             $mensagem     = "views/mensagem.php";            
             
             $busca  = glob("views/*.php", GLOB_BRACE);
+            $result = array();
+            
+            
+            if (trim($pesq) != "") {
+            
+                foreach($busca as $item){
+                    if ( ($item != $atual) && ($item != $topo) && ($item != $rodape) &&
+                         ($item != $alt_senha) && ($item != $lem_senha) && ($item != $como_acessar) &&
+                         ($item != $mensagem) ){
 
-            foreach($busca as $item){
-                if ( ($item != $atual) && ($item != $topo) && ($item != $rodape) &&
-                     ($item != $alt_senha) && ($item != $lem_senha) && ($item != $como_acessar) &&
-                     ($item != $mensagem) ){
-                    
-                    $abrir = fopen($item, "r");
+                        $abrir = fopen($item, "r");
 
-                    while (!feof($abrir)){
-                        $lendo = fgets($abrir);
-                        $lendo = strip_tags($lendo);
+                        while (!feof($abrir)){
+                            $lendo = fgets($abrir);
+                            $lendo = strip_tags($lendo);
 
-                        if ( stristr($lendo, $pesq ) == true ){							
-                            if     (strstr($item, "-2")) $dados = "-2.php";								
-                            elseif (strstr($item, "-3")) $dados = "-3.php";							
-                            else   $dados = ".php";	
-                                                        
-                            $arq = basename(str_replace($dados, "", $item));		
-                                              
-                            if (strstr($arq, "-")) 
-                                $nome = str_replace("-", " ", $arq);
-                            else
-                                $nome = $arq;
-                                                        
-                            $result[] = "<a href='".$arq.$dados."'><i>".$nome."</i>".
-                                                    "<p>... ".substr(stristr($lendo, $pesq ), 0, 175)." ...</p></a>";							
-                            unset($arq);		
-                        }						
-                        unset($lendo);
-                    }					
-                    fclose($abrir);
+                            if ( stristr($lendo, $pesq ) == true ){							
+                                if     (strstr($item, "-2")) $dados = "-2.php";								
+                                elseif (strstr($item, "-3")) $dados = "-3.php";							
+                                else   $dados = ".php";	
+
+                                $arq = basename(str_replace($dados, "", $item));		
+
+                                if (strstr($arq, "-")) 
+                                    $nome = str_replace("-", " ", $arq);
+                                else
+                                    $nome = $arq;
+                                
+                                
+                                $parte1 =  ( stristr($lendo, $pesq, true) );
+                                $parte2 =  ( stristr($lendo, $pesq) );
+                                $parte2 = str_ireplace($pesq, "<strong>".$pesq."</strong>", $parte2);
+                       
+                                $result[] = "<a href='".$arq.$dados."'><i>".$nome."</i>".
+                                                        "<p>".$parte1 . substr($parte2, 0, 175)." ...</p></a>";							
+                                unset($arq);		
+                            }						
+                            unset($lendo);
+                        }					
+                        fclose($abrir);
+                    }
                 }
             }
 
-            if ( isset($result) && count($result) > 0 ){
+            if ( count($result) > 0 ){
 
-                    echo "<h2>Resultado da busca por: $pesq</h2>";
+                    echo "<h4>Resultado da busca por: $pesq</h4>";
 
                     $result = array_unique($result);
                     echo "<ul id=\"resultado_busca\">";
