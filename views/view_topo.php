@@ -15,11 +15,15 @@
     
 
     <!-- Div 'centraliza' e div fundo branco são fechadas na view_rodape -->
-    
     <div class="centraliza">
         <div id="fundo_branco">
+            
+<!--            <div id="topo_maior"></div>
+            <div id="topo_menor"></div>-->
+            
+            
             <div id="logo">
-                <a href="http://projetochance.org.br">
+                <a href="http://projetochance.org.br" title="Projeto Chance">
                     <img src="_imagens/logo.png" />
                 </a>            
             </div>
@@ -60,7 +64,7 @@
                 <blockquote id="search">
                     <form action="busca.php" method="post">
                         <input type="text" name="txtbusca" placeholder="Pesquisar..." />
-                        <input type="submit" value="" name="btbusca" />
+                        <input type="submit" value="" name="btbusca" title="Buscar no Projeto Chance" />
                     </form>
                 </blockquote>
                 

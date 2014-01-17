@@ -11,7 +11,7 @@ img{
 
 body{
         margin:0;        
-        background:url(../_imagens/fundo.gif);
+        background:url(../_imagens/fundo-x.jpg);
 	/*background:#CCC;*/
 }
 
@@ -43,7 +43,7 @@ div#fundo_branco{
         -webkit-border-radius: 0 0 6px 6px;
         -o-border-radius: 0 0 6px 6px;
         
-        box-shadow: 0 0 7px 1px #666;
+        box-shadow: 0 0 5px 1px #666;
         -moz-box-shadow: 1px 1px 7px 2px #333;
         -webkit-box-shadow: 1px 1px 7px 2px #333;
         -o-box-shadow: 1px 1px 7px 2px #333;
@@ -57,25 +57,39 @@ div.centraliza{
         height: 30px;
         margin:0 auto;}
 
-div#toposite{
-        /*background:#4a557f;*/
-        /*background:#00afee;*/
+div#topo_maior {
+    /*border:solid 1px #000;*/
+    background: #017ec5;
+    margin: 0 15px;
+    height: 4px;
+}
+
+div#topo_menor {
+    /*border:solid 1px #000;*/
+    /*background: #CCC;*/
+    margin: 1px 15px;
+    height: 2px;
+}
+
+/*div#toposite{
+        background:#4a557f;
+        background:#00afee;
         background:#007cc2;
-/*        box-shadow: 1px 1px 7px 2px #333;
+        box-shadow: 1px 1px 7px 2px #333;
         -moz-box-shadow: 1px 1px 7px 2px #333;
         -webkit-box-shadow: 1px 1px 7px 2px #333;
-        -o-box-shadow: 1px 1px 7px 2px #333;*/
+        -o-box-shadow: 1px 1px 7px 2px #333;
         position: fixed;
         height: 35px;
         width: 100%;       
-        float: left;}
+        float: left;}*/
 
 
-div#menusuperior{			
+/*div#menusuperior{			
         width:999px;
         height:40px;
         float:left;
-        padding-left:25px;}
+        padding-left:25px;}*/
 
 /*div#menusuperior li{
         color:#d9dadb;
@@ -111,6 +125,8 @@ div#data{
         float:right;}
 
 div#logo{
+    /*border:solid 1px #000;*/
+        margin-top: 5px;
         float:left;}
 
 div#logo a{
@@ -118,8 +134,7 @@ div#logo a{
         text-decoration:none;}
 
 div#banner{
-        margin-top:5px;
-        margin-right: 15px;
+        margin: 20px 15px 5px 0; 
         width:780px;
         height:75px;
         float:right;}
@@ -158,7 +173,7 @@ div#menu_horizontal{
         background: url(../_imagens/meio.png) repeat-x;
         height:52px;
         width:995px;
-        margin-top: 5px;
+        /*margin-top: 5px;*/
         margin-left: 15px;
         float:left;}
 
@@ -363,7 +378,7 @@ ul#resultado_busca li p{
         margin:0;}
 
 div#esquerdo{
-        margin-left: 20px;
+        margin-left: 15px;
         width:260px;
         float:left;}
 
@@ -542,7 +557,7 @@ div#carregando{
 form#form_matricula{
         /*border:solid 1px #000;*/
         width: 650px;
-        margin-top: 25px;
+        margin-top: 35px;
         margin-left: 10px;
         font-size:11px;}
 
@@ -587,13 +602,20 @@ form#form_matricula input:hover, form#form_matricula select:hover{
 
 form#form_matricula input[type=submit]{
         border:0;
+        border-radius: 15px;
         background-color:#999;
         color:#FFF;
         margin-left:2px;
-        padding:5px 10px 5px 10px;}
+        padding:5px 10px 5px 10px;
+        float: right;}
 
 form#form_matricula input[type=submit]:hover{
         background-color:#017ec5;}	
+
+form#form_matricula p {
+    font-weight: bold;
+    float: left;
+}
 
 #marq{
         border:solid 1px #666;
@@ -705,6 +727,7 @@ div#video_home b{
 
 #form_depoimento input[type=submit]{
         border:0;
+        border-radius: 15px;
         background-color:#999;
         color:#FFF;
         margin-left:2px;
@@ -793,15 +816,21 @@ div#video_home b{
 
 #form_contato input[type=submit], #form_contato input[type=button]{
         border:0;
+        border-radius: 15px;
         background-color:#999;
         color:#FFF;
         margin-left:2px;
-        padding:5px 10px 5px 10px;}
+        padding:5px 10px 5px 10px;
+        float: right;}
 
 #form_contato input[type=submit]:hover, #form_contato input[type=button]:hover{
         background-color:#017ec5;}
 
 
+#form_contato p {
+    font-weight: bold;
+    float: left;
+}
 
 #confemail{
     display: none;

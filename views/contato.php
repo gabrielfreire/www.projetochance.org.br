@@ -57,20 +57,22 @@
                     </td>
                 </tr>                 
                 <tr>
-                    <td></td>
-                    <td><p><i>(*) Campos obrigatórios</i></p></td>
+                    <td colspan="2">
+                        <p><i>(*) Campos obrigatórios</i></p>
+                        <input type="submit" name="bt" value="enviar" />
+                    </td>
                 </tr>      
-                <tr>
+<!--                <tr>
                     <td colspan="2" align="right">
                         <input type="submit" name="bt" value="Enviar dados" />
                         <input type="button" name="btlimpar" value="Limpar" onclick="limparFormContato()" />
                     </td>
-                </tr>
+                </tr>-->
             </table>
         </form> 
                        
     	<p id="contato">
-            (11)2866-3441<br/><br/>            
+            11 2866-3441<br/>      
             <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a>
         </p>
        

@@ -21,7 +21,7 @@
             
         <?php endif; ?>
             
-        <p><em>(*) Campos obrigatórios</em></p>
+            
     	<form action="matricula" method="post" id="form_matricula">
               
         	<!-- /**************************************************/
@@ -205,20 +205,23 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="right"><br />
+                            
+                            <p><em>(*) Campos obrigatórios</em></p>
+                            
                             <?php if ( Session::getIdAluno() ): ?>
                                 <input type="submit" name="bt" value="Salvar" />
                             <?php else: ?>
-                                <input type="submit" onClick="return ConfirmMatricula();" name="bt" value="Efetuar matrícula" />
+                                <input type="submit" onClick="return ConfirmMatricula();" name="bt" value="finalizar" />
                             <?php endif; ?>
                         </td>                
                     </tr>
                 </table>    
-			</fieldset>
+            </fieldset>
         </form>
        
     </div>
 
-	<?php require "views/view_rodape.php"; ?>
+    <?php require "views/view_rodape.php"; ?>
 
 </div>
 
