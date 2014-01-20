@@ -1,0 +1,25 @@
+/*
+Estilos do cabeçalho
+*/
+
+header {
+    /*border:solid 1px #CCC;*/
+    background: transparent;
+    height: 162px;
+}
+
+label#saudacao {
+    color: #017ec5;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    float: right;
+}
+
+img#logo {
+    /*border: solid 1px #CCC;*/
+    margin: 25px 0 10px 25px;
+    height: 79px;
+    width: 149px;
+    float: left;
+}

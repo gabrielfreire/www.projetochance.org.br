@@ -1,0 +1,12 @@
+/*
+Estilos do conteúdo
+*/
+
+#content { 
+    /*border: solid 1px #017ec5;*/
+    width: 930px;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+    background: #FFF;
+}
