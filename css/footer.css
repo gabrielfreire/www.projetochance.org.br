@@ -9,14 +9,14 @@ footer {
   padding: 12px 0 12px 0;
   color: #FFF;
   text-align: center;
-  background: #333; /* Show a solid color for older browsers */
-  background: -moz-linear-gradient(#444, #222);
-  background: -o-linear-gradient(#444, #222);
-  background: -webkit-linear-gradient(#444, #222);
+  background: #017ec5; /* Show a solid color for older browsers */
+  background: -moz-linear-gradient(#63a0c2, #017ec5);
+  background: -o-linear-gradient(#63a0c2, #017ec5);
+  background: -webkit-linear-gradient(#63a0c2, #017ec5);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
-  border: 1px solid #222;
+  border: 1px solid #017ec5;
 }
 
 footer p { 

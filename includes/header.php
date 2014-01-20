@@ -15,16 +15,16 @@
     
     <nav>
         <ul class="sf-menu" id="nav">
-            <li><a href="#">O Projeto Chance</a></li>
-            <li><a href="#">Matrícula</a></li>
-            <li><a href="#">Proposta pedagógica</a></li>
-            <li><a href="#">Aprovados</a>
+            <li><a href="#">O Projeto Chance</a>
                 <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Palavra do presidente</a></li>
+                  <li><a href="#">Quem somos</a></li>
+                  <li><a href="#">Nossa história</a></li>
                 </ul>
             </li>
+            <li><a href="#">Proposta pedagógica</a></li>
+            <li><a href="#">Matrícula</a></li>
+            <li><a href="#">Aprovados</a></li>
             <li><a href="#">Galeria de fotos</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
