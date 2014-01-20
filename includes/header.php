@@ -24,8 +24,8 @@
             </li>
             <li><a href="#">Proposta pedagógica</a></li>
             <li><a href="#">Matrícula</a></li>
-            <li><a href="#">Aprovados</a></li>
-            <li><a href="#">Galeria de fotos</a></li>
+            <!--<li><a href="#">Aprovados</a></li>-->
+            <!--<li><a href="#">Galeria de fotos</a></li>-->
             <li><a href="#">Contato</a></li>
         </ul>
         

@@ -1,11 +1,10 @@
 /*
-Estilos do conteúdo
+    Estilos do conteúdo
 */
 
 #content { 
-    /*border: solid 1px #017ec5;*/
-    width: 930px;
-    height: 200px;
+    width: 910px;
+    padding: 10px;
     overflow: hidden;
     margin: 20px auto;
     background: #FFF;
@@ -15,7 +14,6 @@ Estilos do conteúdo
 object.banner {
     width: 600px !important;
     height: 180px !important;
-    margin: 5px;
     float: right;
 }
 

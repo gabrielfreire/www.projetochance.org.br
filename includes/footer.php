@@ -24,13 +24,27 @@
         $("input:text", "#box-buscar").on({
             focus: function (){
                 $(this).animate({
-                    width: "80px"
+                    width: "120px"
                 }, 300);
             },
             focusout: function (){
                 $(this).animate({
-                    width: "60px"
+                    width: "80px"
                 }, 300);
+            }
+        });
+        
+        /* Ativar efeito no menu vertical */
+        $("ol li a", "#nav-left").on({
+            mouseover: function (){
+                $(this).animate({
+                    marginLeft: "10px"
+                }, 85);
+            },
+            mouseout: function (){
+                $(this).animate({
+                    marginLeft: 0
+                }, 85);
             }
         });
     });

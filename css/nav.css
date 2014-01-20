@@ -1,5 +1,5 @@
 /*
-Estilos do do menu horizontal
+    Estilos do do menu horizontal
 */
 
 nav { 
@@ -111,6 +111,10 @@ ul#nav ul {
     padding-bottom: 15px;
 }
 
+ul#nav > li:first-of-type {
+    margin-left: 20px;
+}
+
 ul#nav li a {
     padding: 11px 15px 2px 15px;
     font: 100% 'News Cycle', arial, sans-serif;
@@ -152,7 +156,7 @@ ul#nav ul li a:hover {
     border: none; 
     background: url("../images/lupa.png") no-repeat #FFF;
     color: #017ec5;
-    width: 60px;
+    width: 80px;
     height: 22px;
     padding: 0 30px;
     float: left;

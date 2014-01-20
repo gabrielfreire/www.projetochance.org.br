@@ -1,8 +1,5 @@
 /* 
-Zerar estilos do projeto
-
-Created on : 19/01/2014, 22:43:11
-Author     : gabriel
+    Zerar estilos
 */
 
 html, body, div, span, applet, object, iframe,
@@ -18,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	border: 0;
 	outline: 0;
-	vertical-align: baseline;
+	vertical-align: baseline;        
 	background: transparent;
 }
 body {

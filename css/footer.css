@@ -1,5 +1,5 @@
 /*
-Estilos do rodapé
+    Estilos do rodapé
 */
 
 footer { 
@@ -7,6 +7,7 @@ footer {
   font: 120% 'News Cycle', arial, sans-serif;
   height: 30px;
   padding: 12px 0 12px 0;
+  margin-bottom: 40px;
   color: #FFF;
   text-align: center;
   background: #017ec5; /* Show a solid color for older browsers */
