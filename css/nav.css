@@ -48,7 +48,7 @@ ul.sf-menu a {
 ul.sf-menu ul { 
     position: absolute;
     left: 0;
-    width: 160px; 
+    width: 170px; 
     top: auto;
     left: -999999px;
 }
@@ -59,7 +59,7 @@ ul.sf-menu ul a {
 
 ul.sf-menu ul li { 
     float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
-    width: 160px;
+    width: 170px;
 }
   
 ul.sf-menu ul ul { 
@@ -144,7 +144,7 @@ ul#nav ul li a:hover {
 #box-buscar input[type=text] {
     background: url("../images/lupa.png") no-repeat #FFF;
     color: #017ec5;
-    width: 80px;
+    width: 60px;
     height: 22px;
     padding: 0 30px;
     float: left;
