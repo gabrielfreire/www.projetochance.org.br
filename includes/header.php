@@ -28,5 +28,12 @@
             <li><a href="#">Galeria de fotos</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
+        
+        <div id="box-buscar">
+            <input type="text" name="busca" />
+            <input type="submit" value="" title="Buscar no Projeto Chance" />
+        </div>
     </nav>
+    
+    
 </header>
