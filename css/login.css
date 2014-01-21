@@ -1,0 +1,50 @@
+/*
+    Estilos do login
+*/
+
+#login {
+    /*border: solid 1px #000;*/
+    margin-top: 50px;  
+    margin-left: 10px;
+    width: 280px;   
+    float: left;
+}
+
+#login span {
+    /*border: solid 1px #000;*/
+    color: #666;
+}
+
+#login input[type=text] {
+    border: solid 1px #ccc;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    width: 260px;
+}
+
+#login a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#login a:hover {
+    color: #017ec5;
+}
+
+#login input[type=submit] {
+    border:none;
+    background: url("../images/login.jpg");
+    width: 25px;
+    height: 25px;    
+    cursor: pointer;
+}
+
+#likebox {
+    border:none; 
+    overflow:hidden; 
+    width:270px; 
+    height:290px;
+    margin-top: 50px;
+    margin-left: 5px;
+}

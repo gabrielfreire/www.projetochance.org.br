@@ -15,7 +15,7 @@
             
             <div id="content">
                               
-                <?php include "./includes/nav-left.php"; ?>                
+                <?php include "./includes/left.php"; ?>                
                 
                 
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" class="banner">

@@ -25,17 +25,17 @@
             focus: function (){
                 $(this).animate({
                     width: "120px"
-                }, 300);
+                }, 250);
             },
             focusout: function (){
                 $(this).animate({
                     width: "80px"
-                }, 300);
+                }, 200);
             }
         });
         
         /* Ativar efeito no menu vertical */
-        $("ol li a", "#nav-left").on({
+        $("li > a", "ol#nav-left").on({
             mouseover: function (){
                 $(this).animate({
                     marginLeft: "10px"

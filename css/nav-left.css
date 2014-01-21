@@ -1,35 +1,32 @@
 /*
-    Estilos do do menu vertical
+    Estilos do menu vertical
 */
 
-#nav-left {
+#left {
     border-right: solid 1px #cbcaca;
     border-right-style: dotted;
-    background: url("../images/folha.jpg") no-repeat top left;
     width: 295px;
-    height: 500px;
     float: left;
 }
 
-#nav-left ol {
-    /*border: solid 1px #666;*/
-    width: 160px;
-    margin: 35px 0 0 50px;
+ol#nav-left  {
+    background: url("../images/folha.jpg") no-repeat top left;
+    height: 255px; 
+    width: 165px;
+    padding: 35px 35px 0 50px;
 }
 
-#nav-left ol li {
-    /*border: solid 1px #666;*/
+ol#nav-left li {
     padding: 5px 0;
 }
 
-#nav-left ol li a {
-    /*border: solid 1px #666;*/
+ol#nav-left li a {
     text-decoration: none;    
     color: #000;
     font: 130% 'News Cycle', arial, sans-serif;
     font-style: italic;
 }
 
-#nav-left ol li a:hover {
+ol#nav-left li a:hover {
     color: #017ec5;
 }
