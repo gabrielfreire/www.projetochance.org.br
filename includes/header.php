@@ -17,16 +17,16 @@
         <ul class="sf-menu" id="nav">
             <li><a href="#">O Projeto Chance</a>
                 <ul>
-                  <li><a href="#">Palavra do presidente</a></li>
-                  <li><a href="#">Quem somos</a></li>
-                  <li><a href="#">Nossa história</a></li>
+                  <li><a href="palavra-do-presidente.html">Palavra do presidente</a></li>
+                  <li><a href="quem-somos.html">Quem somos</a></li>
+                  <li><a href="nossa-historia.html">Nossa história</a></li>
                 </ul>
             </li>
-            <li><a href="#">Proposta pedagógica</a></li>
-            <li><a href="#">Matrícula</a></li>
-            <!--<li><a href="#">Aprovados</a></li>-->
-            <!--<li><a href="#">Galeria de fotos</a></li>-->
-            <li><a href="#">Contato</a></li>
+            <li><a href="proposta-pedagogica.html">Proposta pedagógica</a></li>
+            <li><a href="matricula.html">Matrícula</a></li>
+            <!--<li><a href="aprovados.html">Aprovados</a></li>-->
+            <!--<li><a href="galeria-de-fotos.html">Galeria de fotos</a></li>-->
+            <li><a href="contato.html">Contato</a></li>
         </ul>
         
         <div id="box-buscar">

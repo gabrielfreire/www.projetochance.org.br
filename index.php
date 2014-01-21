@@ -8,13 +8,11 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" /> 
     </head>
     <body>
-        <div id="main">
-    
+        <div id="main">    
             <?php include "./includes/header.php"; ?>
 
             
-            <div id="content">
-                              
+            <div id="content">                              
                 <?php include "./includes/left.php"; ?>                
                 
                 
@@ -50,14 +48,11 @@
                         <!--[if !IE]-->
                         </object>
                         <!--[endif]-->
-                </object>
-              
+                </object>              
             </div>
 
 
-
-            <?php include "./includes/footer.php"; ?>
-            
+            <?php include "./includes/footer.php"; ?>            
         </div>
     </body>
 </html>
