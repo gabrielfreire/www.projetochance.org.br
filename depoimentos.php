@@ -15,9 +15,10 @@
             <div id="content">                              
                 <?php include "./includes/left.php"; ?>                
                 
-                
-                      
-            </div>
+                <div id="sub-content">
+                    
+                </div><!--sub-content-->        
+            </div><!--content-->
 
 
             <?php include "./includes/footer.php"; ?>            

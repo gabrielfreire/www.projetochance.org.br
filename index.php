@@ -15,8 +15,8 @@
             <div id="content">                              
                 <?php include "./includes/left.php"; ?>                
                 
-                
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" class="banner">
+                <div id="sub-content">
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" class="banner">
                         <param name="movie" value="banners/banner.swf" />
                         <param name="quality" value="high" />
                         <param name="bgcolor" value="#ffffff" />
@@ -48,8 +48,10 @@
                         <!--[if !IE]-->
                         </object>
                         <!--[endif]-->
-                </object>              
-            </div>
+                    </object>
+                    
+                </div><!--sub-content-->        
+            </div><!--content-->
 
 
             <?php include "./includes/footer.php"; ?>            

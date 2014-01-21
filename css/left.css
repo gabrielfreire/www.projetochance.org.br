@@ -1,9 +1,40 @@
 /*
-    Estilos do login
+    Estilos da coluna na esquerda
 */
 
+/* Menu vertical */
+#left {
+    border-right: solid 1px #cbcaca;
+    border-right-style: dotted;
+    width: 295px;
+    float: left;
+}
+
+ol#nav-left  {
+    background: url("../images/folha.jpg") no-repeat top left;
+    height: 255px; 
+    width: 165px;
+    padding: 35px 35px 0 50px;
+}
+
+ol#nav-left li {
+    padding: 5px 0;
+}
+
+ol#nav-left li a {
+    text-decoration: none;    
+    color: #000;
+    font: 130% 'News Cycle', arial, sans-serif;
+    font-style: italic;
+}
+
+ol#nav-left li a:hover {
+    color: #017ec5;
+}
+
+
+/* Caixa de login */
 #login {
-    /*border: solid 1px #000;*/
     margin-top: 50px;  
     margin-left: 10px;
     width: 280px;   
@@ -11,7 +42,6 @@
 }
 
 #login span {
-    /*border: solid 1px #000;*/
     color: #666;
 }
 
@@ -47,6 +77,8 @@
     float: right;
 }
 
+
+/* Caixa de likebox do Facebook */
 #likebox {
     border:none; 
     overflow:hidden; 
