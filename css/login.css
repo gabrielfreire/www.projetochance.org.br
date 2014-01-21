@@ -23,7 +23,6 @@
 }
 
 #login a {
-    /*border: solid 1px #CCC;*/
     color: #000;
     text-decoration: none;
     font-size: 18px;
@@ -35,14 +34,13 @@
 }
 
 #login a label {
-    margin: 2px;
+    margin: 2px 4px;
     cursor: pointer;
     float: left;    
 }
 
 #login a img {
     border:none;
-    /*border: solid 1px #CCC;*/
     width: 25px;
     height: 25px;  
     cursor: pointer;
