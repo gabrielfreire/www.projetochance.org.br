@@ -16,28 +16,37 @@
 }
 
 #login input[type=text] {
-    border: solid 1px #ccc;
+    border: solid 1px #CCC;
     margin-top: 2px;
     margin-bottom: 10px;
-    width: 260px;
+    width: 267px;
 }
 
 #login a {
+    /*border: solid 1px #CCC;*/
     color: #000;
     text-decoration: none;
     font-size: 18px;
+    float: right;
 }
 
 #login a:hover {
     color: #017ec5;
 }
 
-#login input[type=submit] {
-    border:none;
-    background: url("../images/login.jpg");
-    width: 25px;
-    height: 25px;    
+#login a label {
+    margin: 2px;
     cursor: pointer;
+    float: left;    
+}
+
+#login a img {
+    border:none;
+    /*border: solid 1px #CCC;*/
+    width: 25px;
+    height: 25px;  
+    cursor: pointer;
+    float: right;
 }
 
 #likebox {
@@ -46,5 +55,5 @@
     width:270px; 
     height:290px;
     margin-top: 50px;
-    margin-left: 5px;
+    margin-left: 8px;
 }
