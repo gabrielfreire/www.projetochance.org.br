@@ -31,7 +31,7 @@ body {
 /* Topo */
 header {
     background: transparent;
-    height: 161px;
+    height: 164px;
 }
 
 label#saudacao {
@@ -44,7 +44,7 @@ label#saudacao {
 
 img#logo {
     margin: 25px 0 10px 25px;
-    height: 79px;
+    height: 82px;
     width: 149px;
     float: left;
 }

@@ -11,18 +11,50 @@
     background: #FFF;
 }
 
-#content h2 {
-    border-bottom: solid 1px #017ec5;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    color: #017ec5;
-    font-weight: normal;
-}
-
 #sub-content {
     width: 601px;
     float: right;
 }
+
+#sub-content h1{
+    font: 190% 'News Cycle', arial, sans-serif;
+    color:#017ec5;
+    padding:10px 8px;
+}
+
+#sub-content h3 {
+    color:#017ec5;
+    font-weight: normal;
+    margin: 14px 0 0 8px;
+}
+
+#sub-content h4 {
+    margin: 14px 0 0 8px;
+}
+
+#sub-content p {
+    line-height:20px;
+    font-size:12px;
+    text-align: justify;
+    margin:5px;
+    color:#444;
+    padding:5px;
+}
+
+/* Tabelas */
+table#tb-padrao {
+    margin: 15px 9px;
+    width: 375px;
+    font-size: 14px;
+    color:#000;
+}
+
+table#tb-padrao tr td {
+    border: solid 1px #CCC;    
+    color:#333;
+    padding:4px;
+}
+
 
 /* Home */
 object.banner {
