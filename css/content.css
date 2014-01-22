@@ -16,7 +16,7 @@
     float: right;
 }
 
-#sub-content h1{
+#sub-content h1 {
     font: 190% 'News Cycle', arial, sans-serif;
     color:#017ec5;
     padding:10px 8px;
@@ -63,3 +63,38 @@ object.banner {
     float: right;
 }
 
+/* Matrícula */
+form#form-matricula {
+    /*border: solid 1px #000;*/
+}
+
+form#form-matricula label {
+    color: #999;
+    float: right;
+}
+
+form#form-matricula table {
+    /*border: solid 1px #000;*/
+    margin-top: 10px;
+}
+
+form#form-matricula table tr td {
+    /*border: solid 1px #000;*/
+}
+
+form#form-matricula input[type=text],
+form#form-matricula input[type=password] {
+    border: solid 1px #999;
+    width: 400px;
+    margin: 4px 7px;
+    /*color: #017ec5;*/
+}
+
+form#form-matricula input[type=text]:focus,
+form#form-matricula input[type=password]:focus {
+    border: solid 1px #017ec5;    
+}
+
+form#form-matricula select {
+    margin: 4px 7px;
+}
