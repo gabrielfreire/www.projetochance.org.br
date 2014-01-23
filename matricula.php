@@ -227,5 +227,11 @@ $aluno->ano_prova_enem = "";
 
             <?php include "./includes/footer.php"; ?>            
         </div>
+        
+        <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="js/jquery.matricula.js"></script>
+        <script type="text/javascript">
+            matricula.init();
+        </script>
     </body>
 </html>
