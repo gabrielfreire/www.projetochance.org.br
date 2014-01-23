@@ -38,7 +38,7 @@
                     aulas tradicionais, ajudando no desenvolvimento pré-universitário do aluno.</p>
 
                     <h3>b) Áreas de conhecimento</h3>
-                    <table id="tb-padrao">
+                    <table class="table">
                         <tr>
                             <td>Matemática A</td>
                             <td>Física B</td>

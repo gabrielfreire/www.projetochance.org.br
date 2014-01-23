@@ -48,14 +48,15 @@ $aluno->ano_prova_enem = "";
                         <h4>Dados pessoais</h4>
                         <table>      
                             <tr>
-                                <td><label>* Nome completo</label></td>
-                                <td><input type="text" name="nome" value="<?php echo $aluno->nome; ?>" autofocus /></td>
+                                <td><label>*Nome completo</label></td>
+                                <td><input type="text" name="nome" value="<?php echo $aluno->nome; ?>" class="input input-xlarge" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* Estado civil</label></td>
+                                <td><label>*Estado civil</label></td>
                                 <td>
-                                    <select name="estado-civil">
+                                    <select name="estado-civil" class="select select-small">
+                                        <option></option>
                                         <option>Casado(a)</option>
                                         <option>Solteiro(a)</option>
                                         <option>Divorciado(a)</option>
@@ -65,39 +66,39 @@ $aluno->ano_prova_enem = "";
                             </tr>
                             
                             <tr>
-                                <td><label>* Endereço</label></td>
-                                <td><input type="text" name="endereco" value="<?php echo $aluno->endereco; ?>" /></td>
+                                <td><label>*CEP</label></td>
+                                <td><input type="text" name="cep" value="<?php echo $aluno->cep; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* Nº</label></td>
-                                <td><input type="text" name="numero" value="<?php echo $aluno->numero; ?>" /></td>
+                                <td><label>*Endereço</label></td>
+                                <td><input type="text" name="endereco" value="<?php echo $aluno->endereco; ?>" class="input input-xlarge" /></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label>*Nº</label></td>
+                                <td><input type="text" name="numero" value="<?php echo $aluno->numero; ?>" class="input input-small" /></td>
                             </tr>
                             
                             <tr>
                                 <td><label>Complemento</label></td>
-                                <td><input type="text" name="complemento" value="<?php echo $aluno->complemento; ?>" /></td>
+                                <td><input type="text" name="complemento" value="<?php echo $aluno->complemento; ?>" class="input input-xlarge" /></td>
+                            </tr>                            
+                            
+                            <tr>
+                                <td><label>*Bairro</label></td>
+                                <td><input type="text" name="bairro" value="<?php echo $aluno->bairro; ?>" class="input input-xlarge" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* CEP</label></td>
-                                <td><input type="text" name="cep" value="<?php echo $aluno->cep; ?>" /></td>
-                            </tr>
-                            
-                            <tr>
-                                <td><label>* Bairro</label></td>
-                                <td><input type="text" name="bairro" value="<?php echo $aluno->bairro; ?>" /></td>
-                            </tr>
-                            
-                            <tr>
-                                <td><label>* Cidade</label></td>
-                                <td><input type="text" name="cidade" value="<?php echo $aluno->cidade; ?>" /></td>
+                                <td><label>*Cidade</label></td>
+                                <td><input type="text" name="cidade" value="<?php echo $aluno->cidade; ?>" class="input input-xlarge" /></td>
                             </tr>
                             
                             <tr>         
-                                <td><label>* Estado</label></td>
+                                <td><label>*Estado</label></td>
                                 <td>
-                                    <select name="estado" >
+                                    <select name="estado" class="select select-medium">
                                         <option></option>
                                         <option>AC - Acre</option>
                                         <option>AL - Alagoas</option>
@@ -131,49 +132,49 @@ $aluno->ano_prova_enem = "";
                             </tr>
                             
                             <tr>
-                                <td><label>* Data de nascimento</label></td>
-                                <td><input type="text" name="data-nasc" value="<?php echo $aluno->data_nasc; ?>" /></td>
+                                <td><label>*Data de nascimento</label></td>
+                                <td><input type="text" name="data-nasc" value="<?php echo $aluno->data_nasc; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* RG</label></td>
-                                <td><input type="text" name="rg" value="<?php echo $aluno->rg; ?>" /></td>
+                                <td><label>*RG</label></td>
+                                <td><input type="text" name="rg" value="<?php echo $aluno->rg; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* CPF</label></td>
-                                <td><input type="text" name="cpf" value="<?php echo $aluno->cpf; ?>" /></td>
+                                <td><label>*CPF</label></td>
+                                <td><input type="text" name="cpf" value="<?php echo $aluno->cpf; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* Telefone</label></td>
-                                <td><input type="text" name="telefone" value="<?php echo $aluno->telefone; ?>" /></td>
+                                <td><label>*Telefone</label></td>
+                                <td><input type="text" name="telefone" value="<?php echo $aluno->telefone; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* E-mail</label></td>
-                                <td><input type="text" name="email" value="<?php echo $aluno->email; ?>" /></td>
+                                <td><label>*E-mail</label></td>
+                                <td><input type="text" name="email" value="<?php echo $aluno->email; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* Senha do portal</label></td>
-                                <td><input type="password" name="senha" value="<?php echo $aluno->senha; ?>" /></td>
+                                <td><label>*Senha do portal</label></td>
+                                <td><input type="password" name="senha" value="<?php echo $aluno->senha; ?>" class="input input-medium" /></td>
                             </tr>
                             
                             <tr>
-                                <td><label>* Confirme sua senha</label></td>
-                                <td><input type="password" name="confirmar-senha" value="<?php echo $aluno->senha; ?>" /></td>
+                                <td><label>*Confirme sua senha</label></td>
+                                <td><input type="password" name="confirmar-senha" value="<?php echo $aluno->senha; ?>" class="input input-medium" /></td>
                             </tr>        
                         </table>
 
                         
                         <!-- segunda parte -->
-                        <h4>Pesquisa</h4>
+                        <h4>Pesquisa (opcional)</h4>
                         <table>
                             <tr>
-                                <td><label>Concluiu/concluirá o Ensino Médio no ano:</label></td>
+                                <td><label>Ano que concluiu/concluirá o Ensino Médio</label></td>
                                 <td>
-                                    <select name="conclusao-em">
+                                    <select name="conclusao-em" class="select select-small">
                                         <option></option>
                                         <option>2014</option>
                                         <option>2015</option>
@@ -184,37 +185,37 @@ $aluno->ano_prova_enem = "";
                                         <option>2020</option>
                                     </select>
                                 </td>
-                           </tr>
+                            </tr>
                            
-                           <tr>
-                               <td><label>Instituição que estuda/estudou no Ensino Médio:</label></td>
-                               <td><input type="text" name="nome-inst" value="<?php echo $aluno->nome_inst; ?>" /></td>
-                           </tr> 
-                           
-                           <tr>
-                               <td><label>Você já estudou em cursinho? Se sim, Qual?</label></td>
-                               <td><input type="text" name="nome-cursinho" value="<?php echo $aluno->nome_cursinho; ?>" /></td>
-                           </tr>
-                           
-                           <tr>
-                               <td><label>Já fez a prova do ENEM? Se sim, em que ano?</label></td>
-                               <td>
-                                    <select name="ano-prova-enem">
-                                        <option></option>
-                                        <option>2008</option>
-                                        <option>2009</option>
-                                        <option>2010</option>
-                                        <option>2011</option>
-                                        <option>2012</option>
-                                        <option>2013</option>
-                                        <option>2014</option>
-                                    </select>
-                                </td>
+                            <tr>
+                                <td><label>Já fez a prova do ENEM? Se sim, em que ano?</label></td>
+                                <td>
+                                     <select name="ano-prova-enem" class="select select-small">
+                                         <option></option>
+                                         <option>2008</option>
+                                         <option>2009</option>
+                                         <option>2010</option>
+                                         <option>2011</option>
+                                         <option>2012</option>
+                                         <option>2013</option>
+                                         <option>2014</option>
+                                     </select>
+                                 </td>
                             </tr>
                             
                             <tr>
+                                <td><label>Instituição que estuda/estudou no Ensino Médio:</label></td>
+                                <td><input type="text" name="nome-inst" value="<?php echo $aluno->nome_inst; ?>" class="input input-medium" /></td>
+                            </tr> 
+                           
+                            <tr>
+                                <td><label>Você já estudou em cursinho? Se sim, Qual?</label></td>
+                                <td><input type="text" name="nome-cursinho" value="<?php echo $aluno->nome_cursinho; ?>" class="input input-medium" /></td>
+                            </tr>                           
+                            
+                            <tr>
                                 <td colspan="2">
-                                    <input type="submit" value="Salvar" />                                 
+                                    <input type="submit" value="Salvar" class="btn" />                                 
                                 </td>                
                             </tr>
                         </table>    
