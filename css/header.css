@@ -15,7 +15,7 @@
     src: local("News Cycle"), url("../fonts/NewsCycle-Regular.ttf"); 
 }
 
-/* Definição do site */
+/* Definição do escopo */
 body {
     font: normal .80em arial, sans-serif;
     background: #FFF url("../images/fundo.png");
@@ -154,18 +154,14 @@ ul#nav {
     float: left;
 }
 
-ul#nav ul { 
+ul#nav ul {     
     background: #017ec5;
     margin-top: 4px;
     padding-bottom: 15px;
 }
 
-ul#nav > li:first-of-type {
-    margin-left: 20px;
-}
-
 ul#nav li a {
-    padding: 11px 20px 2px 20px;
+    padding: 11px 15px 2px 15px;
     font: 100% 'News Cycle', arial, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -206,7 +202,7 @@ ul#nav ul li a:hover {
     border: none; 
     background: url("../images/lupa.png") no-repeat #FFF;
     color: #017ec5;
-    width: 80px;
+    width: 50px;
     height: 22px;
     padding: 0 30px;
     float: left;

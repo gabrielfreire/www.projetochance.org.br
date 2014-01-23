@@ -25,12 +25,12 @@
         $("input:text", "#box-buscar").on({
             focus: function (){
                 $(this).animate({
-                    width: "120px"
+                    width: "80px"
                 }, 250);
             },
             focusout: function (){
                 $(this).animate({
-                    width: "80px"
+                    width: "50px"
                 }, 200);
             }
         });
