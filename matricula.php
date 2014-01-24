@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Referência para busca de cep:
+ * http://republicavirtual.com.br/cep/
+ * 
+ * Exemplo de webservice com retorno xml:
+ * http://republicavirtual.com.br/web_cep.php?cep=MEUCEP&formato=xml
+ */
+
 $aluno = new stdClass();
 $aluno->nome = "";
 $aluno->estado_civil = "";
