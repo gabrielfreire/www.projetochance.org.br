@@ -1,6 +1,6 @@
 <?php
 /*
- * Efetuar matrícula
+ * Salvar contato
  */
 
 # Aluno
@@ -30,7 +30,7 @@ $aluno->nome_cursinho = $_POST["nome-cursinho"];
 $aluno->insert();
 ?>
 
-<blockquote id="agradecimento">
+<blockquote clas="box-msg">
     <p>Obrigado por se matricular no Projeto Chance.<br/>
         Aguarde, entraremos em contato!</p>
     <img src="images/logo-original.png" alt="" />

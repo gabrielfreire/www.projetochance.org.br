@@ -1,4 +1,11 @@
 
+/**
+ * Matrícula
+ * 
+ * 1. Mascáras dos campos; 
+ * 2. Submit do formulário.
+ */
+
 
 var matricula = {
     
@@ -64,7 +71,7 @@ var matricula = {
             event.preventDefault();
                         
             if ( me.validateFields() ) {                
-                $.post("ajax/efetuar-matricula.php", $(this).serialize(), function (html){
+                $.post("ajax/salvar-matricula.php", $(this).serialize(), function (html){
                     
                     $("#sub-content").fadeOut(500, function (){                        
                         $(this).html(html).slideDown(2000);
@@ -172,3 +179,7 @@ var matricula = {
 };
 
 
+/**
+ * Iniciar
+ */
+matricula.init();

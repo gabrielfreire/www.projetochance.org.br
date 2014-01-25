@@ -59,7 +59,6 @@ $aluno->ano_prova_enem = "";
                                 <td><label>*Nome completo</label></td>
                                 <td><input type="text" name="nome" id="nome" value="<?php echo $aluno->nome; ?>" class="input input-xlarge" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Estado civil</label></td>
                                 <td>
@@ -72,32 +71,26 @@ $aluno->ano_prova_enem = "";
                                     </select>
                                 </td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*CEP</label></td>
                                 <td><input type="text" name="cep" id="cep" value="<?php echo $aluno->cep; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Endereço</label></td>
                                 <td><input type="text" name="endereco" id="endereco" value="<?php echo $aluno->endereco; ?>" class="input input-xlarge" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Nº</label></td>
                                 <td><input type="text" name="numero" id="numero" value="<?php echo $aluno->numero; ?>" class="input input-small" /></td>
                             </tr>                           
-                            
                             <tr>
                                 <td><label>*Bairro</label></td>
                                 <td><input type="text" name="bairro" id="bairro" value="<?php echo $aluno->bairro; ?>" class="input input-xlarge" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Cidade</label></td>
                                 <td><input type="text" name="cidade" id="cidade" value="<?php echo $aluno->cidade; ?>" class="input input-xlarge" /></td>
                             </tr>
-                            
                             <tr>         
                                 <td><label>*Estado</label></td>
                                 <td>
@@ -133,37 +126,30 @@ $aluno->ano_prova_enem = "";
                                     </select>
                                 </td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Data de nascimento</label></td>
                                 <td><input type="text" name="data-nasc" id="data-nasc" value="<?php echo $aluno->data_nasc; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*RG</label></td>
                                 <td><input type="text" name="rg" id="rg" value="<?php echo $aluno->rg; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*CPF</label></td>
                                 <td><input type="text" name="cpf" id="cpf" value="<?php echo $aluno->cpf; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Telefone</label></td>
                                 <td><input type="text" name="telefone" id="telefone" value="<?php echo $aluno->telefone; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*E-mail</label></td>
                                 <td><input type="text" name="email" id="email" value="<?php echo $aluno->email; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Senha do portal</label></td>
                                 <td><input type="password" name="senha" id="senha" value="<?php echo $aluno->senha; ?>" class="input input-medium" /></td>
                             </tr>
-                            
                             <tr>
                                 <td><label>*Confirme sua senha</label></td>
                                 <td><input type="password" name="confirmar-senha" id="confirmar-senha" value="<?php echo $aluno->senha; ?>" class="input input-medium" /></td>
@@ -189,7 +175,6 @@ $aluno->ano_prova_enem = "";
                                     </select>
                                 </td>
                             </tr>
-                           
                             <tr>
                                 <td><label>Já fez a prova do ENEM? Se sim, em que ano?</label></td>
                                 <td>
@@ -205,17 +190,14 @@ $aluno->ano_prova_enem = "";
                                      </select>
                                  </td>
                             </tr>
-                            
                             <tr>
                                 <td><label>Instituição que estuda/estudou no Ensino Médio:</label></td>
                                 <td><input type="text" name="nome-inst" value="<?php echo $aluno->nome_inst; ?>" class="input input-medium" /></td>
                             </tr> 
-                           
                             <tr>
                                 <td><label>Você já estudou em cursinho? Se sim, Qual?</label></td>
                                 <td><input type="text" name="nome-cursinho" value="<?php echo $aluno->nome_cursinho; ?>" class="input input-medium" /></td>
                             </tr>                           
-                            
                             <tr>
                                 <td colspan="2">
                                     <input type="submit" value="Salvar" class="btn" />                                 
@@ -233,8 +215,5 @@ $aluno->ano_prova_enem = "";
         
         <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="js/jquery.matricula.js"></script>
-        <script type="text/javascript">
-            matricula.init();
-        </script>
     </body>
 </html>
