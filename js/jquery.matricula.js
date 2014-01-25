@@ -5,32 +5,33 @@ var matricula = {
     init: function (){
         
         this.masks();
+        this.onSubmit();
     },
     
     masks: function (){        
-        $(":text[name=data-nasc]").mask("99/99/9999");
-        $(":text[name=rg]").mask("99.999.999-*");
-        $(":text[name=cpf]").mask("999.999.999-99");        
+        $("#data-nasc").mask("99/99/9999");
+        $("#rg").mask("99.999.999-*");
+        $("#cpf").mask("999.999.999-99");        
         
-        $(":text[name=cep]").mask("99999-999", {
+        $("#cep").mask("99999-999", {
             completed: function (){
                 
                 // Consultar CEP
-                $.post("cep-ajax.php", "cep="+$(this).val(), function (dados){                    
-                    switch (dados.resultado) {
+                $.post("ajax/consultar-cep.php", "cep="+$(this).val(), function (json){                    
+                    switch (json.resultado) {
                         
                         // Logradouro completo 
                         case "1":                            
-                            $(":text[name=endereco]").val(dados.tipo_logradouro+" "+dados.logradouro);
-                            $(":text[name=bairro]").val(dados.bairro);
-                            $(":text[name=cidade]").val(dados.cidade);                            
-                            $("select[name=estado] > option:contains('"+dados.uf+"')").attr("selected", "selected");
+                            $("#endereco").val(json.tipo_logradouro+" "+json.logradouro);
+                            $("#bairro").val(json.bairro);
+                            $("#cidade").val(json.cidade);                            
+                            $("#estado > option:contains('"+json.uf+"')").attr("selected", "selected");
                             break;
                         
                         // Logradouro único 
                         case "2":
-                            $(":text[name=cidade]").val(dados.cidade);
-                            $("select[name=estado] > option:contains('"+dados.uf+"')").attr("selected", "selected");
+                            $("#cidade").val(json.cidade);
+                            $("#estado > option:contains('"+json.uf+"')").attr("selected", "selected");
                             break;
                     }
                     
@@ -41,7 +42,7 @@ var matricula = {
         });               
         
         // Número de telefone com 8 ou 9 dígitos
-        $(":text[name=telefone]").mask("(99) 9999-9999?9").ready(function(event) {
+        $("#telefone").mask("(99) 9999-9999?9").ready(function(event) {
             var target, phone, element;
             target = (event.currentTarget) ? event.currentTarget : event.srcElement;
             phone = target.value.replace(/\D/g, '');
@@ -54,7 +55,120 @@ var matricula = {
                 element.mask("(99) 9999-9999?9");
             }
         });
+    },
+    
+    onSubmit: function (){
+        
+        var me = this;
+        $("#form-matricula").on("submit", function(event){
+            event.preventDefault();
+                        
+            if ( me.validateFields() ) {                
+                $.post("ajax/efetuar-matricula.php", $(this).serialize(), function (html){
+                    
+                    $("#sub-content").fadeOut(500, function (){                        
+                        $(this).html(html).slideDown(2000);
+                    });
+                }, "html").fail(function (){
+                    alert("error");
+                });
+            }
+            me.pageUp();
+        });
+    },
+    
+    validateFields: function (){
+        
+        if ( $.trim( $("#nome").val() ) === "" ) {
+            alert("Digite seu nome!");
+            $("#nome").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#estado-civil").val() ) === "" ) {
+            alert("Selecione seu estado civil!");
+            $("#estado-civil").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#cep").val() ) === "" ) {
+            alert("Digite seu CEP!");
+            $("#cep").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#endereco").val() ) === "" ) {
+            alert("Digite seu endereço!");
+            $("#endereco").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#numero").val() ) === "" ) {
+            alert("Digite o número de seu endereço!");
+            $("#numero").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#bairro").val() ) === "" ) {
+            alert("Digite seu bairro!");
+            $("#bairro").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#cidade").val() ) === "" ) {
+            alert("Digite sua cidade!");
+            $("#cidade").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#estado").val() ) === "" ) {
+            alert("Digite seu estado!");
+            $("#estado").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#data-nasc").val() ) === "" ) {
+            alert("Digite sua data de nascimento!");
+            $("#data-nasc").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#rg").val() ) === "" ) {
+            alert("Digite seu RG!");
+            $("#rg").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#cpf").val() ) === "" ) {
+            alert("Digite seu CPF!");
+            $("#cpf").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#telefone").val() ) === "" ) {
+            alert("Digite seu telefone!");
+            $("#telefone").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#email").val() ) === "" ) {
+            alert("Digite seu email!");
+            $("#email").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#senha").val() ) === "" ) {
+            alert("Digite sua senha para o portal!");
+            $("#senha").focus();            
+            return false;
+        }
+        else if ( $.trim( $("#confirmar-senha").val() ) === "" ) {
+            alert("Confirme sua senha!");
+            $("#confirmar-senha").focus();            
+            return false;
+        }             
+        else if ( $("#senha").val() !== $("#confirmar-senha").val() ) {
+            alert("Senhas digitadas não conferem!");
+            $("#senha").focus();            
+            return false;
+        }             
+        return true;        
+    },
+    
+    pageUp: function (){
+        $("html, body").animate({
+            scrollTop: $("#content").offset().top
+        }, 1000);
     }
+    
+    
 };
 
 

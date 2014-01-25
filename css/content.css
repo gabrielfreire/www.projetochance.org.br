@@ -16,6 +16,11 @@
     float: right;
 }
 
+#sub-content a {    
+    color: #017ec5;
+    font-weight: bold;
+}
+
 #sub-content h1 {
     font: 190% 'News Cycle', arial, sans-serif;
     color:#017ec5;
@@ -23,13 +28,8 @@
 }
 
 #sub-content h2 {
-    /*border-bottom: solid 1px #017ec5;*/
-    /*border-bottom-style: groove;*/
-    /*background: #ebebeb;*/
     color: #666;
     font-size: 15px;
-    /*font-weight: normal;*/
-    /*font-style: italic;*/
     padding: 6px;
     margin: 30px 0 0 8px;
 }
@@ -141,4 +141,23 @@ form#form-matricula table {
 
 form#form-matricula table:nth-of-type(1) {
     margin-bottom: 30px;
+}
+
+#agradecimento {
+    border: solid 5px #efeded;
+    border-style: double;
+    text-align: center;
+    width: 450px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+#agradecimento p {
+    text-align: center;
+}
+
+#agradecimento img {
+    width: 125px;
+    height: 70px;
+    margin-bottom: 25px;
 }
