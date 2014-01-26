@@ -3,6 +3,7 @@
 */
 
 /* Definir fonte */
+/************************************************************/
 @font-face { 
   font-family: Yanone Kaffeesatz; 
     src: url("../fonts/YanoneKaffeesatz-Regular.eot"); 
@@ -16,6 +17,7 @@
 }
 
 /* Definição do escopo */
+/************************************************************/
 body {
     font: normal .80em arial, sans-serif;
     background: #FFF url("../images/fundo.png");
@@ -29,6 +31,7 @@ body {
 
 
 /* Topo */
+/************************************************************/
 header {
     background: transparent;
     height: 164px;
@@ -51,12 +54,13 @@ img#logo {
 
 
 /* Menu principal */
+/************************************************************/
 nav { 
   height: 44px;
   width: 928px;
   float: right;
   color: #222;
-  background: #017ec5; /* Show a solid color for older browsers */
+  background: #017ec5; /* Mostrar uma cor sólida para navegadores mais antigos */
   background: -moz-linear-gradient(#63a0c2, #017ec5);
   background: -o-linear-gradient(#63a0c2, #017ec5);
   background: -webkit-linear-gradient(#63a0c2, #017ec5);
@@ -86,7 +90,7 @@ ul.sf-menu li {
 }
   
 ul.sf-menu li:hover { 
-    visibility: inherit; /* fixes IE7 'sticky bug' */ 
+    visibility: inherit; /* corrige bug no IE7 */ 
 }
 
 ul.sf-menu a { 
@@ -103,11 +107,11 @@ ul.sf-menu ul {
 }
   
 ul.sf-menu ul a { 
-    zoom: 1; /* IE6/7 fix */ 
+    zoom: 1; /* corrige IE6/7 */ 
 }
 
 ul.sf-menu ul li { 
-    float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
+    float: left; /* Deve sempre ser lançada caso contrário, haverá um margin-bottom 1px no IE6/7 */
     width: 190px;
 }
   
@@ -139,7 +143,7 @@ span.sf-arrow {
     right: 5px;
     display: block;
     background: url(../images/arrows-white.png) no-repeat 0 0;
-    overflow: hidden; /* making sure IE6 doesn't overflow and expand the box */
+    overflow: hidden; /* Certificando para que não transborde no IE6, expandindo a caixa */
     font-size: 1px;
 }
 
@@ -185,6 +189,7 @@ ul#nav ul li a:hover {
 
 
 /* Caixa de busca */
+/************************************************************/
 #box-buscar {
     background: #efeded;
     padding: 2px;

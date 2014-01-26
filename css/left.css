@@ -3,6 +3,7 @@
 */
 
 /* Menu vertical */
+/************************************************************/
 #left {
     border-right: solid 1px #cbcaca;
     border-right-style: dotted;
@@ -34,6 +35,7 @@ ol#nav-left li a:hover {
 
 
 /* Caixa de login */
+/************************************************************/
 #login {
     margin-top: 50px;  
     margin-left: 10px;
@@ -87,6 +89,7 @@ ol#nav-left li a:hover {
 
 
 /* Caixa de likebox do Facebook */
+/************************************************************/
 #likebox {
     border:none; 
     overflow:hidden; 
