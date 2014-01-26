@@ -118,7 +118,7 @@
     border-radius: 4px;
     cursor: pointer;
     padding: 3px 10px;
-    margin: 25px 7px 0 0;
+    margin-top: 25px;
     float: right;
 }
 
@@ -157,27 +157,31 @@ object.banner {
 }
 
 /* Matrícula */
-#form-matricula label {
-    color: #999;
-    font-size: 12px;   
-    margin-right: 15px;
-}
-
-#form-matricula table {
+.table-matricula {
     margin: 10px 8px;
 }
 
-#form-matricula table:nth-of-type(1) {
+.table-matricula:nth-of-type(1) {
     margin-bottom: 30px;
 }
 
-/* Contato */
-#form-contato label {
+.table-matricula label {
     color: #999;
     font-size: 12px;   
     margin-right: 15px;
 }
 
-#form-contato table {
+/* Contato */
+.table-contato {
     margin: 10px 8px;
+}
+
+.table-contato tr td {
+    vertical-align: middle;
+}
+
+.table-contato label {
+    color: #999;
+    font-size: 12px;  
+    margin-right: 15px;
 }

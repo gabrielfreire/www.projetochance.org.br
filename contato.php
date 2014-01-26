@@ -18,8 +18,8 @@
                 <div id="sub-content">
                     <h1>Contato</h1>
                     
-                    <form action="#" method="post" id="form-contato" >
-                        <table>      
+                    <form action="#" method="post" id="form" >
+                        <table class="table-contato">      
                             <tr>
                                 <td><label>*Nome</label></td>
                                 <td><input type="text" name="nome" id="nome" class="text text-xlarge" /></td>

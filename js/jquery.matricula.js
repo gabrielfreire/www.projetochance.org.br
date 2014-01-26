@@ -67,7 +67,7 @@ var matricula = {
     onSubmit: function (){
         
         var me = this;
-        $("#form-matricula").on("submit", function(event){
+        $("#form").on("submit", function(event){
             event.preventDefault();
                         
             if ( me.validateFields() ) {                

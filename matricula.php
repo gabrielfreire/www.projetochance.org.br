@@ -50,11 +50,11 @@ $aluno->ano_prova_enem = "";
                     <h1>Ficha de matrícula</h1>        
 
 
-                    <form action="#" method="post" id="form-matricula" >
+                    <form action="#" method="post" id="form" >
                          
                         <!-- primeira parte -->
                         <h4>Dados pessoais</h4>
-                        <table>      
+                        <table class="table-matricula">      
                             <tr>
                                 <td><label>*Nome completo</label></td>
                                 <td><input type="text" name="nome" id="nome" value="<?php echo $aluno->nome; ?>" class="text text-xlarge" /></td>
@@ -159,7 +159,7 @@ $aluno->ano_prova_enem = "";
                         
                         <!-- segunda parte -->
                         <h4>Pesquisa (opcional)</h4>
-                        <table>
+                        <table class="table-matricula">
                             <tr>
                                 <td><label>Ano que concluiu/concluirá o Ensino Médio</label></td>
                                 <td>

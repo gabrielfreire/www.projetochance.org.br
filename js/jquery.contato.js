@@ -36,7 +36,7 @@ var contato = {
     onSubmit: function (){
         
         var me = this;
-        $("#form-contato").on("submit", function(event){
+        $("#form").on("submit", function(event){
             event.preventDefault();
                         
             if ( me.validateFields() ) {                
