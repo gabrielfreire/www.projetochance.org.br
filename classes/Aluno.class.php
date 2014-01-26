@@ -5,7 +5,7 @@
  */
 
 # Conexão
-require_once "../classes/DBpdo.class.php";
+require_once __DIR__ . "/DBpdo.class.php";
 
 /**
  * 

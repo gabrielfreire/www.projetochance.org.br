@@ -1,8 +1,14 @@
 <?php
-
-/* 
+/*
  * Realizar consultar de CEP
+ * 
+ * Referência para busca de cep:
+ * http://republicavirtual.com.br/cep/
+ * 
+ * Exemplo de webservice com retorno xml:
+ * http://republicavirtual.com.br/web_cep.php?cep=MEUCEP&formato=xml
  */
+
 
 # Valor digitado
 $cep = isset($_POST["cep"]) ? $_POST["cep"] : null;
