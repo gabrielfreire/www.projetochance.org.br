@@ -22,23 +22,23 @@
                         <table>      
                             <tr>
                                 <td><label>*Nome</label></td>
-                                <td><input type="text" name="nome" id="nome" class="input input-xlarge" /></td>
+                                <td><input type="text" name="nome" id="nome" class="text text-xlarge" /></td>
                             </tr>
                             <tr>
                                 <td><label>Telefone</label></td>
-                                <td><input type="text" name="telefone" id="telefone" class="input input-xlarge" /></td>
+                                <td><input type="text" name="telefone" id="telefone" class="text text-xlarge" /></td>
                             </tr>
                             <tr>
                                 <td><label>*Email</label></td>
-                                <td><input type="text" name="email" id="email" class="input input-xlarge" /></td>
+                                <td><input type="text" name="email" id="email" class="text text-xlarge" /></td>
                             </tr>
                             <tr>
                                 <td><label>*Assunto</label></td>
-                                <td><input type="text" name="assunto" id="assunto" class="input input-xlarge" /></td>
+                                <td><input type="text" name="assunto" id="assunto" class="text text-xlarge" /></td>
                             </tr>
                             <tr>
                                 <td><label>*Mensagem</label></td>
-                                <td><textarea name="mensagem" id="mensagem" class="textArea textArea-xlarge"></textarea></td>
+                                <td><textarea name="mensagem" id="mensagem" class="text textArea"></textarea></td>
                             </tr>
                             <tr>
                                 <td colspan="2">

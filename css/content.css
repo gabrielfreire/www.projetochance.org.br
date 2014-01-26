@@ -71,38 +71,39 @@
 
 /* Input, textArea e Select */
 /************************************************************/
-.input, .textArea, .select {
+.text {
     border: solid 1px #999;
     background: #FFF;
     margin: 1px 0;
 }
 
 .textArea {
+    min-width: 400px;
     min-height: 150px;
 }
 
-.input:focus, textArea:focus, .select:focus {
+.text:focus {
     border: solid 1px #017ec5;    
 }
 
-.input-xsmall, .textArea-xsmall, .select-xsmall {
-    min-width: 50px;
+.text-xsmall {
+    width: 50px;
 }
 
-.input-small, .textArea-small, .select-small {
-    min-width: 100px;
+.text-small {
+    width: 100px;
 }
 
-.input-medium, .textArea-medium, .select-medium {
-    min-width: 200px;
+.text-medium {
+    width: 200px;
 }
 
-.input-large, .textArea-large, .select-large {
-    min-width: 300px;
+.text-large {
+    width: 300px;
 }
 
-.input-xlarge, .textArea-xlarge, .select-xlarge {
-    min-width: 400px;
+.text-xlarge {
+    width: 400px;
 }
 
 /* Botões */
