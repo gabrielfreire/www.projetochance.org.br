@@ -36,8 +36,7 @@ class Aluno {
     public $nome_cursinho;      # varchar(200)
     
     
-    public function insert() {
-        
+    public function insert() {        
         $pdo = DBpdo::connection();
         $stmte = $pdo->prepare("INSERT INTO aluno "
                 . "(nome, estado_civil, cep, endereco, numero, bairro, cidade, estado, "
@@ -67,11 +66,42 @@ class Aluno {
     }
     
     public function update() {
-        
+        $pdo = DBpdo::connection();
+        $stmte = $pdo->prepare("UPDATE aluno SET "
+                . "nome=?, estado_civil=?, cep=?, endereco=?, numero=?, "
+                . "bairro=?, cidade=?, estado=?, data_nasc=?, rg=?, cpf=?, "
+                . "telefone=?, email=?, senha=?, ano_conclusao_em=?, "
+                . "ano_prova_enem=?, nome_inst=?, nome_cursinho=? "
+                . "WHERE id = ?");
+
+        $stmte->bindParam(1,  $this->nome, PDO::PARAM_STR);
+        $stmte->bindParam(2,  $this->estado_civil, PDO::PARAM_STR);
+        $stmte->bindParam(3,  $this->cep, PDO::PARAM_STR);
+        $stmte->bindParam(4,  $this->endereco, PDO::PARAM_STR);
+        $stmte->bindParam(5,  $this->numero, PDO::PARAM_STR);
+        $stmte->bindParam(6,  $this->bairro, PDO::PARAM_STR);
+        $stmte->bindParam(7,  $this->cidade, PDO::PARAM_STR);
+        $stmte->bindParam(8,  $this->estado, PDO::PARAM_STR);
+        $stmte->bindParam(9,  $this->data_nasc, PDO::PARAM_STR);
+        $stmte->bindParam(10, $this->rg, PDO::PARAM_STR);
+        $stmte->bindParam(11, $this->cpf, PDO::PARAM_STR);
+        $stmte->bindParam(12, $this->telefone, PDO::PARAM_STR);
+        $stmte->bindParam(13, $this->email, PDO::PARAM_STR);
+        $stmte->bindParam(14, $this->senha, PDO::PARAM_STR);
+        $stmte->bindParam(15, $this->ano_conclusao_em, PDO::PARAM_STR);
+        $stmte->bindParam(16, $this->ano_prova_enem, PDO::PARAM_STR);
+        $stmte->bindParam(17, $this->nome_inst, PDO::PARAM_STR);
+        $stmte->bindParam(18, $this->nome_cursinho, PDO::PARAM_STR);        
+        $stmte->bindParam(19, $this->id, PDO::PARAM_INT);        
+        $stmte->execute();
     }
     
     public function delete() {
+        $pdo = DBpdo::connection();
+        $stmte = $pdo->prepare("DELETE FROM aluno WHERE id = ? LIMIT 1");
         
+        $stmte->bindParam(1, $this->id, PDO::PARAM_INT);        
+        $stmte->execute();
     }
     
 }

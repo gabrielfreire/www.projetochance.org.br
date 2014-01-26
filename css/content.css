@@ -131,13 +131,11 @@
     border: solid 5px #efeded;
     border-style: double;
     text-align: center;
-    width: 450px;
-    margin: 50px auto;
     padding: 10px;
 }
 
 .box-msg p {
-    text-align: center;
+    text-align: center !important; /* Exceção para tag p na mensagem */
 }
 
 .box-msg img {
@@ -152,8 +150,8 @@
 
 /* Home */
 object.banner {
-    width: 600px !important;
-    height: 180px !important;
+    width: 600px;
+    height: 180px;
     float: right;
 }
 

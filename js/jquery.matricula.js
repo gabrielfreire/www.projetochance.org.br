@@ -74,7 +74,7 @@ var matricula = {
                 $.post("ajax/salvar-matricula.php", $(this).serialize(), function (html){
                     
                     $("#sub-content").fadeOut(500, function (){                        
-                        $(this).html(html).slideDown(2000);
+                        $(this).html(html).slideDown(500);
                     });
                 }, "html").fail(function (){
                     alert("error");
