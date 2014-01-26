@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Consultar CEP
+ * Realizar consultar de CEP
  */
 
 # Valor digitado

@@ -24,7 +24,7 @@ var matricula = {
             completed: function (){
                 
                 // Consultar CEP
-                $.post("ajax/consultar-cep.php", "cep="+$(this).val(), function (json){                    
+                $.post("ajax/ajax-cep.php", "cep="+$(this).val(), function (json){                    
                     switch (json.resultado) {
                         
                         // Logradouro completo 
@@ -71,7 +71,7 @@ var matricula = {
             event.preventDefault();
                         
             if ( me.validateFields() ) {                
-                $.post("ajax/salvar-matricula.php", $(this).serialize(), function (html){
+                $.post("ajax/ajax-matricula.php", $(this).serialize(), function (html){
                     
                     $("#sub-content").fadeOut(500, function (){                        
                         $(this).html(html).slideDown(500);

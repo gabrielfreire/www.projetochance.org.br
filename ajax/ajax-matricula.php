@@ -1,6 +1,6 @@
 <?php
 /*
- * Salvar matrícula
+ * Salvar formulário de matrícula
  */
 
 # Aluno

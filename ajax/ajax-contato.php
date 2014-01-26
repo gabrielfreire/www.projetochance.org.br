@@ -1,6 +1,6 @@
 <?php
 /*
- * Salvar contato
+ * Salvar formulário de contato
  */
 
 # Aluno

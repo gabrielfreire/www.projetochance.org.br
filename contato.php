@@ -48,6 +48,9 @@
                         </table>
                     </form>
                     
+                    <p>11 2866-3441<br/>
+                    <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a></p>
+                    
                 </div><!--sub-content-->        
             </div><!--content-->
 
