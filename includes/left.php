@@ -4,7 +4,7 @@
     <!-- Menu lateral -->
     <ol id="nav-left">
         <li><a href="vestibulares.html">Vestibulares</a></li>
-        <li><a href="enem.html">ENEM</a></li>
+        <li><a href="enem.html">Enem</a></li>
         <li><a href="atualidades.html">Atualidades</a></li>
         <li><a href="depoimentos.html">Depoimentos</a></li>
     </ol>

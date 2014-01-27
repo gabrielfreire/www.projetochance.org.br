@@ -16,7 +16,7 @@
                 <?php include "./includes/left.php"; ?>                
                 
                 <div id="sub-content">
-                    <h1>Provas do ENEM 2010</h1>
+                    <h1>Provas do Enem 2010</h1>
                     
                     <div class="box-link">
                         <h4>1º dia</h4>
