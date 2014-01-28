@@ -206,7 +206,7 @@ object.banner {
 
 /* Galeria de fotos */
 .thumbnails {
-    margin-left: 4px;
+    margin-left: 6px;
     display: table;
 }
 
