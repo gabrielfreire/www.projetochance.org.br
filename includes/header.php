@@ -10,7 +10,7 @@
     <label id="saudacao">Sábado, 20 de setembro de 2014</label>
     
     <a href="index.html">
-        <img src="./images/logo-original.png" alt="Logotipo" title="Projeto Chance" id="logo" />
+        <img src="./images/site/logo-original.png" alt="Logotipo" title="Projeto Chance" id="logo" />
     </a>
     
     <nav>

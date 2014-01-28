@@ -28,7 +28,7 @@
                     <td><input type="text" name="senha" /></td>
                 </tr>
                 <tr>
-                    <td><a href="#"><label>Entrar</label> <img src="images/login.jpg" alt="" /></a></td>
+                    <td><a href="#"><label>Entrar</label> <img src="images/site/login.jpg" alt="" /></a></td>
                 </tr>
             </table>
         </form>        
