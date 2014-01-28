@@ -203,3 +203,29 @@ object.banner {
     display: inline-block;
     margin:0 8px !important; /* margin apenas para essa div */
 }
+
+/* Galeria de fotos */
+.thumbnails {
+    margin-left: 4px;
+    display: table;
+}
+
+.thumbnails:first-of-type {
+    margin-top: 10px;
+}
+
+.thumbnails a {
+    display: table-cell;
+    
+}
+
+.thumbnails img {    
+    opacity: 0.7;
+    max-width: 135px;
+    max-height: 100px;
+    margin: 10px 3px;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}
