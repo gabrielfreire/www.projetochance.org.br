@@ -217,7 +217,7 @@ object.banner {
 }
 
 .box-link a {
-    background: url("../images/site/salvar.gif") no-repeat left;
+    background: url("../images/salvar.gif") no-repeat left;
     padding: 5px 27px;
     display: inline-block;
     margin:0 8px !important; /* margin apenas para essa div */

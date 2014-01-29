@@ -32,7 +32,7 @@ $aluno->insert();
 
 <blockquote class="box-msg">
     <p>Obrigado por se matricular no Projeto Chance. Aguarde, entraremos em contato!</p>
-    <img src="images/site/logo-original.png" alt="" />
+    <img src="images/logo-original.png" alt="" />
     <p>11 2866-3441<br/>
         <a href="mailto:cursinho@projetochance.org.br">cursinho@projetochance.org.br</a></p>
 </blockquote>

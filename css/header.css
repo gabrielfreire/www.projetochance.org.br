@@ -20,7 +20,7 @@
 /************************************************************/
 body {
     font: normal .80em arial, sans-serif;
-    background: #FFF url("../images/site/fundo.png");
+    background: #FFF url("../images/fundo.png");
     color: #444;
 }
 
@@ -142,7 +142,7 @@ span.sf-arrow {
     top: 20px;
     right: 5px;
     display: block;
-    background: url("../images/site/arrows-white.png") no-repeat 0 0;
+    background: url("../images/arrows-white.png") no-repeat 0 0;
     overflow: hidden; /* Certificando para que não transborde no IE6, expandindo a caixa */
     font-size: 1px;
 }
@@ -205,7 +205,7 @@ ul#nav ul li a:hover {
 
 #box-buscar input[type=text] {
     border: none; 
-    background: url("../images/site/lupa.png") no-repeat #FFF;
+    background: url("../images/lupa.png") no-repeat #FFF;
     color: #017ec5;
     width: 50px;
     height: 22px;
@@ -215,7 +215,7 @@ ul#nav ul li a:hover {
 
 #box-buscar input[type=submit] {
     border: none;
-    background: url("../images/site/btn-ok.png") no-repeat;
+    background: url("../images/btn-ok.png") no-repeat;
     cursor: pointer;
     width: 22px;
     height: 22px;
