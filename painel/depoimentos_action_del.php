@@ -6,15 +6,15 @@
  */
 session_start();
 
-require_once '../_classes/DB.class.php';
+require_once './classes/DB.class.php';
 
 $id_depoimento = isset($_GET['id']) ? $_GET['id'] : null;
 
 
-$mysqli = DB::conectar();
+$pdo = DBpdo::connection();
         
 $sql = "DELETE FROM depoimentos WHERE id = {$id_depoimento}";
-$mysqli->query($sql) or die($mysqli->error);
+$pdo->query($sql) or die($pdo->error);
 
 header("Location:depoimentos.php");
 ?>

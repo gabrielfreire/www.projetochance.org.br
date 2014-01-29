@@ -1,14 +1,9 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 session_start();
 
-require_once '../_classes/Session.class.php';
-require_once '../_classes/DB.class.php';
-require_once '../_classes/View.class.php';
+require_once './classes/Session.class.php';
+require_once './classes/DBpdo.class.php';
 
 
 if (!Session::getIdUsuario()) {
@@ -17,13 +12,11 @@ if (!Session::getIdUsuario()) {
 
 
 
-$view = new View();
-
 # Busca
-$busca = isset($_POST['bt_busca']) ? $_POST['bt_busca'] : null;
+$busca = isset($_POST['busca']) ? $_POST['busca'] : null;
 
 # Conexao
-$mysqli = DB::conectar();
+$pdo = DBpdo::connection();
 
 /**
  * Paginacao
@@ -32,29 +25,33 @@ $limite = 11;
 $pagina = isset($_GET['pag']) ? $_GET['pag'] : 1;
 
 $inicio = ($pagina * $limite) - $limite;
+$total_paginas = 1;
 
-
-if ($busca) {    
-    $nome  = $_POST['txt_nome'];
-    $email = $_POST['txt_email'];
-    $ra    = $_POST['txt_ra'];
+if ( $busca ) {    
+    $nome  = $_POST['nome'];
+    $email = $_POST['email'];
+    $ra    = $_POST['ra'];
     
-    $sql = "SELECT * FROM view_aluno WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND ra LIKE '%{$ra}%'";
-    $view->aluno = $mysqli->query($sql);
+    
+    $sql = "SELECT * FROM aluno WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND registro LIKE '%{$ra}%'";
+    $stmte = $pdo->prepare($sql);
+    $stmte->bindParam(1,  $nome,  PDO::PARAM_STR);
+    $stmte->bindParam(2,  $email, PDO::PARAM_STR);
+    $stmte->bindParam(3,  $ra,    PDO::PARAM_INT);
+    $stmte->execute();
 }
 else{
-    $sql = "SELECT * FROM view_aluno ORDER BY id DESC LIMIT {$inicio}, {$limite}";
-    $view->aluno = $mysqli->query($sql);
+    $sql = "SELECT * FROM aluno ORDER BY id DESC LIMIT {$inicio}, {$limite}";
+    $stmte = $pdo->prepare($sql);
+    $stmte->execute();
     
-    $sql = "SELECT id FROM view_aluno";
-    $total = $mysqli->query($sql)->num_rows;
-    
-    $view->total_paginas = ceil($total/$limite);
-    $view->pagina = $pagina;
+    $sql = "SELECT COUNT(*) AS total FROM aluno";
+    $stmte2 = $pdo->prepare($sql);
+    $stmte2->execute();
+    $rs = $stmte2->fetch(PDO::FETCH_OBJ);
+
+    $total_paginas = ceil((int)$rs->total/$limite);
 }
-
-
-require_once 'views/alunos.php';
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -62,7 +59,7 @@ require_once 'views/alunos.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>..: Projeto Chance :..</title>
-<link href="_css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     function ConfirmDel(nome) {  
         if ( confirm("Excluir permanentemente o aluno "+nome+"?") ){
@@ -86,34 +83,24 @@ require_once 'views/alunos.php';
                         <td></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="txt_nome" /></td>
-                        <td><input type="text" name="txt_email" /></td>
-                        <td><input type="text" name="txt_ra" /></td>
-                        <td><input type="submit" value=" buscar " name="bt_busca" /></td>
+                        <td><input type="text" name="nome" /></td>
+                        <td><input type="text" name="email" /></td>
+                        <td><input type="text" name="ra" /></td>
+                        <td><input type="submit" value=" buscar " name="busca" /></td>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <?php while ($aluno = $view->aluno->fetch_object()): ?>
-                    
-                        <?php 
-                        # Os que nao foram vistos deixa marcado em verde
-                        if ($aluno->status == 0) {
-                            $style = 'style="background: #c7f1c8;"';
-                        }
-                        else{
-                            $style = null;
-                        }
-                        ?>
-                    
-                        <tr <?php echo $style ?>>                    
+                    <?php while ($aluno = $stmte->fetch(PDO::FETCH_OBJ)): ?>
+          
+                        <tr>                    
                             <td>
                                 <a href="aluno_form.php?id=<?php echo $aluno->id ?>" id="aluno">
                                     <?php echo $aluno->nome ?>
                                 </a>
                             </td>
                             <td><?php echo $aluno->email ?></td>
-                            <td><?php echo $aluno->ra ?></td>
+                            <td><?php echo $aluno->registro ?></td>
                             <td>
                                 <a href="alunos_action_del.php?id=<?php echo $aluno->id ?>" class="link"
                                    onClick="return ConfirmDel('<?php echo $aluno->nome ?>');">
@@ -127,10 +114,10 @@ require_once 'views/alunos.php';
                 <tfoot>
                     <tr>
                         <td colspan="4">
-                            <?php for($i=1; $i <= $view->total_paginas; $i++): ?>
+                            <?php for($i=1; $i <= $total_paginas; $i++): ?>
 
                                 <?php 
-                                if ($view->pagina == $i): 
+                                if ($pagina == $i): 
                                     $style = 'style="background:#000"'; 
                                 else:
                                     $style = null;

@@ -104,4 +104,19 @@ class Aluno {
         $stmte->execute();
     }
     
+    
+    /*
+     * Registro do aluno
+     */
+    static function gerarRA($quant=1, $min=10000, $max=90000){        
+        date_default_timezone_set('America/Sao_Paulo');
+        $numero = range($min,$max);
+
+        shuffle($numero);
+        $arr = array_slice($numero, 0, $quant);
+        $ra = date("Y").$arr[0];
+
+        return $ra;
+    }
+    
 }

@@ -6,9 +6,9 @@
  */
 session_start();
 
-require_once '../_classes/Session.class.php';
-require_once '../_classes/DB.class.php';
-require_once '../_classes/View.class.php';
+require_once './classes/Session.class.php';
+require_once './classes/DB.class.php';
+require_once './classes/View.class.php';
 
 
 if (!Session::getIdUsuario()) {
@@ -17,13 +17,13 @@ if (!Session::getIdUsuario()) {
 
 
 
-$view = new View();
+
 
 # Busca
 $busca = isset($_POST['bt_busca']) ? $_POST['bt_busca'] : null;
 
 # Conexao
-$mysqli = DB::conectar();
+$pdo = DBpdo::connection();
 
 /**
  * Paginacao
@@ -40,17 +40,17 @@ if ($busca) {
     $data  = $_POST['txt_data'];
     
     $sql = "SELECT * FROM contatos WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND data LIKE '%{$data}%'";
-    $view->contato = $mysqli->query($sql);
+    $contato = $pdo->query($sql);
 }
 else{
     $sql = "SELECT * FROM contatos ORDER BY id DESC LIMIT {$inicio}, {$limite}";
-    $view->contato = $mysqli->query($sql);
+    $contato = $pdo->query($sql);
     
     $sql = "SELECT id FROM contatos";
-    $total = $mysqli->query($sql)->num_rows;
+    $total = $pdo->query($sql)->num_rows;
     
-    $view->total_paginas = ceil($total/$limite);
-    $view->pagina = $pagina;
+    $total_paginas = ceil($total/$limite);
+    $pagina = $pagina;
 }
 
 require_once 'views/contatos.php';
@@ -61,7 +61,7 @@ require_once 'views/contatos.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>..: Projeto Chance :..</title>
-<link href="_css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     function ConfirmDel(nome) {  
         if ( confirm("Excluir permanentemente o contato de "+nome+"?") ){
@@ -93,7 +93,7 @@ require_once 'views/contatos.php';
                 </thead>
 
                 <tbody>
-                    <?php while ($contato = $view->contato->fetch_object()): ?>
+                    <?php while ($contato = $contato->fetch_object()): ?>
                     
                         <?php 
                         # Os que nao foram vistos deixa marcado em verde
@@ -126,10 +126,10 @@ require_once 'views/contatos.php';
                 <tfoot>
                     <tr>
                         <td colspan="4">
-                            <?php for($i=1; $i <= $view->total_paginas; $i++): ?>
+                            <?php for($i=1; $i <= $total_paginas; $i++): ?>
 
                                 <?php 
-                                if ($view->pagina == $i): 
+                                if ($pagina == $i): 
                                     $style = 'style="background:#000"'; 
                                 else:
                                     $style = null;

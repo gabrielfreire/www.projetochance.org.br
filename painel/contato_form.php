@@ -6,12 +6,12 @@
  */
 session_start();
 
-require_once '../_classes/Session.class.php';
-require_once '../_classes/DB.class.php';
-require_once '../_classes/ReceberDados.class.php';
-require_once '../_classes/HTMLcombo.class.php';
-require_once '../_classes/FuncAux.class.php';
-require_once '../_classes/View.class.php';
+require_once './classes/Session.class.php';
+require_once './classes/DB.class.php';
+require_once './classes/ReceberDados.class.php';
+require_once './classes/HTMLcombo.class.php';
+require_once './classes/FuncAux.class.php';
+require_once './classes/View.class.php';
 
 
 if (!Session::getIdUsuario()) {
@@ -32,22 +32,22 @@ $recDados->method = ReceberDados::POST;
 $recebe_form      = $recDados->getVariavel("bt");
 
 # View
-$view = new View();
+
 
 
 # Conexao
-$mysqli = DB::conectar();
+$pdo = DBpdo::connection();
 
 
 if ($id_contato && !$recebe_form) {
     $sql  = "SELECT * FROM contatos WHERE id = {$id_contato}";
     
-    $view->contato = $mysqli->query($sql)->fetch_object();    
+    $contato = $pdo->query($sql)->fetch_object();    
     
     # Verifica se ja foi visto, se nao foi(status 0) edita para visualizado(status 1)
-    if ($view->contato->status == 0) {
+    if ($contato->status == 0) {
         $sql  = "UPDATE contatos SET status = 1 WHERE id = ".$id_contato;
-        $mysqli->query($sql);
+        $pdo->query($sql);
     }
 }
 
@@ -63,12 +63,12 @@ if ($recebe_form) {
     $sql .= "mensagem = '$mensagem' ";
     $sql .= "WHERE id = ".$id_contato;
 
-    $mysqli->query($sql);
+    $pdo->query($sql);
 
     header("Location:contatos.php");
 }
 
-$mysqli->close();
+$pdo->close();
 
 
 require_once 'views/contato_form.php';
@@ -79,11 +79,11 @@ require_once 'views/contato_form.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>..: Projeto Chance :..</title>
-<link href="_css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     function ConfirmDel(nome) {  
         if ( confirm("Excluir permanentemente o contato de "+nome+"?") ){
-                window.location.href = "contatos_action_del.php?id=<?php echo $view->contato->id ?>";
+                window.location.href = "contatos_action_del.php?id=<?php echo $contato->id ?>";
         }else{
                 return false;  
         }  	
@@ -98,38 +98,38 @@ require_once 'views/contato_form.php';
 	
     <body>
 
-        <form action="contato_form.php?id=<?php echo $view->contato->id ?>" method="post" id="form_contato">		
+        <form action="contato_form.php?id=<?php echo $contato->id ?>" method="post" id="form_contato">		
             <table>
                 <tr>
                     <td><label>* Nome:</label></td>
                     <td>
-                        <input type="text" name="txt_nome" value="<?php echo $view->contato->nome; ?>" maxlength="30" />				
+                        <input type="text" name="txt_nome" value="<?php echo $contato->nome; ?>" maxlength="30" />				
                     </td>
                 </tr>
                 <tr>
                     <td><label>* E-mail:</label></td>
                     <td>
-                        <input type="text" name="txt_email" value="<?php echo $view->contato->email; ?>" maxlength="50" />
+                        <input type="text" name="txt_email" value="<?php echo $contato->email; ?>" maxlength="50" />
                     </td>
                 </tr>
                 <tr>
                     <td><label>* Assunto</label></td>
                     <td>
-                        <input type="text" name="txt_assunto" value="<?php echo $view->contato->assunto; ?>" maxlength="50" />
+                        <input type="text" name="txt_assunto" value="<?php echo $contato->assunto; ?>" maxlength="50" />
                     </td>
                 </tr>
                 <tr>
                     <td><label>* Mensagem:</label></td>
                     <td>
-                        <textarea name="txt_msg"><?php echo $view->contato->mensagem; ?></textarea>   
+                        <textarea name="txt_msg"><?php echo $contato->mensagem; ?></textarea>   
                     </td>
                 </tr>      
             </table>
         
             <div>
-                <h4>Contato efetuado no dia <?php echo $view->contato->data ?> !</h4>
-                <input type="button" value="responder" onClick="return window.location.href = 'mailto:<?php echo $view->contato->email ?>'" />
-                <input type="button" value="excluir" onClick="return ConfirmDel('<?php echo $view->contato->nome ?>');" />
+                <h4>Contato efetuado no dia <?php echo $contato->data ?> !</h4>
+                <input type="button" value="responder" onClick="return window.location.href = 'mailto:<?php echo $contato->email ?>'" />
+                <input type="button" value="excluir" onClick="return ConfirmDel('<?php echo $contato->nome ?>');" />
                 <input type="submit" name="bt" value="salvar" />
             </div>
             

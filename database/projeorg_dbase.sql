@@ -35,3 +35,12 @@ CREATE TABLE IF NOT EXISTS contato (
     assunto varchar(200) not null,
     mensagem text not null
 ) DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE IF NOT EXISTS usuario (
+    id int primary key auto_increment not null,
+    nome varchar(200) not null,
+    cpf varchar(14) default null,
+    email varchar(200) not null,
+    senha varchar(50) not null
+) DEFAULT CHARSET=utf8;

@@ -1,18 +1,6 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-session_start();
-
-require_once '../_classes/View.class.php';
-
-
-$view = new View();
-$view->erro = isset($_GET['erro']) ? $_GET['erro'] : null;
-
-require_once 'views/login.php';
+$erro = isset($_GET['erro']) ? $_GET['erro'] : null;
 ?>
 
 
@@ -21,8 +9,7 @@ require_once 'views/login.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>..: Projeto Chance :..</title>
-<link href="_css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="_scripts/java_script.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 	
     <body>
@@ -31,19 +18,19 @@ require_once 'views/login.php';
             <form action="login_action.php" method="post">
                 <table border="0">
                     <tr>                    
-                        <td><label for="txt_login">Login</label></td>
+                        <td><label for="login">Email</label></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="txt_login" autofocus /></td>
+                        <td><input type="text" name="login" autofocus /></td>
                     </tr>
                     <tr>                    
-                        <td><label for="txt_senha">Senha</label></td>
+                        <td><label for="senha">Senha</label></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="txt_senha" /></td>
+                        <td><input type="password" name="senha" /></td>
                     </tr>
                     
-                    <?php if ($view->erro): ?>
+                    <?php if ($erro): ?>
                         <tr>
                             <td><label id="erro">Dados inválidos</label></td>
                         </tr>

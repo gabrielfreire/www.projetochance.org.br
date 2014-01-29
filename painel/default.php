@@ -1,25 +1,17 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
+
 session_start();
-
-require_once '../_classes/Session.class.php';
-require_once '../_classes/View.class.php';
-
+require_once './classes/Session.class.php';
 
 if (!Session::getIdUsuario()) {
     header("Location:index.php");
 }
 
-
-
-$view = new View();
-$view->pagina = isset($_GET['pg']) ? $_GET['pg'] : null;
-
-require_once 'views/default.php';
+$pagina = isset($_GET['pg']) ? $_GET['pg'] : null;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -27,8 +19,7 @@ require_once 'views/default.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>..: Projeto Chance :..</title>
-<link href="_css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="_scripts/java_script.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 	
     <body>
@@ -41,11 +32,9 @@ require_once 'views/default.php';
             background: #aaa7a7;"
             '; 
         
-        switch ($view->pagina): 
-            case "alunos.php":      $style1 = $css; break;            
-            case "contatos.php":    $style2 = $css; break;            
-            case "depoimentos.php": $style3 = $css; break;             
-        endswitch; 
+        $style1 = $pagina == "alunos.php"      ? $css : null;
+        $style2 = $pagina == "contatos.php"    ? $css : null;
+        $style3 = $pagina == "depoimentos.php" ? $css : null;
         
         ?>
         
@@ -54,12 +43,11 @@ require_once 'views/default.php';
                 <li <?php echo $style1 ?>><a href="default.php?pg=alunos.php">Alunos</a></li>
                 <li <?php echo $style2 ?>><a href="default.php?pg=contatos.php">Contatos</a></li>
                 <li <?php echo $style3 ?>><a href="default.php?pg=depoimentos.php">Depoimentos</a></li>
-<!--                <li><a href="default.php?pg=config.php">Configuraçoes</a></li>-->
             </ul>
 
             <a href="logout.php" id="logout">Logout</a>
         
-            <iframe id="caixa" src="<?php echo $view->pagina ?>" scrolling="auto"></iframe>
+            <iframe id="caixa" src="<?php echo $pagina ?>" scrolling="auto"></iframe>
         </div>
         
     </body>

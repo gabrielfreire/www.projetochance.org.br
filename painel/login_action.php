@@ -5,35 +5,29 @@
  */
 session_start();
 
-require_once '../_classes/Session.class.php';
-require_once '../_classes/DB.class.php';
+require_once './classes/Session.class.php';
+require_once './classes/DBpdo.class.php';
 
-$login = isset($_POST['txt_login']) ? $_POST['txt_login'] : null;
-$senha = isset($_POST['txt_senha']) ? $_POST['txt_senha'] : null;
+$login = isset($_POST['login']) ? $_POST['login'] : null;
+$senha = isset($_POST['senha'])  ? $_POST['senha'] : null;
 
-$mysqli = DB::conectar();
+$pdo = DBpdo::connection();
 
-$sql = "SELECT * FROM usuarios WHERE login = '{$login}' && senha = '{$senha}' LIMIT 1";
-$user = $mysqli->query($sql);
+$stmte = $pdo->prepare("SELECT * FROM usuario WHERE email = ? && senha = ? LIMIT 1");
+$stmte->bindParam(1,  $login, PDO::PARAM_STR);
+$stmte->bindParam(2,  $senha, PDO::PARAM_STR);
+$stmte->execute();
 
-if ( $user->num_rows ) {
-    
-    $user = $user->fetch_object();
+# salvar objeto
+$usuario = $stmte->fetch(PDO::FETCH_OBJ);
 
-    Session::setIdUsuario($user->id);
-    Session::setNomeUsuario($user->nome);
+if ( $usuario ) {    
+    Session::setIdUsuario($usuario->id);
+    Session::setNomeUsuario($usuario->nome);
 
     header("Location:default.php");
 }
 else{
     
-    if ($mysqli->errno) {
-        echo $mysqli->errno." - ".$mysqli->error;
-    }
-    else{
-        header("Location:login.php?erro=1");
-    }
+    header("Location:login.php?erro=1");
 }
-
-$mysqli->close();
-?>
