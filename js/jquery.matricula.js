@@ -9,8 +9,7 @@
 
 var matricula = {
     
-    init: function (){
-        
+    init: function (){        
         this.masks();
         this.onSubmit();
     },

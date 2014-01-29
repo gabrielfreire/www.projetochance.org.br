@@ -9,8 +9,7 @@
 
 var contato = {
     
-    init: function (){
-        
+    init: function (){        
         this.masks();
         this.onSubmit();
     },

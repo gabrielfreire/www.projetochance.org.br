@@ -71,25 +71,9 @@
             <?php include "./includes/footer.php"; ?>            
         </div>        
         
+        <!-- js do fancybox, manter a sequência -->
         <script src="js/fancy/jquery.fancybox.js?v=2.1.0" type="text/javascript"></script>	
         <script src="js/fancy/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>	
-        <script type="text/javascript">
-            
-            /*
-             * Ativar fancybox
-             */
-            $("a.rel", "div.thumbnails").fancybox({
-                openEffect : 'elastic',
-                openSpeed  : 150,
-                closeEffect : 'elastic',
-                closeSpeed  : 350, 
-                arrows: true,
-                helpers : {
-                    title : {
-                        type : 'float'//float, over, outside,inside
-                    }
-                }                
-            });
-        </script>
+        <script src="js/jquery.galeria-fotos.js" type="text/javascript"></script>
     </body>
 </html>

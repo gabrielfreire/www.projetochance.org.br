@@ -30,8 +30,10 @@
         </ul>
         
         <div id="box-buscar">
-            <input type="text" name="busca" />
-            <input type="submit" value="" title="Buscar no Projeto Chance" />
+            <form action="busca.html" method="get">
+                <input type="text" name="s" />
+                <input type="submit" value="" title="Buscar no Projeto Chance" />
+            </form>
         </div>
     </nav>
     

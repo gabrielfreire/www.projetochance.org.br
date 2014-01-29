@@ -150,6 +150,25 @@
 /* Páginas */
 /************************************************************/
 
+/* Busca */
+.box-search {
+    border-bottom:solid 1px #017ec5;
+    margin: 30px 8px;
+}
+
+.box-search a {
+    text-decoration: none;
+}
+
+.box-search a:hover {    
+    text-decoration: underline;
+}
+
+.box-search p {
+    font-weight: normal;
+    
+}
+
 /* Home */
 object.banner {
     width: 600px;
@@ -216,7 +235,6 @@ object.banner {
 
 .thumbnails a {
     display: table-cell;
-    
 }
 
 .thumbnails img {    
