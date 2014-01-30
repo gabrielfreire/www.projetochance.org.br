@@ -4,7 +4,6 @@
  * 
  */
 session_start();
-
 require_once './classes/DBpdo.class.php';
 
 $id_aluno = isset($_GET['id']) ? $_GET['id'] : null;

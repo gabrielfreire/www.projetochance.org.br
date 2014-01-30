@@ -34,7 +34,6 @@ $pagina = isset($_GET['pg']) ? $_GET['pg'] : null;
         
         $style1 = $pagina == "alunos.php"      ? $css : null;
         $style2 = $pagina == "contatos.php"    ? $css : null;
-        $style3 = $pagina == "depoimentos.php" ? $css : null;
         
         ?>
         
@@ -42,7 +41,6 @@ $pagina = isset($_GET['pg']) ? $_GET['pg'] : null;
             <ul>
                 <li <?php echo $style1 ?>><a href="default.php?pg=alunos.php">Alunos</a></li>
                 <li <?php echo $style2 ?>><a href="default.php?pg=contatos.php">Contatos</a></li>
-                <li <?php echo $style3 ?>><a href="default.php?pg=depoimentos.php">Depoimentos</a></li>
             </ul>
 
             <a href="logout.php" id="logout">Logout</a>

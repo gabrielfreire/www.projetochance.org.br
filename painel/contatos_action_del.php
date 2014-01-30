@@ -1,20 +1,17 @@
 <?php
-
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 session_start();
+require_once './classes/DBpdo.class.php';
 
-require_once './classes/DB.class.php';
-
-$id_contato = isset($_GET['id']) ? $_GET['id'] : null;
+$id_aluno = isset($_GET['id']) ? $_GET['id'] : null;
 
 
 $pdo = DBpdo::connection();
-
-$sql = "DELETE FROM contatos WHERE id = {$id_contato}";
-$pdo->query($sql) or die($pdo->error);
+        
+$stmte = $pdo->prepare("DELETE FROM contato WHERE id = ?");
+$stmte->bindParam(1, $id_aluno,  PDO::PARAM_INT);
+$stmte->execute();
 
 header("Location:contatos.php");
-?>

@@ -1,14 +1,8 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 session_start();
-
 require_once './classes/Session.class.php';
-require_once './classes/DB.class.php';
-require_once './classes/View.class.php';
+require_once './classes/DBpdo.class.php';
 
 
 if (!Session::getIdUsuario()) {
@@ -16,11 +10,8 @@ if (!Session::getIdUsuario()) {
 }
 
 
-
-
-
 # Busca
-$busca = isset($_POST['bt_busca']) ? $_POST['bt_busca'] : null;
+$busca = isset($_POST['busca']) ? $_POST['busca'] : null;
 
 # Conexao
 $pdo = DBpdo::connection();
@@ -32,28 +23,33 @@ $limite = 11;
 $pagina = isset($_GET['pag']) ? $_GET['pag'] : 1;
 
 $inicio = ($pagina * $limite) - $limite;
+$total_paginas = 1;
 
-
-if ($busca) {    
-    $nome  = $_POST['txt_nome'];
-    $email = $_POST['txt_email'];
-    $data  = $_POST['txt_data'];
+if ( $busca ) {    
+    $nome  = $_POST['nome'];
+    $email = $_POST['email'];
+    $data  = $_POST['data'];
     
-    $sql = "SELECT * FROM contatos WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND data LIKE '%{$data}%'";
-    $contato = $pdo->query($sql);
+    
+    $sql = "SELECT * FROM contato WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND data LIKE '%{$data}%'";
+    $stmte = $pdo->prepare($sql);
+    $stmte->bindParam(1,  $nome,  PDO::PARAM_STR);
+    $stmte->bindParam(2,  $email, PDO::PARAM_STR);
+    $stmte->bindParam(3,  $ra,    PDO::PARAM_INT);
+    $stmte->execute();
 }
 else{
-    $sql = "SELECT * FROM contatos ORDER BY id DESC LIMIT {$inicio}, {$limite}";
-    $contato = $pdo->query($sql);
+    $sql = "SELECT * FROM contato ORDER BY id DESC LIMIT {$inicio}, {$limite}";
+    $stmte = $pdo->prepare($sql);
+    $stmte->execute();
     
-    $sql = "SELECT id FROM contatos";
-    $total = $pdo->query($sql)->num_rows;
-    
-    $total_paginas = ceil($total/$limite);
-    $pagina = $pagina;
-}
+    $sql = "SELECT COUNT(*) AS total FROM contato";
+    $stmte2 = $pdo->prepare($sql);
+    $stmte2->execute();
+    $rs = $stmte2->fetch(PDO::FETCH_OBJ);
 
-require_once 'views/contatos.php';
+    $total_paginas = ceil((int)$rs->total/$limite);
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -85,27 +81,17 @@ require_once 'views/contatos.php';
                         <td></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="txt_nome" /></td>
-                        <td><input type="text" name="txt_email" /></td>
-                        <td><input type="text" name="txt_data" /></td>
-                        <td><input type="submit" value=" buscar " name="bt_busca" /></td>
+                        <td><input type="text" name="nome" /></td>
+                        <td><input type="text" name="email" /></td>
+                        <td><input type="text" name="data" /></td>
+                        <td><input type="submit" value=" buscar " name="busca" /></td>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <?php while ($contato = $contato->fetch_object()): ?>
+                    <?php while ($contato = $stmte->fetch(PDO::FETCH_OBJ)): ?>
                     
-                        <?php 
-                        # Os que nao foram vistos deixa marcado em verde
-                        if ($contato->status == 0) {
-                            $style = 'style="background: #c7f1c8;"';
-                        }
-                        else{
-                            $style = null;
-                        }
-                        ?>
-                    
-                        <tr <?php echo $style ?>>
+                        <tr>
                             <td>
                                 <a href="contato_form.php?id=<?php echo $contato->id ?>" id="aluno">
                                     <?php echo $contato->nome ?>

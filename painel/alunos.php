@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 require_once './classes/Session.class.php';
 require_once './classes/DBpdo.class.php';
 
