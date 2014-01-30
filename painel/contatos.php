@@ -84,7 +84,7 @@ else{
                         <td><input type="text" name="nome" /></td>
                         <td><input type="text" name="email" /></td>
                         <td><input type="text" name="data" /></td>
-                        <td><input type="submit" value=" buscar " name="busca" /></td>
+                        <td><input type="submit" value="buscar" name="busca" /></td>
                     </tr>
                 </thead>
 

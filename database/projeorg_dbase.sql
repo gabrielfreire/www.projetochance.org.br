@@ -28,6 +28,14 @@ CREATE TABLE IF NOT EXISTS aluno (
 ) DEFAULT CHARSET=utf8;
 
 
+CREATE TABLE IF NOT EXISTS depoimento (
+    id int primary key auto_increment not null,
+    data varchar(20) not null,
+    mensagem text not null,
+    id_aluno int not null
+) DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE IF NOT EXISTS contato (
     id int primary key auto_increment not null,
     data varchar(20) not null,
@@ -46,5 +54,8 @@ CREATE TABLE IF NOT EXISTS usuario (
     email varchar(200) not null,
     senha varchar(50) not null
 ) DEFAULT CHARSET=utf8;
+
+ALTER TABLE depoimento
+    ADD CONSTRAINT FOREIGN KEY(id_aluno) REFERENCES aluno(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 INSERT INTO usuario(nome, email, senha) VALUES ("Misael", "misah@ig.com.br", "Pr0jet0_Ch@nce");
