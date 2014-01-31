@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS usuario (
     senha varchar(50) not null
 ) DEFAULT CHARSET=utf8;
 
+
 ALTER TABLE depoimento
     ADD CONSTRAINT FOREIGN KEY(id_aluno) REFERENCES aluno(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
