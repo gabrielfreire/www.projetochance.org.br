@@ -4,8 +4,6 @@
  * Cabeçalho do site
  */
 
-# Iniciar session
-session_start();
 ?>
 
 <header>

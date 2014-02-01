@@ -55,7 +55,7 @@ ol#nav-left li a:hover {
     color: #666;
 }
 
-#login input[type=text] {
+#login input[type=text], #login input[type=password] {
     border: solid 1px #CCC;
     margin-top: 2px;
     margin-bottom: 10px;

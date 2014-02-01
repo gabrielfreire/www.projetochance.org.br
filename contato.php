@@ -18,7 +18,7 @@
                 <div id="sub-content">
                     <h1>Contato</h1>
                     
-                    <form action="#" method="post" id="form" >
+                    <form action="#" method="post" id="form-contato" >
                         <table class="table-contato">      
                             <tr>
                                 <td><label>*Nome</label></td>

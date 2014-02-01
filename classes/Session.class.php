@@ -40,14 +40,4 @@ abstract class Session {
             return $_SESSION['aluno']['email'];
         }
     } 
-    
-    static function setUltimoAcessoAluno($ult_acesso){        
-        $_SESSION['aluno']['ultimo_acesso'] = $ult_acesso;
-    } 
-    
-    static function getUltimoAcessoAluno(){        
-        if (isset($_SESSION['aluno']['ultimo_acesso'])){
-            return $_SESSION['aluno']['ultimo_acesso'];
-        }
-    } 
 }

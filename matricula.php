@@ -26,7 +26,7 @@ $aluno = new Aluno();
                     <h1>Ficha de matrícula</h1>        
 
 
-                    <form action="#" method="post" id="form" >
+                    <form action="#" method="post" id="form-matricula" >
                          
                         <!-- primeira parte -->
                         <h4>Dados pessoais</h4>

@@ -7,25 +7,26 @@
         <li><a href="enem.html">Enem</a></li>
         <li><a href="atualidades.html">Atualidades</a></li>
         <li><a href="depoimentos.html">Depoimentos</a></li>
+        <li><a href="portal.html">Portal do aluno</a></li>
     </ol>
     
     <!-- Caixa de login -->
     <div id="login">
         <h2>Login do estudante</h2>
         
-        <form action="#" method="post">
+        <form action="portal.html" method="post" id="form-login">
             <table>
                 <tr>
                     <td><span>Email</span></td>                
                 </tr>
                 <tr>
-                    <td><input type="text" name="email" /></td>
+                    <td><input type="text" name="email" id="email" /></td>
                 </tr>
                 <tr>
                     <td><span>Senha</span></td>                
                 </tr>
                 <tr>
-                    <td><input type="text" name="senha" /></td>
+                    <td><input type="password" name="senha" id="senha" /></td>
                 </tr>
                 <tr>
                     <td><a href="#"><label>Entrar</label> <img src="images/login.jpg" alt="" /></a></td>

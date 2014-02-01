@@ -45,6 +45,16 @@ class Aluno {
 
         return (integer)( date("Y").$arr[0] );
     }
+        
+    public function login() {
+        $pdo = DBpdo::connection();
+        $sql = $pdo->prepare("SELECT * FROM aluno WHERE email = ? && senha = ?");
+        $sql->bindParam(1, $this->email);
+        $sql->bindParam(2, $this->senha);
+        $sql->execute();
+
+        return $sql->fetch(PDO::FETCH_OBJ);
+    }
     
     public function insert() {        
         $pdo = DBpdo::connection();
