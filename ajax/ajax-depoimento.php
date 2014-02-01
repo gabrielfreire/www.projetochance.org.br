@@ -25,6 +25,14 @@ $depoimento = $depoimento->getObject();
     <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
 
     <div class="depo-nome"><?php echo $depoimento->nome ?></div>
+    
+    <?php if( $depoimento->id_aluno == Session::getIdAluno() ): ?>
+        <div class="depo-icons">
+            <a href="#">editar</a>
+            <a href="#">excluir</a>
+        </div>
+    <?php endif; ?>
+
     <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
 </div>

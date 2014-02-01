@@ -301,10 +301,6 @@ object.banner {
 /* Caixas para listar os depoimentos */
 .box-depo {
     border-bottom: solid 1px #ebebe4;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
     width: 560px;
     margin: 2px 8px;
     float: left;
@@ -322,6 +318,10 @@ object.banner {
     font-size: 16px;
     margin: 7px 0;
     float: left;
+}
+
+.depo-icons {
+    float: right;
 }
 
 .depo-msg {
