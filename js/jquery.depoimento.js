@@ -22,8 +22,17 @@ var depoimentos = {
         $(".depo-btn-alterar").hide();
     },
     
+    onAutoResizePrimeiroDepo: function (){
+        $(".depo-textArea:eq(0)").autoResize(); 
+        
+        //deve vir após autoResize()
+        $(".depo-textArea:eq(0)").hide();
+        $(".depo-btn-alterar:eq(0)").hide();
+    },
+    
     onDepoAdd: function (){
         
+        var me = this;
         $("#btn-new-depo").on("click", function(event){  
             event.preventDefault();            
             
@@ -46,11 +55,7 @@ var depoimentos = {
                /*
                 * AutoResize para depoimento que acabou de ser inserido
                 */
-                $(".depo-textArea:eq(0)").autoResize(); 
-        
-                //deve vir após autoResize()
-                $(".depo-textArea:eq(0)").hide();
-                $(".depo-btn-alterar:eq(0)").hide();
+                me.onAutoResizePrimeiroDepo();
         
            }, "html");            
         });
