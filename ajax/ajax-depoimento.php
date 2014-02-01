@@ -28,11 +28,16 @@ $depoimento = $depoimento->getObject();
     
     <?php if( $depoimento->id_aluno == Session::getIdAluno() ): ?>
         <div class="depo-icons">
-            <a href="#">editar</a>
-            <a href="#">excluir</a>
+            <a href="#" class="depo-editar">editar</a>
+            <a href="#" class="depo-excluir">excluir</a>
         </div>
     <?php endif; ?>
 
-    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
+    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div> 
+    
+    <!-- hide() -->
+    <textarea class="depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
+    <input type="button" value="Alterar" class="depo-btn-alterar" /> 
+                                    
     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
 </div>

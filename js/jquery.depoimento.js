@@ -19,7 +19,7 @@ var depoimentos = {
         
         //deve vir após autoResize()
         $(".depo-textArea").hide();
-        $(".depo-btn-alterar ").hide();
+        $(".depo-btn-alterar").hide();
     },
     
     onDepoAdd: function (){
@@ -30,7 +30,7 @@ var depoimentos = {
             $.post("ajax/ajax-depoimento.php", "mensagem="+$("#mensagem").val(), function (html){
                
                 //apagar textarea e dar foco
-                $("#mensagem").val("").focus();
+                $("#mensagem").val("").height(35).focus();
                 
                 //se for o primeiro depoimento, apaga a mensagem
                 if ( $(".depo-none").is(":visible") ) {
@@ -43,13 +43,22 @@ var depoimentos = {
                         .find(".box-depo:eq(0)")
                             .fadeIn(2000);
                
+               /*
+                * AutoResize para depoimento que acabou de ser inserido
+                */
+                $(".depo-textArea:eq(0)").autoResize(); 
+        
+                //deve vir após autoResize()
+                $(".depo-textArea:eq(0)").hide();
+                $(".depo-btn-alterar:eq(0)").hide();
+        
            }, "html");            
         });
     },
     
     onDepoEditar: function (){        
         
-        $(".depo-editar", "#pai-depos").on("click", function (event){
+        $("#pai-depos").on("click", ".depo-editar", function (event){
             event.preventDefault();            
             var div_pai = $(this).parents(".box-depo");
   
