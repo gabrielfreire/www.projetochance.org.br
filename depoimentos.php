@@ -87,6 +87,7 @@ $depoimentos = $depoimento->getObjects();
                                     
                                     <!-- hide() -->
                                     <textarea class="depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
+                                    <input type="button" value="Cancelar" class="depo-btn-cancelar" />                                    
                                     <input type="button" value="Alterar" class="depo-btn-alterar" />                                    
                                     
                                     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>

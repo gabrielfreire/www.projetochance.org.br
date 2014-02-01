@@ -340,16 +340,23 @@ object.banner {
     float: left;
 }
 
-.depo-btn-alterar {
+.depo-btn-alterar, .depo-btn-cancelar {
     border: solid 1px #FFF;
     background: #CCC;
     color: #FFF;
     cursor: pointer;
-    margin: 1px 32px;
     float: right;
 }
 
-.depo-btn-alterar:hover {
+.depo-btn-alterar {
+    margin: 1px 2px;
+}
+
+.depo-btn-cancelar {
+    margin: 1px 33px 1px 0;
+}
+
+.depo-btn-alterar:hover, .depo-btn-cancelar:hover {
     color: #666;
 }
 

@@ -11,6 +11,7 @@ var depoimentos = {
         this.onDepoAdd();
         this.onDepoEditar();
         this.onDepoExcluir();
+        this.onDepoCancelar();
     },
     
     onAutoResize: function (){
@@ -20,6 +21,7 @@ var depoimentos = {
         //deve vir após autoResize()
         $(".depo-textArea").hide();
         $(".depo-btn-alterar").hide();
+        $(".depo-btn-cancelar").hide();
     },
     
     onAutoResizePrimeiroDepo: function (){
@@ -28,6 +30,7 @@ var depoimentos = {
         //deve vir após autoResize()
         $(".depo-textArea:eq(0)").hide();
         $(".depo-btn-alterar:eq(0)").hide();
+        $(".depo-btn-cancelar:eq(0)").hide();
     },
     
     onDepoAdd: function (){
@@ -63,14 +66,36 @@ var depoimentos = {
     
     onDepoEditar: function (){        
         
+        // Mostrar a edição
         $("#pai-depos").on("click", ".depo-editar", function (event){
             event.preventDefault();            
             var div_pai = $(this).parents(".box-depo");
   
-            div_pai.find(".depo-msg").fadeOut(function (){   
+            div_pai.find(".depo-msg").fadeOut(0, function (){   
                 
-                div_pai.find(".depo-textArea").fadeIn();
-                div_pai.find(".depo-btn-alterar").fadeIn();                
+                div_pai.find(".depo-textArea").fadeIn(0);
+                div_pai.find(".depo-btn-alterar").fadeIn(0);                
+                div_pai.find(".depo-btn-cancelar").fadeIn(0);                
+            });
+        });
+        
+        // Editar
+        $("#pai-depos").on("click", ".depo-btn-alterar", function (){
+            
+        });
+    },
+    
+    onDepoCancelar: function (){
+        
+        $("#pai-depos").on("click", ".depo-btn-cancelar", function (event){
+            event.preventDefault();            
+            var div_pai = $(this).parents(".box-depo");
+  
+            div_pai.find(".depo-msg").fadeIn(0, function (){   
+                
+                div_pai.find(".depo-textArea").fadeOut(0);
+                div_pai.find(".depo-btn-alterar").fadeOut(0);                
+                div_pai.find(".depo-btn-cancelar").fadeOut(0);                
             });
         });
     },
