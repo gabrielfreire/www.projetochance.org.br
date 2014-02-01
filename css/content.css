@@ -250,20 +250,24 @@ object.banner {
 
 /* Depoimentos */
 .box-new-depo {
+    /*border:solid 1px #000;*/
+    border-bottom: solid 1px #ebebe4;
     width: 560px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin: 20px 8px;
     float: left;
 }
 
 .box-new-depo div {
+    /*border:solid 1px #000;*/
     background: #efeded;
     font-weight: bold;
-    padding: 10px 5px;
-    width: 490px;
+    padding: 10px;
+    width: 540px;
 }
 
 .box-new-depo img {
+    /*border:solid 1px #000;*/
     width: 90px;
     height: 80px;
     margin: 10px;
@@ -272,24 +276,26 @@ object.banner {
 
 .box-new-depo textArea {
     border: solid 1px #CCC;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    margin: 10px 0;
+    margin-top: 10px;
     padding: 5px;
-    width: 372px;
-    height: 50px;
+    width: 426px;
+    height: 35px;
     resize: none;
     float: left;
 }
 
-
-/***/
-.box-depo:first-of-type {
-    margin-top: 20px;
+.box-new-depo button {
+    border:solid 1px #FFF;
+    background: #017ec5;
+    color: #FFF;
+    cursor: pointer;
+    margin: 4px 10px;
+    padding: 1px 10px;
+    float: right;
 }
 
+
+/***/
 .box-depo {
     border-bottom: solid 1px #ebebe4;
     -moz-border-radius: 5px;
@@ -308,21 +314,21 @@ object.banner {
     float: left;
 }
 
-.box-depo div {
+.depo-nome {
     font-weight: bold;
     font-size: 16px;
     margin: 7px 0;
     float: left;
 }
 
-.box-depo label {
+.depo-msg {
     color: #666;
     font-size: 16px;
     width: 430px;    
     float: left;
 }
 
-.box-depo span {
+.depo-data {
     color: #999;
     width: 515px;
     font-size: 11px;

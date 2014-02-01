@@ -36,32 +36,44 @@ class Aluno {
     public $nome_cursinho;      # varchar(200)
     
     
+    static function gerarRA($quant=1, $min=10000, $max=90000){        
+        date_default_timezone_set('America/Sao_Paulo');
+        $numero = range($min,$max);
+
+        shuffle($numero);
+        $arr = array_slice($numero, 0, $quant);
+
+        return (integer)( date("Y").$arr[0] );
+    }
+    
     public function insert() {        
         $pdo = DBpdo::connection();
         $stmte = $pdo->prepare("INSERT INTO aluno "
-                . "(nome, estado_civil, cep, endereco, numero, bairro, cidade, estado, "
+                . "(data, registro, nome, estado_civil, cep, endereco, numero, bairro, cidade, estado, "
                 . "data_nasc, rg, cpf, telefone, email, senha, ano_conclusao_em, "
                 . "ano_prova_enem, nome_inst, nome_cursinho) "
-                . "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                . "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-        $stmte->bindParam(1,  $this->nome, PDO::PARAM_STR);
-        $stmte->bindParam(2,  $this->estado_civil, PDO::PARAM_STR);
-        $stmte->bindParam(3,  $this->cep, PDO::PARAM_STR);
-        $stmte->bindParam(4,  $this->endereco, PDO::PARAM_STR);
-        $stmte->bindParam(5,  $this->numero, PDO::PARAM_STR);
-        $stmte->bindParam(6,  $this->bairro, PDO::PARAM_STR);
-        $stmte->bindParam(7,  $this->cidade, PDO::PARAM_STR);
-        $stmte->bindParam(8,  $this->estado, PDO::PARAM_STR);
-        $stmte->bindParam(9,  $this->data_nasc, PDO::PARAM_STR);
-        $stmte->bindParam(10, $this->rg, PDO::PARAM_STR);
-        $stmte->bindParam(11, $this->cpf, PDO::PARAM_STR);
-        $stmte->bindParam(12, $this->telefone, PDO::PARAM_STR);
-        $stmte->bindParam(13, $this->email, PDO::PARAM_STR);
-        $stmte->bindParam(14, $this->senha, PDO::PARAM_STR);
-        $stmte->bindParam(15, $this->ano_conclusao_em, PDO::PARAM_STR);
-        $stmte->bindParam(16, $this->ano_prova_enem, PDO::PARAM_STR);
-        $stmte->bindParam(17, $this->nome_inst, PDO::PARAM_STR);
-        $stmte->bindParam(18, $this->nome_cursinho, PDO::PARAM_STR);        
+        $stmte->bindParam(1,  $this->data, PDO::PARAM_STR);
+        $stmte->bindParam(2,  $this->registro, PDO::PARAM_INT);
+        $stmte->bindParam(3,  $this->nome, PDO::PARAM_STR);
+        $stmte->bindParam(4,  $this->estado_civil, PDO::PARAM_STR);
+        $stmte->bindParam(5,  $this->cep, PDO::PARAM_STR);
+        $stmte->bindParam(6,  $this->endereco, PDO::PARAM_STR);
+        $stmte->bindParam(7,  $this->numero, PDO::PARAM_STR);
+        $stmte->bindParam(8,  $this->bairro, PDO::PARAM_STR);
+        $stmte->bindParam(9,  $this->cidade, PDO::PARAM_STR);
+        $stmte->bindParam(10, $this->estado, PDO::PARAM_STR);
+        $stmte->bindParam(11, $this->data_nasc, PDO::PARAM_STR);
+        $stmte->bindParam(12, $this->rg, PDO::PARAM_STR);
+        $stmte->bindParam(13, $this->cpf, PDO::PARAM_STR);
+        $stmte->bindParam(14, $this->telefone, PDO::PARAM_STR);
+        $stmte->bindParam(15, $this->email, PDO::PARAM_STR);
+        $stmte->bindParam(16, $this->senha, PDO::PARAM_STR);
+        $stmte->bindParam(17, $this->ano_conclusao_em, PDO::PARAM_STR);
+        $stmte->bindParam(18, $this->ano_prova_enem, PDO::PARAM_STR);
+        $stmte->bindParam(19, $this->nome_inst, PDO::PARAM_STR);
+        $stmte->bindParam(20, $this->nome_cursinho, PDO::PARAM_STR);        
         $stmte->execute();
     }
     
@@ -102,21 +114,6 @@ class Aluno {
         
         $stmte->bindParam(1, $this->id, PDO::PARAM_INT);        
         $stmte->execute();
-    }
-    
-    
-    /*
-     * Registro do aluno
-     */
-    static function gerarRA($quant=1, $min=10000, $max=90000){        
-        date_default_timezone_set('America/Sao_Paulo');
-        $numero = range($min,$max);
-
-        shuffle($numero);
-        $arr = array_slice($numero, 0, $quant);
-        $ra = date("Y").$arr[0];
-
-        return $ra;
     }
     
 }

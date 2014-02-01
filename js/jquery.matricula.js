@@ -69,7 +69,7 @@ var matricula = {
         $("#form").on("submit", function(event){
             event.preventDefault();
                         
-            if ( me.validateFields() ) {                
+//            if ( me.validateFields() ) {                
                 $.post("ajax/ajax-matricula.php", $(this).serialize(), function (html){
                     
                     $("#sub-content").fadeOut(500, function (){                        
@@ -78,7 +78,7 @@ var matricula = {
                 }, "html").fail(function (){
                     alert("error");
                 });
-            }
+//            }
             me.pageUp();
         });
     },

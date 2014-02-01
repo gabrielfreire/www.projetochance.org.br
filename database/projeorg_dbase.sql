@@ -30,9 +30,9 @@ CREATE TABLE IF NOT EXISTS aluno (
 
 CREATE TABLE IF NOT EXISTS depoimento (
     id int primary key auto_increment not null,
+    id_aluno int not null,
     data varchar(20) not null,
-    mensagem text not null,
-    id_aluno int not null
+    mensagem text not null
 ) DEFAULT CHARSET=utf8;
 
 

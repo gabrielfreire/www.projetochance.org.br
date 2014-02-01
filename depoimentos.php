@@ -1,3 +1,10 @@
+<?php
+
+require_once "./classes/Depoimento.class.php";
+
+$depoimentos = Depoimento::getObjects();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,41 +26,29 @@
                     <h1>Deixe seu depoimento</h1>
                     
                     <h3>Depoimentos (1.132)</h3>
-
+                    
+                    <!-- div novo depoimento -->
                     <div class="box-new-depo">
                         <div>Fulano da Silva</div>
                         <img src="images/sem-foto.jpg" alt="" title="<?php ?>" />
 
-                        <textarea placeholder="Comentário..."></textarea>
+                        <textarea name="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
+                        <button id="btn-new-depo">Publicar</button>
                     </div>
                     
 
-                    <div class="box-depo">                        
-                        <img src="images/sem-foto.jpg" alt="" title="<?php ?>" />
-                        <div>Fulano da Silva</div>
-                        
-                        <label>Minha mensagem sera de bla bla bla...</label>
-                       
-                        <span>em 23/06/2014 às 13:54</span>
-                    </div>
-                    
-                    <div class="box-depo">                        
-                        <img src="images/sem-foto.jpg" alt="" title="<?php ?>" />
-                        <div>Fulano da Silva</div>
-                        
-                        <label>Minha mensagem sera de bla bla bla...</label>
-                       
-                        <span>em 23/06/2014 às 13:54</span>
-                    </div>
-                    
-                    <div class="box-depo">                        
-                        <img src="images/sem-foto.jpg" alt="" title="<?php ?>" />
-                        <div>Fulano da Silva</div>
-                        
-                        <label>Minha mensagem sera de bla bla bla...</label>
-                       
-                        <span>em 23/06/2014 às 13:54</span>
-                    </div>
+                    <!-- todos os depoimentos -->
+                    <?php foreach ( $depoimentos as $depoimento ): ?>
+                        <div class="box-depo">      
+                            <input type="hidden" name="id" value="<?php echo $depoimento->id ?>" />
+                            
+                            <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
+                            
+                            <div class="depo-nome"><?php echo $depoimento->nome ?></div>
+                            <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
+                            <div class="depo-data"><?php echo $depoimento->data ?></div>
+                        </div>
+                    <?php endforeach; ?>
                     
                 </div><!--sub-content-->        
             </div><!--content-->
