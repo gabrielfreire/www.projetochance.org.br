@@ -13,7 +13,6 @@ if ( Session::getAlunoLogado() ) {
     $aluno->id = Session::getIdAluno();
     $aluno = $aluno->getObject();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,27 +45,43 @@ if ( Session::getAlunoLogado() ) {
                             <div><?php echo $aluno->nome ?></div>
                             <img src="images/<?php echo $aluno->foto ?>" alt="" title="<?php ?>" />
 
-                            <textarea name="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
+                            <textarea id="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
                             <button id="btn-new-depo">Publicar</button>
                         </div>
                     <?php else: ?>
                         
-                        
+                        <!-- mensagem para se logar -->
+                        <div class="logado-none">
+                            Somente alunos matriculados podem deixar um depoimento, faça já sua 
+                            <a href="">matrícula</a> ou realize seu <a href="">login</a> para postar algo...
+                        </div>
                     <?php endif; ?>
                     
 
-                    <!-- todos os depoimentos -->
-                    <?php foreach ( $depoimentos as $depoimento ): ?>
-                        <div class="box-depo">      
-                            <input type="hidden" name="id" value="<?php echo $depoimento->id ?>" />
-                            
-                            <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
-                            
-                            <div class="depo-nome"><?php echo $depoimento->nome ?></div>
-                            <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
-                            <div class="depo-data"><?php echo $depoimento->data ?></div>
-                        </div>
-                    <?php endforeach; ?>
+                    <div id="pai-depos">
+                        <?php if ( $depoimento->getTotalRegistros() === 0): ?>
+
+                            <div class="depo-none">Seja o primeiro a deixar o seu...</div>
+                        <?php else: ?>
+
+
+
+                            <!-- todos os depoimentos -->
+                            <?php foreach ( $depoimentos as $depoimento ): ?>
+                                <div class="box-depo">      
+                                    <input type="hidden" name="id" value="<?php echo $depoimento->id ?>" />
+
+                                    <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
+
+                                    <div class="depo-nome"><?php echo $depoimento->nome ?></div>
+                                    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
+                                    <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
+                                </div>
+                            <?php endforeach; ?>
+
+                        <?php endif; ?>                        
+                    </div>
+                    
                     
                 </div><!--sub-content-->        
             </div><!--content-->

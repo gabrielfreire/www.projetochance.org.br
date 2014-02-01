@@ -24,7 +24,7 @@ require_once "./classes/Session.class.php";
                     
                     <div class="login">
                         <a href="#" id="sair">Sair</a>
-                        <?php   ?>
+                        <?php var_dump($_SESSION);  ?>
                     </div>
                     
                 </div><!--sub-content-->        

@@ -9,7 +9,7 @@
 
 var contato = {
     
-    init: function (){        
+    init: function (){  
         this.masks();
         this.onSubmit();
     },
@@ -35,7 +35,7 @@ var contato = {
     onSubmit: function (){
         
         var me = this;
-        $("#form").on("submit", function(event){
+        $("#form-contato").on("submit", function(event){
             event.preventDefault();
                         
             if ( me.validateFields() ) {                

@@ -151,6 +151,7 @@
 /************************************************************/
 
 /* Busca */
+/****************************/
 .box-search {
     border-bottom:solid 1px #017ec5;
     margin: 30px 8px;
@@ -170,6 +171,7 @@
 }
 
 /* Home */
+/****************************/
 object.banner {
     width: 600px;
     height: 180px;
@@ -177,6 +179,7 @@ object.banner {
 }
 
 /* Matrícula */
+/****************************/
 .table-matricula {
     margin: 10px 8px;
 }
@@ -192,6 +195,7 @@ object.banner {
 }
 
 /* Contato */
+/****************************/
 .table-contato {
     margin: 10px 8px;
 }
@@ -207,6 +211,7 @@ object.banner {
 }
 
 /* Vestibulares e ENEM */
+/****************************/
 .box-link {
     margin: 10px 0;
     padding: 5px;
@@ -224,6 +229,7 @@ object.banner {
 }
 
 /* Galeria de fotos */
+/****************************/
 .thumbnails {
     margin-left: 6px;
     display: table;
@@ -249,8 +255,9 @@ object.banner {
 }
 
 /* Depoimentos */
+/****************************/
+/* Caixa para escrever no depoimento */
 .box-new-depo {
-    /*border:solid 1px #000;*/
     border-bottom: solid 1px #ebebe4;
     width: 560px;
     padding-bottom: 5px;
@@ -259,7 +266,6 @@ object.banner {
 }
 
 .box-new-depo div {
-    /*border:solid 1px #000;*/
     background: #efeded;
     font-weight: bold;
     padding: 10px;
@@ -267,7 +273,6 @@ object.banner {
 }
 
 .box-new-depo img {
-    /*border:solid 1px #000;*/
     width: 90px;
     height: 80px;
     margin: 10px;
@@ -293,9 +298,7 @@ object.banner {
     padding: 1px 10px;
     float: right;
 }
-
-
-/***/
+/* Caixas para listar os depoimentos */
 .box-depo {
     border-bottom: solid 1px #ebebe4;
     -moz-border-radius: 5px;
@@ -330,9 +333,20 @@ object.banner {
 
 .depo-data {
     color: #999;
-    width: 515px;
+    width: 474px;
     font-size: 11px;
     padding: 10px 0;
-    margin-left: 10px;
+    margin-top: 10px;
+    float: right;
+}
+/* Mensagens para o usuário não logado */
+.logado-none {
+    margin: 15px 8px;
+    font-size: 15px;
+}
+
+.depo-none {
+    font-style: italic;
+    margin: 50px 8px;
     float: left;
 }
