@@ -331,6 +331,28 @@ object.banner {
     float: left;
 }
 
+.depo-textArea {
+    border: solid 1px #CCC;
+    padding: 5px;
+    height: 35px;
+    resize: none;
+    width: 430px;   
+    float: left;
+}
+
+.depo-btn-alterar {
+    border: solid 1px #FFF;
+    background: #CCC;
+    color: #FFF;
+    cursor: pointer;
+    margin: 1px 32px;
+    float: right;
+}
+
+.depo-btn-alterar:hover {
+    color: #666;
+}
+
 .depo-data {
     color: #999;
     width: 474px;

@@ -78,12 +78,17 @@ $depoimentos = $depoimento->getObjects();
                                     
                                     <?php if( $depoimento->id_aluno == Session::getIdAluno() ): ?>
                                         <div class="depo-icons">
-                                            <a href="#">editar</a>
-                                            <a href="#">excluir</a>
+                                            <a href="#" class="depo-editar">editar</a>
+                                            <a href="#" class="depo-excluir">excluir</a>
                                         </div>
                                     <?php endif; ?>
                                     
-                                    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>                            
+                                    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>
+                                    
+                                    <!-- hide() -->
+                                    <textarea class="depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
+                                    <input type="button" value="Alterar" class="depo-btn-alterar" />                                    
+                                    
                                     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
                                 </div>
                             <?php endforeach; ?>
@@ -99,6 +104,7 @@ $depoimentos = $depoimento->getObjects();
             <?php include "./includes/footer.php"; ?>            
         </div>
         
-        <script src="js/jquery.depoimento.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.cokidoo-textarea.js"></script>
+        <script type="text/javascript" src="js/jquery.depoimento.js"></script>
     </body>
 </html>

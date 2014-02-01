@@ -7,12 +7,25 @@
 var depoimentos = {
     
     init: function (){
-        this.onAdd();
+        this.onAutoResize();
+        this.onDepoAdd();
+        this.onDepoEditar();
+        this.onDepoExcluir();
     },
     
-    onAdd: function (){
+    onAutoResize: function (){
+        $("#mensagem").autoResize();
+        $(".depo-textArea").autoResize(); 
         
-        $("#btn-new-depo").on("click", function(){  
+        //deve vir após autoResize()
+        $(".depo-textArea").hide();
+        $(".depo-btn-alterar ").hide();
+    },
+    
+    onDepoAdd: function (){
+        
+        $("#btn-new-depo").on("click", function(event){  
+            event.preventDefault();            
             
             $.post("ajax/ajax-depoimento.php", "mensagem="+$("#mensagem").val(), function (html){
                
@@ -32,6 +45,24 @@ var depoimentos = {
                
            }, "html");            
         });
+    },
+    
+    onDepoEditar: function (){        
+        
+        $(".depo-editar", "#pai-depos").on("click", function (event){
+            event.preventDefault();            
+            var div_pai = $(this).parents(".box-depo");
+  
+            div_pai.find(".depo-msg").fadeOut(function (){   
+                
+                div_pai.find(".depo-textArea").fadeIn();
+                div_pai.find(".depo-btn-alterar").fadeIn();                
+            });
+        });
+    },
+    
+    onDepoExcluir: function (){
+        
     }
 };
 
