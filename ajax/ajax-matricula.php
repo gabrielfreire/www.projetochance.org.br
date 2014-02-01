@@ -11,6 +11,7 @@ date_default_timezone_set('America/Sao_Paulo');
 $aluno = new Aluno();
 $aluno->data             = date("d/m/Y - H:i");
 $aluno->registro         = Aluno::gerarRA();
+$aluno->foto             = "sem-foto.jpg";
 $aluno->nome             = $_POST["nome"];
 $aluno->estado_civil     = $_POST["estado-civil"];
 $aluno->cep              = $_POST["cep"];

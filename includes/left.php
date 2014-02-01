@@ -20,13 +20,13 @@
                     <td><span>Email</span></td>                
                 </tr>
                 <tr>
-                    <td><input type="text" name="email" id="email" /></td>
+                    <td><input type="text" name="email" id="login-email" /></td>
                 </tr>
                 <tr>
                     <td><span>Senha</span></td>                
                 </tr>
                 <tr>
-                    <td><input type="password" name="senha" id="senha" /></td>
+                    <td><input type="password" name="senha" id="login-senha" /></td>
                 </tr>
                 <tr>
                     <td><a href="#"><label>Entrar</label> <img src="images/login.jpg" alt="" /></a></td>

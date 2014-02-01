@@ -21,23 +21,14 @@ abstract class Session {
         }
     } 
     
-    static function setNomeAluno($nome){        
-        $_SESSION['aluno']['nome'] = $nome;
+    static function setAlunoLogado($login){        
+        $_SESSION['aluno']['login'] = $login;
     } 
     
-    static function getNomeAluno(){        
-        if (isset($_SESSION['aluno']['nome'])){
-            return $_SESSION['aluno']['nome'];
+    static function getAlunoLogado(){        
+        if (isset($_SESSION['aluno']['login'])){
+            return $_SESSION['aluno']['login'];
         }
     } 
     
-    static function setEmailAluno($email){        
-        $_SESSION['aluno']['email'] = $email;
-    } 
-    
-    static function getEmailAluno(){        
-        if (isset($_SESSION['aluno']['email'])){
-            return $_SESSION['aluno']['email'];
-        }
-    } 
 }

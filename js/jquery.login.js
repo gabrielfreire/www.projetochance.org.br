@@ -53,14 +53,14 @@ var login = {
     
     validateFields: function (){
         
-        if ( $.trim( $("#email").val() ) === "" ) {
+        if ( $.trim( $("#login-email").val() ) === "" ) {
             alert("Digite seu email!");
-            $("#email").focus();            
+            $("#login-email").focus();            
             return false;
         }
-        else if ( $.trim( $("#senha").val() ) === "" ) {
+        else if ( $.trim( $("#login-senha").val() ) === "" ) {
             alert("Digite sua senha!");
-            $("#senha").focus();            
+            $("#login-senha").focus();            
             return false;
         }
         return true;        

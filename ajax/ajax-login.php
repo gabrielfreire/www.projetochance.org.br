@@ -11,17 +11,16 @@ require_once "../classes/Aluno.class.php";
 $aluno = new Aluno();
 $aluno->email = $_POST["email"];
 $aluno->senha = $_POST["senha"];
-$logado = $aluno->login();
+$login = $aluno->login();
 
 
-if ( $logado === false ) {
+if ( $login === false ) {
     
     echo "false";
 }
 else {
-    Session::setIdAluno($logado->id);
-    Session::setNomeAluno($logado->nome);
-    Session::setEmailAluno($logado->email);
+    Session::setAlunoLogado(true);
+    Session::setIdAluno($login->id);
     
     echo "true";
 }

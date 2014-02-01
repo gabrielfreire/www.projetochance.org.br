@@ -1,8 +1,19 @@
 <?php
-
+session_start();
+require_once "./classes/Session.class.php";
+require_once "./classes/Aluno.class.php";
 require_once "./classes/Depoimento.class.php";
 
-$depoimentos = Depoimento::getObjects();
+$depoimento = new Depoimento();
+$depoimentos = $depoimento->getObjects();
+
+
+if ( Session::getAlunoLogado() ) {
+    $aluno = new Aluno();
+    $aluno->id = Session::getIdAluno();
+    $aluno = $aluno->getObject();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +36,23 @@ $depoimentos = Depoimento::getObjects();
                 <div id="sub-content">
                     <h1>Deixe seu depoimento</h1>
                     
-                    <h3>Depoimentos (1.132)</h3>
+                    <h3>Depoimentos (<?php echo $depoimento->getTotalRegistros() ?>)</h3>
                     
-                    <!-- div novo depoimento -->
-                    <div class="box-new-depo">
-                        <div>Fulano da Silva</div>
-                        <img src="images/sem-foto.jpg" alt="" title="<?php ?>" />
+                    
+                    <?php if ( Session::getAlunoLogado() ): ?>
+                        
+                        <!-- div novo depoimento -->
+                        <div class="box-new-depo">
+                            <div><?php echo $aluno->nome ?></div>
+                            <img src="images/<?php echo $aluno->foto ?>" alt="" title="<?php ?>" />
 
-                        <textarea name="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
-                        <button id="btn-new-depo">Publicar</button>
-                    </div>
+                            <textarea name="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
+                            <button id="btn-new-depo">Publicar</button>
+                        </div>
+                    <?php else: ?>
+                        
+                        
+                    <?php endif; ?>
                     
 
                     <!-- todos os depoimentos -->

@@ -20,11 +20,18 @@ class Depoimento {
     public $mensagem;       # text
     
     
-    static public function getObjects() {
+    public function getObjects() {
         $pdo = DBpdo::connection();
-        $sql = $pdo->query("SELECT * FROM depoimento");
+        $sql = $pdo->query("SELECT * FROM depoimento a JOIN aluno b ON a.id_aluno = b.id");
         
         return $sql->fetchAll(PDO::FETCH_OBJ);
+    }
+    
+    public function getTotalRegistros() {
+        $pdo = DBpdo::connection();
+        $sql = $pdo->query("SELECT COUNT(*) as total FROM depoimento");
+        
+        return $sql->fetch(PDO::FETCH_OBJ)->total;
     }
     
     public function insert() {        

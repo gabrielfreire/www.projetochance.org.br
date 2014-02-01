@@ -6,6 +6,7 @@ USE projeorg_dbase;
 CREATE TABLE IF NOT EXISTS aluno (
     id int primary key auto_increment not null,
     data varchar(20) not null,
+    foto varchar(200) not null,
     registro int(9) not null,
     nome varchar(200) not null,
     estado_civil varchar(20) not null,
