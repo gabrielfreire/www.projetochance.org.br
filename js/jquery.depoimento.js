@@ -19,18 +19,14 @@ var depoimentos = {
         $(".depo-textArea").autoResize(); 
         
         //deve vir após autoResize()
-        $(".depo-textArea").hide();
-        $(".depo-btn-alterar").hide();
-        $(".depo-btn-cancelar").hide();
+        $(".depo-editar").hide();
     },
     
     onAutoResizePrimeiroDepo: function (){
         $(".depo-textArea:eq(0)").autoResize(); 
-        
+
         //deve vir após autoResize()
-        $(".depo-textArea:eq(0)").hide();
-        $(".depo-btn-alterar:eq(0)").hide();
-        $(".depo-btn-cancelar:eq(0)").hide();
+        $(".depo-editar", ".box-depo:eq(0)").hide();
     },
     
     onDepoAdd: function (){
@@ -67,16 +63,12 @@ var depoimentos = {
     onDepoEditar: function (){        
         
         // Mostrar a edição
-        $("#pai-depos").on("click", ".depo-editar", function (event){
+        $("#pai-depos").on("click", ".depo-icon-editar", function (event){
             event.preventDefault();            
             var div_pai = $(this).parents(".box-depo");
   
-            div_pai.find(".depo-msg").fadeOut(0, function (){   
-                
-                div_pai.find(".depo-textArea").fadeIn(0);
-                div_pai.find(".depo-btn-alterar").fadeIn(0);                
-                div_pai.find(".depo-btn-cancelar").fadeIn(0);                
-            });
+            div_pai.find(".depo-msg").fadeOut(0);
+            div_pai.find(".depo-editar").fadeIn(0); 
         });
         
         // Editar
@@ -91,12 +83,8 @@ var depoimentos = {
             event.preventDefault();            
             var div_pai = $(this).parents(".box-depo");
   
-            div_pai.find(".depo-msg").fadeIn(0, function (){   
-                
-                div_pai.find(".depo-textArea").fadeOut(0);
-                div_pai.find(".depo-btn-alterar").fadeOut(0);                
-                div_pai.find(".depo-btn-cancelar").fadeOut(0);                
-            });
+            div_pai.find(".depo-editar").fadeOut(0);
+            div_pai.find(".depo-msg").fadeIn(0);  
         });
     },
     
