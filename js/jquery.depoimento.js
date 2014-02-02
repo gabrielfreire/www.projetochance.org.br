@@ -7,7 +7,7 @@
 var depoimentos = {
     
     init: function (){
-        this.onAutoResize();
+        this.onAutoResizeAll();
         this.onDepoAdd();
         this.onDepoEditar();
         this.onDepoExcluir();
@@ -15,7 +15,7 @@ var depoimentos = {
         this.onDepoCancelar();
     },
     
-    onAutoResize: function (){
+    onAutoResizeAll: function (){
         $("#mensagem").autoResize();
         $(".depo-textArea").autoResize();
         
@@ -24,17 +24,17 @@ var depoimentos = {
     },
     
     onAutoResizePrimeiroDepo: function (){
-        $(".depo-textArea:eq(0)").autoResize(); 
-
-        //deve vir após autoResize()
-        $(".depo-editar", ".box-depo:eq(0)").hide();
+        var div_pai = $(".box-depo:eq(0)");
+        
+        $(".depo-textArea", div_pai).autoResize(); 
+        $(".depo-editar", div_pai).hide();
     },
     
     onAutoResizeDepoEspecifico: function (index){
-        $(".depo-textArea").eq(index).autoResize(); 
+        var div_pai = $(".box-depo").eq(index);
 
-        //deve vir após autoResize()
-        $(".depo-editar", $(".box-depo").eq(index)).hide();
+        $(".depo-textArea", div_pai).autoResize(); 
+        $(".depo-editar", div_pai).hide();
     },
     
     onDepoAdd: function (){
@@ -43,23 +43,27 @@ var depoimentos = {
         $("#btn-new-depo").on("click", function(event){  
             event.preventDefault();            
             
-            $.post("ajax/ajax-depoimento.php", "mensagem="+$("#mensagem").val(), function (html){
-               
-                //apagar textarea e dar foco
-                $("#mensagem").val("").height(35).focus();
-                
-                //se for o primeiro depoimento, apaga a mensagem
-                if ( $(".depo-none").is(":visible") ) {
-                    $(".depo-none").hide();
-                }
-                
-                //inserir depoimento ao topo da div
-                $("#pai-depos").prepend(html);
-               
-                //AutoResize para depoimento que acabou de ser inserido
-                me.onAutoResizePrimeiroDepo();
-        
-           }, "html");            
+            var msg = $.trim( $("#mensagem").val() );
+            
+            if ( msg !== "" ) {            
+                $.post("ajax/ajax-depoimento.php", "mensagem="+msg, function (html){
+
+                    //apagar textarea e dar foco
+                    $("#mensagem").val("").height(35).focus();
+
+                    //se for o primeiro depoimento, apaga a mensagem
+                    if ( $(".depo-none").is(":visible") ) {
+                        $(".depo-none").hide();
+                    }
+
+                    //inserir depoimento ao topo da div
+                    $("#pai-depos").prepend(html);
+
+                    //AutoResize para depoimento que acabou de ser inserido
+                    me.onAutoResizePrimeiroDepo();
+
+               }, "html"); 
+           }            
         });
     },
     
@@ -85,17 +89,26 @@ var depoimentos = {
 
             var div_pai = $(this).parents(".box-depo");
             
-            //mensagem e id do depoimento para salvar
-            var parametros = "mensagem="+div_pai.find(".depo-textArea").val()
-                    +"&id="+div_pai.children(":hidden").val();
+            var msg     = $.trim( div_pai.find(".depo-textArea").val() );
+            var id_depo = div_pai.children(":hidden").val();
             
-            $.post("ajax/ajax-depoimento.php", parametros, function (html){
-                
-                var index = div_pai.index();
-                div_pai.replaceWith(html);
-                
-                me.onAutoResizeDepoEspecifico( index );
-            }, "html");
+            if ( msg !== "" ) {    
+                var parametros = "mensagem="+msg+"&id="+id_depo;
+
+                $.post("ajax/ajax-depoimento.php", parametros, function (html){
+                    
+                    var index = div_pai.index();
+                    
+                    /*
+                     * ATENÇÃO, esta função precisa de um callback,
+                     * pode ocorrer bug aqui!!
+                     */
+                    div_pai.replaceWith(html);
+                    
+                    me.onAutoResizeDepoEspecifico( index );
+
+                }, "html");
+            }
         });
     },
     
