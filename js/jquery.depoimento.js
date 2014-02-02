@@ -62,7 +62,9 @@ var depoimentos = {
                     //AutoResize para depoimento que acabou de ser inserido
                     me.onAutoResizePrimeiroDepo();
 
-               }, "html"); 
+               }, "html").fail(function (){
+                    alert("error");
+                }); 
            }            
         });
     },
@@ -103,11 +105,12 @@ var depoimentos = {
                      * ATENÇÃO, esta função precisa de um callback,
                      * pode ocorrer bug aqui!!
                      */
-                    div_pai.replaceWith(html);
-                    
+                    div_pai.replaceWith(html);                    
                     me.onAutoResizeDepoEspecifico( index );
 
-                }, "html");
+                }, "html").fail(function (){
+                    alert("error");
+                });
             }
         });
     },
@@ -125,6 +128,23 @@ var depoimentos = {
     
     onDepoExcluir: function (){
         
+        $("#pai-depos").on("click", ".depo-icon-excluir", function (event){
+            event.preventDefault(); 
+          
+            var div_pai = $(this).parents(".box-depo");
+            var id_depo = div_pai.children(":hidden").val();
+            
+            if ( confirm("Tem certeza?") ) {
+                div_pai.fadeOut(500, function (){
+                    $.post("ajax/ajax-depo-del.php", "id="+id_depo, function (){
+
+                    }).fail(function (){
+                        alert("error");
+                    });
+                });
+            }
+            return false;
+        });
     }
 };
 
