@@ -324,6 +324,24 @@ object.banner {
     float: right;
 }
 
+.depo-icon-editar {
+    background: url("../images/icon-editar.jpg") no-repeat top left;
+    padding: 4px 11px;
+}
+
+.depo-icon-editar:hover {
+    background: url("../images/icon-editar-hover.jpg") no-repeat top left;
+}
+
+.depo-icon-excluir:hover {
+    background: url("../images/icon-excluir-hover.jpg") no-repeat top left;
+}
+
+.depo-icon-excluir {
+    background: url("../images/icon-excluir.jpg") no-repeat top left;
+    padding: 4px 11px;
+}
+
 .depo-msg {
     color: #666;
     font-size: 16px;

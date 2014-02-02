@@ -39,8 +39,8 @@ $depoimento = $depoimento->getObject();
     
     <?php if( $depoimento->id_aluno == Session::getIdAluno() ): ?>
         <div class="depo-icons">
-            <a href="#" class="depo-icon-editar">editar</a>
-            <a href="#" class="depo-icon-excluir">excluir</a>
+            <a href="#" class="depo-icon-editar" title="Editar"></a>
+            <a href="#" class="depo-icon-excluir" title="Excluir"></a>
         </div>
     <?php endif; ?>
 
