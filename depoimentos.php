@@ -54,7 +54,7 @@ $depoimentos = $depoimento->getObjects();
                         <!-- mensagem para se logar -->
                         <div class="logado-none">
                             Somente alunos matriculados podem deixar um depoimento, faça já sua 
-                            <a href="">matrícula</a> ou realize seu <a href="">login</a> para postar algo...
+                            <a href="matricula.html">matrícula</a> ou realize seu <a href="portal.html">login</a> para postar algo...
                         </div>
                     <?php endif; ?>
                     

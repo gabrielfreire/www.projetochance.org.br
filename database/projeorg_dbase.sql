@@ -1,7 +1,7 @@
 
-CREATE DATABASE IF NOT EXISTS projeorg_dbase DEFAULT CHARSET=utf8;
+CREATE DATABASE IF NOT EXISTS projeorg_chance DEFAULT CHARSET=utf8;
 
-USE projeorg_dbase;
+USE projeorg_chance;
 
 CREATE TABLE IF NOT EXISTS aluno (
     id int primary key auto_increment not null,

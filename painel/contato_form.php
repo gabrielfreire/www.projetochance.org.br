@@ -63,7 +63,7 @@ if ($id_contato) {
             </tr>
             <tr>
                 <td><label>*Mensagem</label></td>
-                <td><textarea name="mensagem" id="mensagem" value="<?php echo $contato->mensagem ?>" cols="50" rows="7"></textarea></td>
+                <td><textarea name="mensagem" id="mensagem" cols="50" rows="7"><?php echo $contato->mensagem ?></textarea></td>
             </tr>
             <tr>
                 <td colspan="2">
