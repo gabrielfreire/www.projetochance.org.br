@@ -4,10 +4,13 @@
  * Cabeçalho do site
  */
 
+require_once "./classes/Data.class.php";
 ?>
 
 <header>
-    <label id="saudacao">Sábado, 20 de setembro de 2014</label>
+    <label id="saudacao">
+        <?php echo ucfirst( Data::getDiaSemana() ).", ".Data::getDia()." de ".Data::getMes()." de ".Data::getAno() ?>
+    </label>
     
     <a href="index.html">
         <img src="./images/logo-original.png" alt="Logotipo" title="Projeto Chance" id="logo" />
