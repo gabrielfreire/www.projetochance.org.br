@@ -11,12 +11,13 @@ var depoimentos = {
         this.onDepoAdd();
         this.onDepoEditar();
         this.onDepoExcluir();
+        this.onDepoSalvar();
         this.onDepoCancelar();
     },
     
     onAutoResize: function (){
         $("#mensagem").autoResize();
-        $(".depo-textArea").autoResize(); 
+        $(".depo-textArea").autoResize();
         
         //deve vir após autoResize()
         $(".depo-editar").hide();
@@ -27,6 +28,13 @@ var depoimentos = {
 
         //deve vir após autoResize()
         $(".depo-editar", ".box-depo:eq(0)").hide();
+    },
+    
+    onAutoResizeDepoEspecifico: function (index){
+        $(".depo-textArea").eq(index).autoResize(); 
+
+        //deve vir após autoResize()
+        $(".depo-editar", $(".box-depo").eq(index)).hide();
     },
     
     onDepoAdd: function (){
@@ -46,14 +54,9 @@ var depoimentos = {
                 }
                 
                 //inserir depoimento ao topo da div
-                $("#pai-depos")
-                    .prepend(html)
-                        .find(".box-depo:eq(0)")
-                            .fadeIn(2000);
+                $("#pai-depos").prepend(html);
                
-               /*
-                * AutoResize para depoimento que acabou de ser inserido
-                */
+                //AutoResize para depoimento que acabou de ser inserido
                 me.onAutoResizePrimeiroDepo();
         
            }, "html");            
@@ -69,11 +72,30 @@ var depoimentos = {
   
             div_pai.find(".depo-msg").fadeOut(0);
             div_pai.find(".depo-editar").fadeIn(0); 
-        });
+        });        
         
-        // Editar
-        $("#pai-depos").on("click", ".depo-btn-alterar", function (){
+    },
+    
+    onDepoSalvar: function (){
+        
+        // Salvar
+        var me = this;
+        $("#pai-depos").on("click", ".depo-btn-alterar", function (event){
+            event.preventDefault();            
+
+            var div_pai = $(this).parents(".box-depo");
             
+            //mensagem e id do depoimento para salvar
+            var parametros = "mensagem="+div_pai.find(".depo-textArea").val()
+                    +"&id="+div_pai.children(":hidden").val();
+            
+            $.post("ajax/ajax-depoimento.php", parametros, function (html){
+                
+                var index = div_pai.index();
+                div_pai.replaceWith(html);
+                
+                me.onAutoResizeDepoEspecifico( index );
+            }, "html");
         });
     },
     

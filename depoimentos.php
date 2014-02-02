@@ -58,6 +58,9 @@ $depoimentos = $depoimento->getObjects();
                         </div>
                     <?php endif; ?>
                     
+                        
+                        
+                        
 
                     <div id="pai-depos">
                         <?php if ( $depoimento->getTotalRegistros() === 0): ?>
@@ -66,11 +69,10 @@ $depoimentos = $depoimento->getObjects();
                         <?php else: ?>
 
 
-
                             <!-- todos os depoimentos -->
                             <?php foreach ( $depoimentos as $depoimento ): ?>
                                 <div class="box-depo">      
-                                    <input type="hidden" name="id" value="<?php echo $depoimento->id ?>" />
+                                    <input type="hidden" name="id" value="<?php echo $depoimento->id_depo ?>" />
 
                                     <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
 
@@ -89,6 +91,7 @@ $depoimentos = $depoimento->getObjects();
                                     <textarea class="depo-editar depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
                                     <input class="depo-editar depo-btn-cancelar" type="button" value="Cancelar" />                                    
                                     <input class="depo-editar depo-btn-alterar" type="button" value="Alterar" />                                    
+                                    <!------------>
                                     
                                     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
                                 </div>

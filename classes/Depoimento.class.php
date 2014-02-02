@@ -21,8 +21,8 @@ class Depoimento {
 
     public function getObject() {
         $pdo = DBpdo::connection();
-        $sql = $pdo->prepare("SELECT *, a.data AS data_depo FROM depoimento a JOIN aluno b "
-                . "ON a.id_aluno = b.id WHERE a.id = ?");
+        $sql = $pdo->prepare("SELECT *, a.data AS data_depo, a.id AS id_depo FROM depoimento a "
+                . "JOIN aluno b ON a.id_aluno = b.id WHERE a.id = ?");
         
         $sql->bindParam(1, $this->id, PDO::PARAM_INT);
         $sql->execute();
@@ -32,8 +32,8 @@ class Depoimento {
 
     public function getObjects() {
         $pdo = DBpdo::connection();
-        $sql = $pdo->query("SELECT *, a.data AS data_depo FROM depoimento a JOIN aluno b "
-                . "ON a.id_aluno = b.id ORDER BY a.id DESC");
+        $sql = $pdo->query("SELECT *, a.data AS data_depo, a.id AS id_depo FROM depoimento a "
+                . "JOIN aluno b ON a.id_aluno = b.id ORDER BY a.id DESC");
 
         return $sql->fetchAll(PDO::FETCH_OBJ);
     }

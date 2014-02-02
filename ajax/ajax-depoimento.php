@@ -26,12 +26,12 @@ else {
     $depoimento->insert();
 }
 
-# Salvar objeto
+# Resgatar objeto
 $depoimento = $depoimento->getObject();
 ?>
 
-<div class="box-depo" style="display: none">                        
-    <input type="hidden" name="id" value="<?php echo $depoimento->id ?>" />
+<div class="box-depo">                        
+    <input type="hidden" name="id" value="<?php echo $depoimento->id_depo ?>" />
                             
     <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
 
@@ -50,6 +50,7 @@ $depoimento = $depoimento->getObject();
     <textarea class="depo-editar depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
     <input class="depo-editar depo-btn-cancelar" type="button" value="Cancelar" />                                    
     <input class="depo-editar depo-btn-alterar" type="button" value="Alterar" /> 
-                                    
+    <!------------>
+    
     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
 </div>
