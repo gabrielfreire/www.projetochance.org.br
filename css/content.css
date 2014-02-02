@@ -1,0 +1,399 @@
+/*
+    Estilos do conteúdo
+*/
+
+/* Padrões do conteúdo */
+/************************************************************/
+#content { 
+    width: 910px;
+    padding: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    background: #FFF;
+}
+
+#sub-content {
+    width: 601px;
+    float: right;
+}
+
+#sub-content a {    
+    color: #017ec5;
+    font-weight: bold;
+}
+
+#sub-content h1 {
+    font: 190% 'News Cycle', arial, sans-serif;
+    color:#017ec5;
+    padding:10px 8px;
+}
+
+#sub-content h2 {
+    color: #666;
+    font-size: 15px;
+    padding: 6px;
+    margin: 30px 0 0 10px;
+}
+
+#sub-content h3 {
+    color:#017ec5;
+    font-weight: normal;
+    margin: 14px 0 0 10px;
+}
+
+#sub-content h4 {
+    margin: 14px 0 0 10px;
+}
+
+#sub-content p {
+    line-height:20px;
+    font-size:15px;
+    text-align: justify;
+    margin:5px;
+    color:#444;
+    padding:5px;
+}
+
+/* Tabelas */
+/************************************************************/
+.table {
+    margin: 15px 9px;
+    width: 375px;
+    font-size: 14px;
+    color:#000;
+}
+
+.table tr td {
+    border: solid 1px #CCC;    
+    color:#333;
+    padding:4px;
+}
+
+/* Input, textArea e Select */
+/************************************************************/
+.text {
+    border: solid 1px #999;
+    background: #FFF;
+    margin: 1px 0;
+    padding: 1px 0;
+}
+
+.textArea {
+    min-width: 400px;
+    min-height: 150px;
+}
+
+.text:focus {
+    border: solid 1px #017ec5;    
+}
+
+.text-xsmall {
+    width: 50px;
+}
+
+.text-small {
+    width: 100px;
+}
+
+.text-medium {
+    width: 200px;
+}
+
+.text-large {
+    width: 300px;
+}
+
+.text-xlarge {
+    width: 400px;
+}
+
+/* Botões */
+/************************************************************/
+.btn {
+    border: solid 1px #adadad;
+    background: #FFF;
+    color: #000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 20px;
+    margin-top: 25px;
+    float: right;
+}
+
+.btn:hover {
+    background: #ebebeb;
+}
+
+/* Mensagem de agradecimento ou alerta */
+/************************************************************/
+.box-msg {
+    border: solid 5px #efeded;
+    border-style: double;
+    text-align: center;
+    padding: 10px;
+}
+
+.box-msg p {
+    text-align: center !important; /* Exceção para tag p na mensagem */
+}
+
+.box-msg img {
+    width: 125px;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+
+/* Páginas */
+/************************************************************/
+
+/* Busca */
+/****************************/
+.box-search {
+    border-bottom:solid 1px #017ec5;
+    margin: 30px 8px;
+}
+
+.box-search a {
+    text-decoration: none;
+}
+
+.box-search a:hover {    
+    text-decoration: underline;
+}
+
+.box-search p {
+    font-weight: normal;
+    
+}
+
+/* Home */
+/****************************/
+object.banner {
+    width: 600px;
+    height: 180px;
+    float: right;
+}
+
+/* Matrícula */
+/****************************/
+.table-matricula {
+    margin: 10px 8px;
+}
+
+.table-matricula:nth-of-type(1) {
+    margin-bottom: 30px;
+}
+
+.table-matricula label {
+    color: #999;
+    font-size: 12px;   
+    margin-right: 15px;
+}
+
+/* Contato */
+/****************************/
+.table-contato {
+    margin: 10px 8px;
+}
+
+.table-contato tr td {
+    vertical-align: middle;
+}
+
+.table-contato label {
+    color: #999;
+    font-size: 12px;  
+    margin-right: 15px;
+}
+
+/* Vestibulares e ENEM */
+/****************************/
+.box-link {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.box-link h4 {
+    margin-bottom: 5px !important; /* h4 apenas para essa div */
+}
+
+.box-link a {
+    background: url("../images/salvar.gif") no-repeat left;
+    padding: 5px 27px;
+    display: inline-block;
+    margin:0 8px !important; /* margin apenas para essa div */
+}
+
+/* Galeria de fotos */
+/****************************/
+.thumbnails {
+    margin-left: 6px;
+    display: table;
+}
+
+.thumbnails:first-of-type {
+    margin-top: 10px;
+}
+
+.thumbnails a {
+    display: table-cell;
+}
+
+.thumbnails img {    
+    opacity: 0.7;
+    max-width: 135px;
+    max-height: 100px;
+    margin: 10px 3px;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}
+
+/* Depoimentos */
+/****************************/
+/* Caixa para escrever no depoimento */
+.box-new-depo {
+    border-bottom: solid 1px #ebebe4;
+    width: 560px;
+    padding-bottom: 5px;
+    margin: 20px 8px;
+    float: left;
+}
+
+.box-new-depo div {
+    background: #efeded;
+    font-weight: bold;
+    padding: 10px;
+    width: 540px;
+}
+
+.box-new-depo img {
+    width: 90px;
+    height: 80px;
+    margin: 10px;
+    float: left;
+}
+
+.box-new-depo textArea {
+    border: solid 1px #CCC;
+    margin-top: 10px;
+    padding: 5px;
+    width: 426px;
+    height: 35px;
+    resize: none;
+    float: left;
+}
+
+.box-new-depo button {
+    border:solid 1px #FFF;
+    background: #017ec5;
+    color: #FFF;
+    cursor: pointer;
+    margin: 4px 10px;
+    padding: 1px 10px;
+    float: right;
+}
+/* Caixas para listar os depoimentos */
+.box-depo {
+    border-bottom: solid 1px #ebebe4;
+    width: 560px;
+    margin: 2px 8px;
+    float: left;
+}
+
+.box-depo img {
+    width: 70px;
+    height: 60px;
+    margin: 7px;
+    float: left;
+}
+
+.depo-nome {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 7px 0;
+    float: left;
+}
+
+.depo-icons {
+    float: right;
+}
+
+.depo-icon-editar {
+    background: url("../images/icon-editar.jpg") no-repeat top left;
+    padding: 4px 11px;
+}
+
+.depo-icon-editar:hover {
+    background: url("../images/icon-editar-hover.jpg") no-repeat top left;
+}
+
+.depo-icon-excluir:hover {
+    background: url("../images/icon-excluir-hover.jpg") no-repeat top left;
+}
+
+.depo-icon-excluir {
+    background: url("../images/icon-excluir.jpg") no-repeat top left;
+    padding: 4px 11px;
+}
+
+.depo-msg {
+    color: #666;
+    font-size: 16px;
+    width: 430px;    
+    float: left;
+}
+
+.depo-textArea {
+    border: solid 1px #CCC;
+    padding: 5px;
+    height: 35px;
+    resize: none;
+    width: 430px;   
+    float: left;
+}
+
+.depo-btn-alterar, .depo-btn-cancelar {
+    border: solid 1px #FFF;
+    background: #CCC;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+}
+
+.depo-btn-alterar {
+    margin: 1px 2px;
+}
+
+.depo-btn-cancelar {
+    margin: 1px 33px 1px 0;
+}
+
+.depo-btn-alterar:hover, .depo-btn-cancelar:hover {
+    color: #666;
+}
+
+.depo-data {
+    color: #999;
+    width: 474px;
+    font-size: 11px;
+    padding: 10px 0;
+    margin-top: 10px;
+    float: right;
+}
+/* Mensagens para o usuário não logado */
+.logado-none {
+    margin: 15px 8px;
+    font-size: 15px;
+}
+
+.depo-none {
+    font-style: italic;
+    margin: 50px 8px;
+    float: left;
+}

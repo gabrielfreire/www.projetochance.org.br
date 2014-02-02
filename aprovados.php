@@ -1,8 +1,3 @@
-<?php
-session_start();
-require_once "./classes/Session.class.php";
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,11 +16,6 @@ require_once "./classes/Session.class.php";
                 <?php include "./includes/left.php"; ?>                
                 
                 <div id="sub-content">
-                    
-                    <div class="login">
-                        <a href="#" id="sair">Sair</a>
-                        <?php var_dump($_SESSION);  ?>
-                    </div>
                     
                 </div><!--sub-content-->        
             </div><!--content-->

@@ -1,0 +1,100 @@
+/*
+    Estilos da coluna na esquerda
+*/
+
+/* Menu vertical */
+/************************************************************/
+#left {
+    border-right: solid 1px #cbcaca;
+    border-right-style: dotted;
+    width: 295px;
+    float: left;
+}
+
+ol#nav-left  {
+    background: url("../images/folha.jpg") no-repeat top left;
+    height: 255px; 
+    width: 165px;
+    padding: 35px 35px 0 50px;
+}
+
+ol#nav-left li {
+    padding: 5px 0;
+}
+
+ol#nav-left li a {
+    text-decoration: none;    
+    color: #000;
+    font: 130% 'News Cycle', arial, sans-serif;
+    font-style: italic;
+}
+
+ol#nav-left li a:hover {
+    color: #017ec5;
+}
+
+
+/* Caixa de login */
+/************************************************************/
+#login {
+    margin-top: 50px;  
+    margin-left: 10px;
+    width: 280px;   
+    float: left;
+}
+
+#login h2 {
+    border-bottom: solid 1px #017ec5;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #017ec5;
+    font-weight: normal;
+}
+
+#login span {
+    color: #666;
+}
+
+#login input[type=text], #login input[type=password] {
+    border: solid 1px #CCC;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    width: 267px;
+}
+
+#login a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    float: right;
+}
+
+#login a:hover {
+    color: #017ec5;
+}
+
+#login a label {
+    margin: 2px 4px;
+    cursor: pointer;
+    float: left;    
+}
+
+#login a img {
+    border:none;
+    width: 25px;
+    height: 25px;  
+    cursor: pointer;
+    float: right;
+}
+
+
+/* Caixa de likebox do Facebook */
+/************************************************************/
+#likebox {
+    border:none; 
+    overflow:hidden; 
+    width:270px; 
+    height:290px;
+    margin-top: 50px;
+    margin-left: 8px;
+}

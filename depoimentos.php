@@ -1,85 +1,114 @@
-<?php 
-/**
- * 
- */
+<?php
 session_start();
-
-require "_classes/DB.class.php";
-require "_classes/ReceberDados.class.php";
-require "_classes/FuncAux.class.php";
-require "_classes/Session.class.php";
-require "_classes/View.class.php";
-
-FuncAux::checaF5();
-
-/**
-* View
-*/
-$view = new View();
+require_once "./classes/Session.class.php";
+require_once "./classes/Aluno.class.php";
+require_once "./classes/Depoimento.class.php";
 
 
-/**
- * Receber dados
- */
-$recDados         = new ReceberDados();
-$recDados->method = ReceberDados::POST;
-$recebe_form      = $recDados->getVariavel("bt");
-
-/**
- * Tratando os dados...
- */
-$view->nome     = $recDados->getVariavel('txt_nome', true);
-$view->email    = $recDados->getVariavel('txt_email', true);
-$view->mensagem = $recDados->getVariavel('txt_msg');
-
-//var_dump((bool)$recebe_form);die();
-if ( $recebe_form ){
-    
-    /**
-     *  Valida todos os campos!!!
-     */
-    if ($view->nome     == "Nome ou empresa" || 
-        $view->email    == "E-mail (não será divulgado)" || 
-        $view->mensagem == "" ){
-        
-        $view->msg_erro = "Preencha todos os campos!!";
-    }
-    else {
-
-       /**
-        * Se estiver ok, insere os dados...
-        */
-        $mysqli = DB::conectar();
-        
-        $data = FuncAux::data_hora_por_extenso(); 
-        
-        # Insere dados de identificação do aluno
-        $sql  = "INSERT INTO depoimentos ";
-        $sql .= "(nome, email, mensagem, data) ";
-        $sql .= "VALUES ";
-        $sql .= "('$view->nome', '$view->email', '$view->mensagem', '$data')";        
-     
-        $mysqli->query($sql);
-        
-        $view->msg_sucesso = "Postado com sucesso!!";
-        
-        $view->nome     = "";
-        $view->email    = "";
-        $view->mensagem = "";
-    }
+if ( Session::getAlunoLogado() ) {
+    $aluno = new Aluno();
+    $aluno->id = Session::getIdAluno();
+    $aluno = $aluno->getObject();
 }
 
+$depoimento = new Depoimento();
+$depoimentos = $depoimento->getObjects();
 
-/**
-* Listando depoimentos...
-*/
-$mysqli = DB::conectar();
-
-# Insere dados de identificação do aluno
-$view->depoimentos = $mysqli->query("SELECT * FROM depoimentos ORDER BY id DESC LIMIT 5");
-$mysqli->close(); 
-
-
-# View
-require_once "views/depoimentos.php";
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.:: Projeto Chance ::.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+    </head>
+    <body>
+        <div id="main">    
+            <?php include "./includes/header.php"; ?>
+
+            
+            <div id="content">                              
+                <?php include "./includes/left.php"; ?>                
+                
+                <div id="sub-content">
+                    <h1>Deixe seu depoimento</h1>
+                    
+                    <h3>Depoimentos (<?php echo $depoimento->getTotalRegistros() ?>)</h3>
+                    
+                    
+                    <?php if ( Session::getAlunoLogado() ): ?>
+                        
+                        <!-- div novo depoimento -->
+                        <div class="box-new-depo">
+                            <div><?php echo $aluno->nome ?></div>
+                            <img src="images/<?php echo $aluno->foto ?>" alt="" title="<?php ?>" />
+
+                            <textarea id="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
+                            <button id="btn-new-depo">Publicar</button>
+                        </div>
+                    <?php else: ?>
+                        
+                        <!-- mensagem para se logar -->
+                        <div class="logado-none">
+                            Somente alunos matriculados podem deixar um depoimento, faça já sua 
+                            <a href="matricula.html">matrícula</a> ou realize seu <a href="portal.html">login</a> para postar algo...
+                        </div>
+                    <?php endif; ?>
+                    
+                        
+                        
+                        
+
+                    <div id="pai-depos">
+                        <?php if ( $depoimento->getTotalRegistros() === 0): ?>
+
+                            <div class="depo-none">Seja o primeiro a deixar o seu...</div>
+                        <?php else: ?>
+
+
+                            <!-- todos os depoimentos -->
+                            <?php foreach ( $depoimentos as $depoimento ): ?>
+                                <div class="box-depo">      
+                                    <input type="hidden" name="id" value="<?php echo $depoimento->id_depo ?>" />
+
+                                    <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
+
+                                    <div class="depo-nome"><?php echo $depoimento->nome ?></div>
+                                    
+                                    <?php if( $depoimento->id_aluno == Session::getIdAluno() ): ?>
+                                        <div class="depo-icons">
+                                            <a href="#" class="depo-icon-editar" title="Editar"></a>
+                                            <a href="#" class="depo-icon-excluir" title="Excluir"></a>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <div class="depo-msg"><?php echo $depoimento->mensagem ?></div>
+                                    
+                                    <!-- hide() -->
+                                    <textarea class="depo-editar depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
+                                    <input class="depo-editar depo-btn-cancelar" type="button" value="Cancelar" />                                    
+                                    <input class="depo-editar depo-btn-alterar" type="button" value="Alterar" />                                    
+                                    <!------------>
+                                    
+                                    <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
+                                </div>
+                            <?php endforeach; ?>
+
+                        <?php endif; ?>                        
+                    </div>
+                    
+                    
+                </div><!--sub-content-->        
+            </div><!--content-->
+
+
+            <?php include "./includes/footer.php"; ?>            
+        </div>
+        
+        <script type="text/javascript" src="js/jquery.cokidoo-textarea.js"></script>
+        <script type="text/javascript" src="js/jquery.depoimento.js"></script>
+    </body>
+</html>

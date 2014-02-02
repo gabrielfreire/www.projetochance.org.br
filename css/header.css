@@ -1,0 +1,224 @@
+/*
+    Estilos do cabeçalho
+*/
+
+/* Definir fonte */
+/************************************************************/
+@font-face { 
+  font-family: Yanone Kaffeesatz; 
+    src: url("../fonts/YanoneKaffeesatz-Regular.eot"); 
+    src: local("Yanone Kaffeesatz"), url("../fonts/YanoneKaffeesatz-Regular.ttf"); 
+} 
+
+@font-face { 
+  font-family: News Cycle; 
+    src: url("../fonts/NewsCycle-Regular.eot"); 
+    src: local("News Cycle"), url("../fonts/NewsCycle-Regular.ttf"); 
+}
+
+/* Definição do escopo */
+/************************************************************/
+body {
+    font: normal .80em arial, sans-serif;
+    background: #FFF url("../images/fundo.png");
+    color: #444;
+}
+
+#main {
+    width: 932px;
+    margin: 0 auto;
+}
+
+
+/* Topo */
+/************************************************************/
+header {
+    background: transparent;
+    height: 164px;
+}
+
+label#saudacao {
+    color: #017ec5;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    float: right;
+}
+
+img#logo {
+    margin: 25px 0 10px 25px;
+    height: 82px;
+    width: 149px;
+    float: left;
+}
+
+
+/* Menu principal */
+/************************************************************/
+nav { 
+  height: 44px;
+  width: 928px;
+  float: right;
+  color: #222;
+  background: #017ec5; /* Mostrar uma cor sólida para navegadores mais antigos */
+  background: -moz-linear-gradient(#63a0c2, #017ec5);
+  background: -o-linear-gradient(#63a0c2, #017ec5);
+  background: -webkit-linear-gradient(#63a0c2, #017ec5);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+  border: 1px solid #017ec5;
+  float: left;
+}
+
+/* Posições dos componentes de menu */
+ul.sf-menu, ul.sf-menu * { 
+    margin: 0;
+    padding: 0;
+}
+
+ul.sf-menu { 
+    display: block;
+    position: relative;
+}
+  
+ul.sf-menu li {
+    display: block;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+  
+ul.sf-menu li:hover { 
+    visibility: inherit; /* corrige bug no IE7 */ 
+}
+
+ul.sf-menu a { 
+    display: block;
+    position: relative;
+}
+  
+ul.sf-menu ul { 
+    position: absolute;
+    left: 0;
+    width: 190px; 
+    top: auto;
+    left: -999999px;
+}
+  
+ul.sf-menu ul a { 
+    zoom: 1; /* corrige IE6/7 */ 
+}
+
+ul.sf-menu ul li { 
+    float: left; /* Deve sempre ser lançada caso contrário, haverá um margin-bottom 1px no IE6/7 */
+    width: 190px;
+}
+  
+ul.sf-menu ul ul { 
+    top: 0;
+    margin: 0 0 0 150px;
+}
+
+ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul, 
+ul.sf-menu ul li:hover ul,ul.sf-menu ul li:focus ul,ul.sf-menu ul li.sf-hover ul,
+ul.sf-menu ul ul li:hover ul,ul.sf-menu ul ul li:focus ul,ul.sf-menu ul ul li.sf-hover ul,
+ul.sf-menu ul ul ul li:hover ul,ul.sf-menu ul ul ul li:focus ul,ul.sf-menu ul ul ul li.sf-hover ul { 
+    left: auto;
+}
+  
+ul.sf-menu li:hover ul ul,ul.sf-menu li:focus ul ul,ul.sf-menu li.sf-hover ul ul,
+ul.sf-menu ul li:hover ul ul,ul.sf-menu ul li:focus ul ul,ul.sf-menu ul li.sf-hover ul ul,
+ul.sf-menu ul ul li:hover ul ul,ul.sf-menu ul ul li:focus ul ul,ul.sf-menu ul ul li.sf-hover ul ul,
+ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu ul ul ul li.sf-hover ul ul { 
+    left: -999999px;
+}
+
+/* Símbolo do drop down */
+span.sf-arrow { 
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    display: block;
+    background: url("../images/arrows-white.png") no-repeat 0 0;
+    overflow: hidden; /* Certificando para que não transborde no IE6, expandindo a caixa */
+    font-size: 1px;
+}
+
+ul ul span.sf-arrow { 
+    right: 5px;
+    top: 20px;
+    background-position: 0 100%;
+}
+
+/* Definir componentes do menu */
+ul#nav { 
+    float: left;
+}
+
+ul#nav ul {     
+    background: #017ec5;
+    margin-top: 4px;
+    padding-bottom: 15px;
+}
+
+ul#nav li a {
+    padding: 11px 15px 2px 15px;
+    font: 100% 'News Cycle', arial, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    margin-right: 2px;
+}
+
+ul#nav li a:hover, ul#nav li a:focus, ul#nav li.selected a, ul#nav li.selected a:hover, ul#nav li.selected a:focus { 
+    color: #000;
+    text-shadow: none;
+}
+
+ul#nav ul li a { 
+    color: #FFF;
+}
+
+ul#nav ul li a:hover { 
+    color: #000;
+    margin-right: 2px;
+}
+
+
+/* Caixa de busca */
+/************************************************************/
+#box-buscar {
+    background: #efeded;
+    padding: 2px;
+    margin: 12px 12px 0 0;
+    float: right;
+}
+
+#box-buscar, #box-buscar input[type=text] {    
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#box-buscar input[type=text] {
+    border: none; 
+    background: url("../images/lupa.png") no-repeat #FFF;
+    color: #017ec5;
+    width: 50px;
+    height: 22px;
+    padding: 0 30px;
+    float: left;
+}
+
+#box-buscar input[type=submit] {
+    border: none;
+    background: url("../images/btn-ok.png") no-repeat;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    margin-left: 2px;
+    float: right;
+}

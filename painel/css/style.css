@@ -1,0 +1,176 @@
+*{
+    font-family: Arial;
+    list-style: none;
+}
+
+
+/******Pagina de login****/
+
+a {
+    text-decoration: none;
+}
+
+label {
+    font-size: 12px;
+}
+
+#erro{
+    font-size: 11px;
+    color:#bf1313;
+}
+
+#caixaLogin{
+    border: solid 1px #CCC;
+    border-radius:1em; 
+    box-shadow: 0.4em 0.4em 1em #CCC;   
+    background: url("../images/logo.png") no-repeat top center;
+    margin: 100px auto;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    width: 250px;
+}
+
+#caixaLogin table{
+    margin: 0 auto;
+}
+
+#caixaLogin label{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#caixaLogin input[type=submit]{
+    border-radius: 0.4em;
+    border:solid 1px #FFF;
+    background: #666;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:#FFF;
+}
+
+#caixaLogin input[type=submit]:hover{
+    background: #333;    
+}
+
+
+
+/*******Padrao******/
+
+#tudo{
+    border:solid 0px #666;
+    background: url("../images/logo.png") no-repeat top left;
+    width: 800px;
+    height: 500px;
+    margin: 0 40px;
+    padding-top: 100px;
+    float: left;
+}
+
+#caixa{
+    border: solid 5px #CCC;
+    border-style: dotted;
+    height: 400px;
+    width: 800px;    
+    float: left;
+}
+
+ul{
+    border:solid 0px #000;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+ul li{
+    background: #CCC;
+    font-size: 14px;
+    text-align: center;
+    border:solid 1px #CCC; 
+    height: 30px;
+    width: 120px;
+    line-height: 27px;
+    margin-right: 2px;
+    float: left;
+}
+
+ul li a{
+    color:#FFF;
+    height: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+ul li a:hover{
+}
+
+#logout{
+    color:#666;
+    float: right;
+}
+#logout:hover{
+    text-decoration: underline;
+}
+
+
+/********Lista de alunos, contatos e depoimentos********/
+
+#table_lista{
+    font-size: 14px;
+}
+
+#table_lista tr td{
+    padding: 4px;    
+}
+
+#table_lista thead{
+    padding: 4px;
+    background: #CCC;
+    color: #FFF;
+    text-align: center;
+}
+
+#table_lista tr td.titulo{
+    width: 200px;
+}
+
+#table_lista tbody tr td{
+    color:#666;
+    border-bottom: solid 1px #96a8df;
+    border-bottom-style: dotted;
+}
+
+#table_lista tbody tr:hover{
+    background: #CCC;
+}
+
+#table_lista tbody tr td a:hover{
+    text-decoration: underline;
+}
+
+a#aluno{
+    color:#666;
+}
+
+a.link{
+    font-size: 12px;
+    color: #b51412;
+}
+
+#table_lista tfoot{
+    background: #CCC;
+}
+
+.pag{
+    border:solid 0px black;
+    background: #666;
+    padding: 4px;
+    margin-top: 10px;
+    margin-right: 4px;
+    font-weight: bold;
+    color: #FFF;    
+    float: left;
+}
+
+.pag:hover{
+    background: #900;
+}
