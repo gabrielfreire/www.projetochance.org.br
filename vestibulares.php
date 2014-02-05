@@ -18,41 +18,50 @@
                 <div id="sub-content">                    
                     <h1>Vestibulares</h1>
                     
+                    
+                    <h3>Veja quais são os principais vestibulares:</h3>
                     <div class="box-link">
                         <h4>FUVEST</h4>
-                        <a class="prova" href="downloads/vestibulares/5 Fase Prova de conheciementos Gerais- Fuvest 2010.rar">Prova Conhecimentos Gerais</a><br />
-                        <a class="prova" href="downloads/vestibulares/5 Fase - Gabarito Fuvest 2011 Conhecimentos Gerais.rar">Gabarito Conhecimentos Gerais</a><br /><br />
+                        <img src="images/fuvest.jpg" alt="" />
+                        <p>A USP, Universidade de São Paulo é a maior instituição de ensino e pesquisa 
+                            do Brasil. Possui cursos de graduação, gratuitos, em todas as áreas do 
+                            conhecimento. A USP oferece 246 cursos! O acesso ocorre por meio de provas, 
+                            organizado anualmente pela FUVEST, Fundação para o Vestibular.</p>
                     </div>
                     
                     <div class="box-link">
-                        <h4>Relação Candidato por vaga FUVEST</h4>
-                        <a class="prova" href="downloads/vestibulares/2011-fuvest-relacao-candidato-vaga-2011.rar">Relação candidato por vaga 2011 FUVEST</a><br /><br />
+                        <h4>UNICAMP</h4>
+                        <img src="images/unicamp.gif" alt="" />
+                        <p>A UNICAMP, Universidade de Campinas se destaca por responder por 15% da 
+                            pesquisa acadêmica do Brasil e também pelo número de artigos publicados 
+                            anualmente. Seu vestibular é organizado pela COMVEST, Comissão Permanente 
+                            para os vestibulares.</p>
                     </div>
                     
                     <div class="box-link">
-                        <h4>Unicamp</h4>
-                        <a class="prova" href="downloads/vestibulares/3prova_unicamp_QZ_2011_f1.rar">Vestibular 2011</a><br />
-                        <a class="prova" href="downloads/vestibulares/3Unicamp 2011Gabarito conhecimentos gerais.rar">Gabarito Unicamp 2011</a><br /><br />
+                        <h4>UNESP</h4>
+                        <img src="images/unesp.jpg" alt="" />
+                        <p>A UNESP, Universidade Estadual Paulista “Júlio de Mesquita Mesquita Filha” 
+                            é uma das maiores e importantes universidades do Brasil, com destaque no 
+                            ensino, pesquisa e na extensão de serviços à comunidade. O processo 
+                            seletivo é realizado pela VUNESP, Fundação para o Vestibular da 
+                            Universidade Paulista.</p>
                     </div>
                     
                     <div class="box-link">
-                        <h4>Unesp</h4>
-                        <a class="prova" href="downloads/vestibulares/4Unesp - prova.rar">Vestibular 2011</a><br />
-                        <a class="prova" href="downloads/vestibulares/4UNESP - GABARITO DE CONHECIMENTOS GERAIS.rar">Gabarito Unesp 2011</a><br /><br />
+                        <h4>UNIFESP</h4>
+                        <img src="images/unifesp.jpg" alt="" />
+                        <p>Saiba como concorrer aos cursos de graduação da Universidade Federal de 
+                            São Paulo:        
+                            <br/><br/>
+                            <strong>Vestibular UNIFESP – SISU:</strong> O SISU, Sistema de Seleção Unificado, que 
+                            utiliza a nota do ENEM, como meio de ingresso para alguns cursos. 
+                            <br/><br/>
+                            <strong>Vestibular UNIFESP – Misto:</strong> Para alguns cursos a UNIFESP aplica uma 
+                            prova complementar. A nota final do candidato ocorre da seguinte forma: 
+                            junta-se as notas do ENEM e da UNIFESP, de acordo com os termos do edital.</p>
                     </div>
                     
-                    <div class="box-link">
-                        <h4>Mackenzie</h4>
-                        <a class="prova" href="downloads/vestibulares/1prova_mack_gruposII_III_2010_sem1.rar">Vestibular 2011</a><br />
-                        <a class="prova" href="downloads/vestibulares/1gabarito_mack_gruposII_III_2010_sem1.rar">Gabarito Mackenzie 2011</a><br /><br />
-                    </div>
-                    
-                    <div class="box-link">
-                        <h4>Puc - SP</h4>
-                        <a class="prova" href="downloads/vestibulares/2prova_pucsp_objetiva_2011_sem1.rar">Vestibular 2011</a><br />
-                        <a class="prova" href="downloads/vestibulares/2gabarito_pucsp_objetiva_2011_sem1.rar">Gabarito Puc 2011</a><br />
-                        <a class="prova" href="downloads/vestibulares/prova_pucsp_discursiva_2011_sem1.rar">Prova PUC - SP dissertativa</a><br /><br />
-                    </div>
                 </div><!--sub-content-->        
             </div><!--content-->
 
