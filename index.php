@@ -50,6 +50,53 @@
                         <!--[endif]-->
                     </object>
                     
+                    
+                    <div id="artigos-lista">
+                        <div class="artigo-titulo">Artigos</div>
+
+                        <div class="artigo">
+                            <img src="./images/sem-imagem.gif" alt="" />
+
+                            <blockquote>
+                                <h3>Por que fazer cursinho?</h3>
+                                <div>
+                                    Ingressar em uma universidade pública ou privada de renome é o 
+                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
+                                    <a href="#">Leia mais!</a>
+                                </div>
+                            </blockquote>
+                        </div>
+
+
+                        <div class="artigo">
+                            <img src="./images/sem-imagem.gif" alt="" />
+
+                            <blockquote>
+                                <h3>Por que fazer cursinho?</h3>
+                                <div>
+                                    Ingressar em uma universidade pública ou privada de renome é o 
+                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
+                                    <a href="#">Leia mais!</a>
+                                </div>
+                            </blockquote>
+                        </div>
+
+
+                        <div class="artigo">
+                            <img src="./images/sem-imagem.gif" alt="" />
+
+                            <blockquote>
+                                <h3>Por que fazer cursinho?</h3>
+                                <div>
+                                    Ingressar em uma universidade pública ou privada de renome é o 
+                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
+                                    <a href="#">Leia mais!</a>
+                                </div>
+                            </blockquote>
+                        </div>
+                    
+                    </div><!-- artigos lista -->
+                    
                 </div><!--sub-content-->        
             </div><!--content-->
 

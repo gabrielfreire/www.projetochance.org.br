@@ -178,6 +178,52 @@ object.banner {
     float: right;
 }
 
+#artigos-lista {
+    /*border:solid 1px #CCC;*/
+    margin: 30px 0;
+    width: 320px;
+    float: right;
+}
+
+.artigo-titulo {
+    border-bottom: solid 1px #000;
+    padding-bottom: 5px;
+    width: 320px;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+}
+
+.artigo {
+    /*border:solid 1px #CCC;*/
+    border-bottom: solid 1px #017ec5;
+    width: 320px;
+    margin: 8px 0;
+    float: right;
+}
+
+.artigo blockquote {
+    /*border:solid 1px #000;*/
+    width: 210px;
+    float: left;
+}
+
+.artigo img {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.artigo h3 {
+    font-weight: bold !important;
+}
+
+.artigo div {
+    /*border:solid 1px #000;*/
+    margin: 10px;
+}
+
+
 /* Matrícula */
 /****************************/
 .table-matricula {
