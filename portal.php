@@ -76,6 +76,36 @@ if ( Session::getAlunoLogado() ) {
                             <div class="portal-dados-item"><span>Telefone:</span> <?php echo $aluno->telefone ?></div>
                         </div>
                         
+                    <?php else: ?>
+                        
+                        
+                        
+                        <div class="portal-login">
+                            <h2>Já sou matriculado</h2>
+                            
+                            <form action="#" method="post" id="form-portal">
+                                <table>
+                                    <tr>
+                                        <td><label>Email:</label></td>
+                                        <td><input type="text" name="email" id="portal-email" class="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Senha:</label></td>
+                                        <td><input type="password" name="senha" id="portal-senha" class="text" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input type="submit" value="Entrar" class="btn" /></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        
+                        <div class="portal-matricula">
+                            <h2>Quero me matricular</h2>
+                            <p>Para efetuar sua matrícula no Projeto Chance <a href="matricula.html">clique aqui</a>.</p>
+                        </div>
+                        
+                        
                     <?php endif; ?>
                     
                 </div><!--sub-content-->        
@@ -84,15 +114,7 @@ if ( Session::getAlunoLogado() ) {
 
             <?php include "./includes/footer.php"; ?>            
         </div>
-        <script type="text/javascript">
-            $("div.portal-box-img").on({
-                mouseover: function (){
-                    $("div.portal-box-img-editar").show();
-                },
-                mouseout: function (){
-                    $("div.portal-box-img-editar").hide();
-                }
-            });
-        </script>
+        
+        <script type="text/javascript" src="js/jquery.portal.js"></script>
     </body>
 </html>

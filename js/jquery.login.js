@@ -23,7 +23,7 @@ var login = {
             event.preventDefault();
             
             $.post("ajax/aluno-logout.php", function (){
-                location.href = "portal.html";
+                window.location.href = "portal.html";
             });
         });
     },
