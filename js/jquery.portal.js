@@ -11,6 +11,7 @@ var portal = {
     init: function (){  
         this.onSubmit();
         this.onMouseoverFoto();
+        this.onUpload();
     },
     
     onSubmit: function (){
@@ -59,11 +60,19 @@ var portal = {
         
         $("div.portal-box-img").on({
             mouseover: function (){
-                $("div.portal-box-img-editar").show();
+                $("a.portal-box-img-editar").show();
             },
             mouseout: function (){
-                $("div.portal-box-img-editar").hide();
+                $("a.portal-box-img-editar").hide();
             }
+        });
+    },
+    
+    onUpload: function (){
+        
+        $(".portal-box-img-editar").on("click", function(){
+            
+            
         });
     },
     

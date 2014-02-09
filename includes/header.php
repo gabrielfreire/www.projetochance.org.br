@@ -4,7 +4,7 @@
  * Cabeçalho do site
  */
 
-require_once "./classes/Data.class.php";
+require "./classes/Data.class.php";
 ?>
 
 <header>

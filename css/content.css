@@ -146,6 +146,39 @@
     margin-bottom: 25px;
 }
 
+/* Modal */
+/************************************************************/
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+.window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#dialog {
+  width:375px; 
+  height:203px;
+  padding:10px;
+  background-color:#ffffff;
+}
+
+.close {
+    display:block; 
+    float: right;
+}
 
 /* Páginas */
 /************************************************************/
@@ -328,7 +361,7 @@ object.banner {
     -o-border-radius: 4px;
     border-radius: 4px;
     height: 160px;
-    margin: 10px 0 0 5px;
+    margin: 40px 0 20px 5px;
     padding: 9px 12px;
     float: left;
 }
@@ -342,7 +375,6 @@ object.banner {
 }
 
 .portal-box-img-editar {
-    /*box-shadow: 0.1em 0.1em 1em 0.1em #CCC;*/
     background: #CCC;
     text-align: center;
     width: 110px;
@@ -361,6 +393,26 @@ object.banner {
 .portal-foto span {
     font-size: 11px;   
 }
+/* Caixa de informações do aluno */
+.portal-info {
+    width: 410px;
+    margin-right: 10px;
+    padding: 35px 0;
+    float: right;
+}
+
+.portal-info label {
+    font-size: 20px;
+}
+
+.portal-info div {
+    color: #999;
+    margin-top: 15px;
+}
+
+.portal-info span {
+    font-weight: bold;
+}
 /* Caixa de dados do aluno */
 .portal-dados {
     border:solid 1px #CCC;
@@ -368,8 +420,8 @@ object.banner {
     -webkit-border-radius: 4px;
     -o-border-radius: 4px;
     border-radius: 4px;
-    width: 420px;
-    margin: 10px;
+    width: 580px;
+    margin: 8px 14px;
     float: right;
 }
 
@@ -403,7 +455,6 @@ object.banner {
 }
 
 #sair {
-    margin:0 0 20px 585px; /* Margin à esquerda para alinhas as divs abaixo */
     float: right;
 }
 

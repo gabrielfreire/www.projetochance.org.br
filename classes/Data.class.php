@@ -9,16 +9,16 @@
  * @author gabriel
  */
 class Data {
-    
+
     static function getDia() {
         date_default_timezone_set('America/Sao_Paulo');
-        
+
         return date("d");
     }
-    
+
     static function getMes() {
         date_default_timezone_set('America/Sao_Paulo');
-        
+
         $mes["01"] = "janeiro";
         $mes["02"] = "fevereiro";
         $mes["03"] = "março";
@@ -34,16 +34,16 @@ class Data {
 
         return $mes[date("m")];
     }
-    
+
     static function getAno() {
         date_default_timezone_set('America/Sao_Paulo');
-        
+
         return date("Y");
     }
-    
+
     static function getDiaSemana() {
         date_default_timezone_set('America/Sao_Paulo');
-        
+
         $semana["0"] = "domingo";
         $semana["1"] = "segunda-feira";
         $semana["2"] = "terça-feira";
@@ -54,5 +54,27 @@ class Data {
 
         return $semana[date("w")];
     }
-    
+
+    static function getSaudacao() {
+        date_default_timezone_set('America/Sao_Paulo');
+
+        $hora = (integer) date("H");
+
+        switch ($hora) {
+            case $hora >= 04 && $hora < 12:
+                $saudacao = "Boa dia";
+                break;
+            case $hora >= 12 && $hora <= 18:
+                $saudacao = "Boa tarde";
+                break;
+            case $hora > 18 && $hora <= 23:
+                $saudacao = "Boa noite";
+                break;
+            case $hora >= 00 && $hora < 04:
+                $saudacao = "Boa noite";
+                break;
+        }
+        return $saudacao;
+    }
+
 }
