@@ -1,8 +1,15 @@
 <?php
-
-require_once "./classes/Aluno.class.php";
+session_start();
+require "./classes/Session.class.php";
+require "./classes/HTMLcombo.class.php";
+require "./classes/Aluno.class.php";
 
 $aluno = new Aluno();
+
+if ( Session::getIdAluno() ) {
+    $aluno->id = Session::getIdAluno();
+    $aluno = $aluno->getObject();
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +34,8 @@ $aluno = new Aluno();
 
 
                     <form action="#" method="post" id="form-matricula" >
-                         
+                        <input type="hidden" name="id" value="<?php echo $aluno->id ?>" /> 
+                        
                         <!-- primeira parte -->
                         <h4>Dados pessoais</h4>
                         <table class="table-matricula">      
@@ -39,11 +47,12 @@ $aluno = new Aluno();
                                 <td><label>*Estado civil</label></td>
                                 <td>
                                     <select name="estado-civil" id="estado-civil" class="text text-small">
-                                        <option></option>
-                                        <option>Casado(a)</option>
-                                        <option>Solteiro(a)</option>
-                                        <option>Divorciado(a)</option>
-                                        <option>Viúvo(a)</option>
+                                        <?php                                                     
+                                        $combo    = new HTMLcombo();
+                                        $combo->valor_selecionado = $aluno->estado_civil;							
+                                        
+                                        echo $combo->getOptions( HTMLcombo::estados_civis() );                                
+                                        ?>
                                     </select>
                                 </td>
                             </tr>
@@ -71,34 +80,12 @@ $aluno = new Aluno();
                                 <td><label>*Estado</label></td>
                                 <td>
                                     <select name="estado" id="estado" class="text text-medium">
-                                        <option></option>
-                                        <option>AC - Acre</option>
-                                        <option>AL - Alagoas</option>
-                                        <option>AP - Amapá</option>
-                                        <option>AM - Amazonas</option>
-                                        <option>BA - Bahia</option>
-                                        <option>CE - Ceará</option>
-                                        <option>DF - Distrito Federal</option>
-                                        <option>ES - Espírito Santo</option>
-                                        <option>GO - Goiás</option>
-                                        <option>MA - Maranhão</option>
-                                        <option>MT - Mato Grosso</option>
-                                        <option>MS - Mato Grosso do Sul</option>
-                                        <option>MG - Minas Gerais</option>
-                                        <option>PA - Pará</option>
-                                        <option>PB - Paraíba</option>
-                                        <option>PR - Paraná</option>
-                                        <option>PE - Pernambuco</option>
-                                        <option>PI - Piauí</option>
-                                        <option>RJ - Rio de Janeiro</option>
-                                        <option>RN - Rio Grande do Norte</option>
-                                        <option>RS - Rio Grande do Sul</option>
-                                        <option>RO - Rondônia</option>
-                                        <option>RR - Roraima</option>
-                                        <option>SC - Santa Catarina</option>
-                                        <option>SP - São Paulo</option>
-                                        <option>SE - Sergipe</option>
-                                        <option>TO - Tocantins</option>
+                                        <?php                                                     
+                                        $combo    = new HTMLcombo();
+                                        $combo->valor_selecionado = $aluno->estado;							
+                                        
+                                        echo $combo->getOptions( HTMLcombo::estados() );                                
+                                        ?>
                                     </select>
                                 </td>
                             </tr>
@@ -140,14 +127,12 @@ $aluno = new Aluno();
                                 <td><label>Ano que concluiu/concluirá o Ensino Médio</label></td>
                                 <td>
                                     <select name="ano-conclusao-em" class="text text-small">
-                                        <option></option>
-                                        <option>2014</option>
-                                        <option>2015</option>
-                                        <option>2016</option>
-                                        <option>2017</option>
-                                        <option>2018</option>
-                                        <option>2019</option>
-                                        <option>2020</option>
+                                        <?php                                                     
+                                        $combo    = new HTMLcombo();
+                                        $combo->valor_selecionado = $aluno->ano_conclusao_em;							
+                                        
+                                        echo $combo->getOptions( HTMLcombo::anos_ensino_medio() );                                
+                                        ?>
                                     </select>
                                 </td>
                             </tr>
@@ -155,14 +140,12 @@ $aluno = new Aluno();
                                 <td><label>Já fez a prova do ENEM? Se sim, em que ano?</label></td>
                                 <td>
                                      <select name="ano-prova-enem" class="text text-small">
-                                         <option></option>
-                                         <option>2008</option>
-                                         <option>2009</option>
-                                         <option>2010</option>
-                                         <option>2011</option>
-                                         <option>2012</option>
-                                         <option>2013</option>
-                                         <option>2014</option>
+                                        <?php                                                     
+                                        $combo    = new HTMLcombo();
+                                        $combo->valor_selecionado = $aluno->ano_prova_enem;							
+                                        
+                                        echo $combo->getOptions( HTMLcombo::anos_prova_enem() );                                
+                                        ?>
                                      </select>
                                  </td>
                             </tr>

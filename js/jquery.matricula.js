@@ -23,7 +23,7 @@ var matricula = {
             completed: function (){
                 
                 // Consultar CEP
-                $.post("ajax/ajax-cep.php", "cep="+$(this).val(), function (json){                    
+                $.post("ajax/webservice-cep.php", "cep="+$(this).val(), function (json){                    
                     switch (json.resultado) {
                         
                         // Logradouro completo 
@@ -69,15 +69,15 @@ var matricula = {
         $("#form-matricula").on("submit", function(event){
             event.preventDefault();
                         
-            if ( me.validateFields() ) {                
-                $.post("ajax/ajax-matricula.php", $(this).serialize(), function (html){
-                    
+            if ( me.validateFields() ) { 
+                $.post("ajax/matricula-save.php", $(this).serialize(), function (html){
+
                     $("#sub-content").fadeOut(500, function (){                        
                         $(this).html(html).slideDown(500);
                     });
                 }, "html").fail(function (){
                     alert("error");
-                });
+                });                
             }
             me.pageUp();
         });

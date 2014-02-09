@@ -2,7 +2,7 @@
     Estilos da coluna na esquerda
 */
 
-/* Menu vertical */
+/* Coluna lateral */
 /************************************************************/
 #left {
     border-right: solid 1px #cbcaca;
@@ -11,6 +11,9 @@
     float: left;
 }
 
+
+/* Menu */
+/************************************************************/
 ol#nav-left  {
     background: url("../images/folha.jpg") no-repeat top left;
     height: 255px; 
@@ -80,7 +83,7 @@ ol#nav-left li a:hover {
 }
 
 #login a img {
-    border:none;
+    border: none;
     width: 25px;
     height: 25px;  
     cursor: pointer;
@@ -91,7 +94,7 @@ ol#nav-left li a:hover {
 /* Caixa de likebox do Facebook */
 /************************************************************/
 #likebox {
-    border:none; 
+    border: none; 
     overflow:hidden; 
     width:270px; 
     height:290px;

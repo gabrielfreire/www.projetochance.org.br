@@ -10,7 +10,7 @@ footer {
   margin-bottom: 40px;
   color: #FFF;
   text-align: center;
-  background: #017ec5; /* Show a solid color for older browsers */
+  background: #017ec5; /* Mostrar cor sólida pra browsers antigos */
   background: -moz-linear-gradient(#63a0c2, #017ec5);
   background: -o-linear-gradient(#63a0c2, #017ec5);
   background: -webkit-linear-gradient(#63a0c2, #017ec5);

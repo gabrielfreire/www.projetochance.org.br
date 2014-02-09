@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once "./classes/Session.class.php";
-require_once "./classes/Aluno.class.php";
-require_once "./classes/Depoimento.class.php";
+require "./classes/Session.class.php";
+require "./classes/Aluno.class.php";
+require "./classes/Depoimento.class.php";
 
 
 if ( Session::getAlunoLogado() ) {
@@ -13,7 +13,6 @@ if ( Session::getAlunoLogado() ) {
 
 $depoimento = new Depoimento();
 $depoimentos = $depoimento->getObjects();
-
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +90,7 @@ $depoimentos = $depoimento->getObjects();
                                     <textarea class="depo-editar depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
                                     <input class="depo-editar depo-btn-cancelar" type="button" value="Cancelar" />                                    
                                     <input class="depo-editar depo-btn-alterar" type="button" value="Alterar" />                                    
-                                    <!------------>
+                                    <!-- -->
                                     
                                     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
                                 </div>

@@ -11,16 +11,23 @@ require_once "../classes/Aluno.class.php";
 $aluno = new Aluno();
 $aluno->email = $_POST["email"];
 $aluno->senha = $_POST["senha"];
-$login = $aluno->login();
+$aluno = $aluno->login();
 
 
-if ( $login === false ) {
+if ( $aluno === false ) {
     
     echo "false";
 }
 else {
     Session::setAlunoLogado(true);
-    Session::setIdAluno($login->id);
+    Session::setIdAluno($aluno->id);
+    Session::setUltimoAcessoAluno($aluno->ultimo_acesso);
+    
+    # Timezone para data
+    date_default_timezone_set('America/Sao_Paulo');
+
+    $aluno->ultimo_acesso = date("d/m/Y - H:i");
+    $aluno->update();
     
     echo "true";
 }

@@ -16,7 +16,8 @@ class Aluno {
 
     public $id;                 # int(11)
     public $data;               # varchar(20)
-    public $registro;           # int(9)
+    public $ultimo_acesso;      # varchar(20)
+    public $registro_aluno;     # int(9)
     public $foto;               # varchar(200)
     public $nome;               # varchar(200)
     public $estado_civil;       # varchar(20)
@@ -54,7 +55,7 @@ class Aluno {
         $sql->bindParam(2, $this->senha);
         $sql->execute();
 
-        return $sql->fetch(PDO::FETCH_OBJ);
+        return $sql->fetchObject( get_class($this) );
     }
 
     public function getObject() {
@@ -63,70 +64,73 @@ class Aluno {
         $sql->bindParam(1, $this->id);
         $sql->execute();
         
-        return $sql->fetch(PDO::FETCH_OBJ);
+        return $sql->fetchObject( get_class($this) );
     }
     
     public function insert() {
         $pdo = DBpdo::connection();
         $stmte = $pdo->prepare("INSERT INTO aluno "
-                . "(data, registro, foto, nome, estado_civil, cep, endereco, numero, bairro, cidade, estado, "
-                . "data_nasc, rg, cpf, telefone, email, senha, ano_conclusao_em, "
-                . "ano_prova_enem, nome_inst, nome_cursinho) "
-                . "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                . "(data, ultimo_acesso, registro_aluno, foto, nome, estado_civil, "
+                . "cep, endereco, numero, bairro, cidade, estado, data_nasc, rg, "
+                . "cpf, telefone, email, senha, ano_conclusao_em, ano_prova_enem, "
+                . "nome_inst, nome_cursinho) "
+                . "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         $stmte->bindParam(1,  $this->data, PDO::PARAM_STR);
-        $stmte->bindParam(2,  $this->registro, PDO::PARAM_INT);
-        $stmte->bindParam(3,  $this->foto, PDO::PARAM_STR);
-        $stmte->bindParam(4,  $this->nome, PDO::PARAM_STR);
-        $stmte->bindParam(5,  $this->estado_civil, PDO::PARAM_STR);
-        $stmte->bindParam(6,  $this->cep, PDO::PARAM_STR);
-        $stmte->bindParam(7,  $this->endereco, PDO::PARAM_STR);
-        $stmte->bindParam(8,  $this->numero, PDO::PARAM_STR);
-        $stmte->bindParam(9,  $this->bairro, PDO::PARAM_STR);
-        $stmte->bindParam(10, $this->cidade, PDO::PARAM_STR);
-        $stmte->bindParam(11, $this->estado, PDO::PARAM_STR);
-        $stmte->bindParam(12, $this->data_nasc, PDO::PARAM_STR);
-        $stmte->bindParam(13, $this->rg, PDO::PARAM_STR);
-        $stmte->bindParam(14, $this->cpf, PDO::PARAM_STR);
-        $stmte->bindParam(15, $this->telefone, PDO::PARAM_STR);
-        $stmte->bindParam(16, $this->email, PDO::PARAM_STR);
-        $stmte->bindParam(17, $this->senha, PDO::PARAM_STR);
-        $stmte->bindParam(18, $this->ano_conclusao_em, PDO::PARAM_STR);
-        $stmte->bindParam(19, $this->ano_prova_enem, PDO::PARAM_STR);
-        $stmte->bindParam(20, $this->nome_inst, PDO::PARAM_STR);
-        $stmte->bindParam(21, $this->nome_cursinho, PDO::PARAM_STR);
+        $stmte->bindParam(2,  $this->ultimo_acesso, PDO::PARAM_STR);
+        $stmte->bindParam(3,  $this->registro_aluno, PDO::PARAM_INT);
+        $stmte->bindParam(4,  $this->foto, PDO::PARAM_STR);
+        $stmte->bindParam(5,  $this->nome, PDO::PARAM_STR);
+        $stmte->bindParam(6,  $this->estado_civil, PDO::PARAM_STR);
+        $stmte->bindParam(7,  $this->cep, PDO::PARAM_STR);
+        $stmte->bindParam(8,  $this->endereco, PDO::PARAM_STR);
+        $stmte->bindParam(9,  $this->numero, PDO::PARAM_STR);
+        $stmte->bindParam(10, $this->bairro, PDO::PARAM_STR);
+        $stmte->bindParam(11, $this->cidade, PDO::PARAM_STR);
+        $stmte->bindParam(12, $this->estado, PDO::PARAM_STR);
+        $stmte->bindParam(13, $this->data_nasc, PDO::PARAM_STR);
+        $stmte->bindParam(14, $this->rg, PDO::PARAM_STR);
+        $stmte->bindParam(15, $this->cpf, PDO::PARAM_STR);
+        $stmte->bindParam(16, $this->telefone, PDO::PARAM_STR);
+        $stmte->bindParam(17, $this->email, PDO::PARAM_STR);
+        $stmte->bindParam(18, $this->senha, PDO::PARAM_STR);
+        $stmte->bindParam(19, $this->ano_conclusao_em, PDO::PARAM_STR);
+        $stmte->bindParam(20, $this->ano_prova_enem, PDO::PARAM_STR);
+        $stmte->bindParam(21, $this->nome_inst, PDO::PARAM_STR);
+        $stmte->bindParam(22, $this->nome_cursinho, PDO::PARAM_STR);
         $stmte->execute();
     }
 
     public function update() {
         $pdo = DBpdo::connection();
         $stmte = $pdo->prepare("UPDATE aluno SET "
-                . "foto=?, nome=?, estado_civil=?, cep=?, endereco=?, numero=?, "
-                . "bairro=?, cidade=?, estado=?, data_nasc=?, rg=?, cpf=?, "
-                . "telefone=?, email=?, senha=?, ano_conclusao_em=?, "
-                . "ano_prova_enem=?, nome_inst=?, nome_cursinho=? "
+                . "ultimo_acesso=?, foto=?, nome=?, estado_civil=?, cep=?, "
+                . "endereco=?, numero=?, bairro=?, cidade=?, estado=?, "
+                . "data_nasc=?, rg=?, cpf=?, telefone=?, email=?, senha=?, "
+                . "ano_conclusao_em=?, ano_prova_enem=?, nome_inst=?, nome_cursinho=? "
                 . "WHERE id = ?");
 
-        $stmte->bindParam(1,  $this->foto, PDO::PARAM_STR);
-        $stmte->bindParam(2,  $this->nome, PDO::PARAM_STR);
-        $stmte->bindParam(3,  $this->estado_civil, PDO::PARAM_STR);
-        $stmte->bindParam(4,  $this->cep, PDO::PARAM_STR);
-        $stmte->bindParam(5,  $this->endereco, PDO::PARAM_STR);
-        $stmte->bindParam(6,  $this->numero, PDO::PARAM_STR);
-        $stmte->bindParam(7,  $this->bairro, PDO::PARAM_STR);
-        $stmte->bindParam(8,  $this->cidade, PDO::PARAM_STR);
-        $stmte->bindParam(9,  $this->estado, PDO::PARAM_STR);
-        $stmte->bindParam(10, $this->data_nasc, PDO::PARAM_STR);
-        $stmte->bindParam(11, $this->rg, PDO::PARAM_STR);
-        $stmte->bindParam(12, $this->cpf, PDO::PARAM_STR);
-        $stmte->bindParam(13, $this->telefone, PDO::PARAM_STR);
-        $stmte->bindParam(14, $this->email, PDO::PARAM_STR);
-        $stmte->bindParam(15, $this->senha, PDO::PARAM_STR);
-        $stmte->bindParam(16, $this->ano_conclusao_em, PDO::PARAM_STR);
-        $stmte->bindParam(17, $this->ano_prova_enem, PDO::PARAM_STR);
-        $stmte->bindParam(18, $this->nome_inst, PDO::PARAM_STR);
-        $stmte->bindParam(19, $this->nome_cursinho, PDO::PARAM_STR);
-        $stmte->bindParam(20, $this->id, PDO::PARAM_INT);
+        $stmte->bindParam(1,  $this->ultimo_acesso, PDO::PARAM_STR);
+        $stmte->bindParam(2,  $this->foto, PDO::PARAM_STR);
+        $stmte->bindParam(3,  $this->nome, PDO::PARAM_STR);
+        $stmte->bindParam(4,  $this->estado_civil, PDO::PARAM_STR);
+        $stmte->bindParam(5,  $this->cep, PDO::PARAM_STR);
+        $stmte->bindParam(6,  $this->endereco, PDO::PARAM_STR);
+        $stmte->bindParam(7,  $this->numero, PDO::PARAM_STR);
+        $stmte->bindParam(8,  $this->bairro, PDO::PARAM_STR);
+        $stmte->bindParam(9,  $this->cidade, PDO::PARAM_STR);
+        $stmte->bindParam(10, $this->estado, PDO::PARAM_STR);
+        $stmte->bindParam(11, $this->data_nasc, PDO::PARAM_STR);
+        $stmte->bindParam(12, $this->rg, PDO::PARAM_STR);
+        $stmte->bindParam(13, $this->cpf, PDO::PARAM_STR);
+        $stmte->bindParam(14, $this->telefone, PDO::PARAM_STR);
+        $stmte->bindParam(15, $this->email, PDO::PARAM_STR);
+        $stmte->bindParam(16, $this->senha, PDO::PARAM_STR);
+        $stmte->bindParam(17, $this->ano_conclusao_em, PDO::PARAM_STR);
+        $stmte->bindParam(18, $this->ano_prova_enem, PDO::PARAM_STR);
+        $stmte->bindParam(19, $this->nome_inst, PDO::PARAM_STR);
+        $stmte->bindParam(20, $this->nome_cursinho, PDO::PARAM_STR);
+        $stmte->bindParam(21, $this->id, PDO::PARAM_INT);
         $stmte->execute();
     }
 

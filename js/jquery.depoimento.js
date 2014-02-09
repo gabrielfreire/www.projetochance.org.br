@@ -9,10 +9,10 @@ var depoimentos = {
     init: function (){
         this.onAutoResizeAll();
         this.onDepoAdd();
+        this.onDepoShowEditar();
         this.onDepoEditar();
-        this.onDepoExcluir();
-        this.onDepoSalvar();
         this.onDepoCancelar();
+        this.onDepoExcluir();
     },
     
     onAutoResizeAll: function (){
@@ -46,7 +46,7 @@ var depoimentos = {
             var msg = $.trim( $("#mensagem").val() );
             
             if ( msg !== "" ) {            
-                $.post("ajax/ajax-depoimento.php", "mensagem="+msg, function (html){
+                $.post("ajax/depoimento-save.php", "mensagem="+msg, function (html){
 
                     //apagar textarea e dar foco
                     $("#mensagem").val("").height(35).focus();
@@ -69,7 +69,7 @@ var depoimentos = {
         });
     },
     
-    onDepoEditar: function (){        
+    onDepoShowEditar: function (){        
         
         // Mostrar a edição
         $("#pai-depos").on("click", ".depo-icon-editar", function (event){
@@ -82,7 +82,7 @@ var depoimentos = {
         
     },
     
-    onDepoSalvar: function (){
+    onDepoEditar: function (){
         
         // Salvar
         var me = this;
@@ -95,9 +95,7 @@ var depoimentos = {
             var id_depo = div_pai.children(":hidden").val();
             
             if ( msg !== "" ) {    
-                var parametros = "mensagem="+msg+"&id="+id_depo;
-
-                $.post("ajax/ajax-depoimento.php", parametros, function (html){
+                $.post("ajax/depoimento-save.php", "mensagem="+msg+"&id="+id_depo, function (html){
                     
                     var index = div_pai.index();
                     
@@ -136,7 +134,7 @@ var depoimentos = {
             
             if ( confirm("Tem certeza?") ) {
                 div_pai.fadeOut(500, function (){
-                    $.post("ajax/ajax-depo-del.php", "id="+id_depo, function (){
+                    $.post("ajax/depoimento-delete.php", "id="+id_depo, function (){
 
                     }).fail(function (){
                         alert("error");

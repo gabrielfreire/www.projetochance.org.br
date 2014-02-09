@@ -39,7 +39,7 @@ var contato = {
             event.preventDefault();
                         
             if ( me.validateFields() ) {                
-                $.post("ajax/ajax-contato.php", $(this).serialize(), function (html){
+                $.post("ajax/contato-save.php", $(this).serialize(), function (html){
                     
                     $("#sub-content").fadeOut(500, function (){                        
                         $(this).html(html).slideDown(500);

@@ -19,11 +19,11 @@ var login = {
     
     onLogout: function (){
       
-        $("#sair").on("click", function(event){
+        $("#sair").on("click", function(event) {
             event.preventDefault();
             
-            $.post("ajax/ajax-logout.php", function (){
-                
+            $.post("ajax/aluno-logout.php", function (){
+                location.href = "portal.html";
             });
         });
     },
@@ -36,7 +36,7 @@ var login = {
                         
             if ( me.validateFields() ) { 
                 
-                $.post("ajax/ajax-login.php", $("#form-login").serialize(), function (login){                    
+                $.post("ajax/aluno-login.php", $("#form-login").serialize(), function (login){                    
                     if (login === "true") {
                         $("#form-login").submit();
                     }

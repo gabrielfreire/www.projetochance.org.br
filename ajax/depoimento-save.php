@@ -6,7 +6,6 @@ session_start();
 require_once "../classes/Session.class.php";
 require_once "../classes/Depoimento.class.php";
 
-# Se receber id, vou editar, senão vou inserir!
 $idDepo = isset( $_POST["id"] ) ? $_POST["id"] : null;
 
 
@@ -14,20 +13,20 @@ $idDepo = isset( $_POST["id"] ) ? $_POST["id"] : null;
 date_default_timezone_set('America/Sao_Paulo');
 
 $depoimento = new Depoimento();
+$depoimento->id       = $idDepo;
 $depoimento->id_aluno = Session::getIdAluno();
 $depoimento->data     = date("d/m/Y - H:i");
 $depoimento->mensagem = $_POST["mensagem"];
 
-if ( $idDepo ) {
-    $depoimento->id = $idDepo;
+if ( $idDepo )
     $depoimento->update();
-}
-else {
+else
     $depoimento->insert();
-}
+
 
 # Resgatar objeto
 $depoimento = $depoimento->getObject();
+
 ?>
 
 <div class="box-depo">                        
@@ -50,7 +49,7 @@ $depoimento = $depoimento->getObject();
     <textarea class="depo-editar depo-textArea"><?php echo $depoimento->mensagem ?></textarea>
     <input class="depo-editar depo-btn-cancelar" type="button" value="Cancelar" />                                    
     <input class="depo-editar depo-btn-alterar" type="button" value="Alterar" /> 
-    <!------------>
+    <!-- -->
     
     <div class="depo-data"><?php echo $depoimento->data_depo ?></div>
 </div>

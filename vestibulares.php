@@ -16,10 +16,9 @@
                 <?php include "./includes/left.php"; ?>                
                 
                 <div id="sub-content">                    
-                    <h1>Vestibulares</h1>
+                    <h1>Vestibulares</h1>                    
                     
-                    
-                    <h3>Veja quais são os principais vestibulares:</h3>
+                    <h4>Veja quais são os principais vestibulares:</h4>
                     <div class="box-link">
                         <h4>FUVEST</h4>
                         <img src="images/fuvest.jpg" alt="" />

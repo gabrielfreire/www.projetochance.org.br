@@ -6,8 +6,9 @@ USE projeorg_chance;
 CREATE TABLE IF NOT EXISTS aluno (
     id int primary key auto_increment not null,
     data varchar(20) not null,
+    ultimo_acesso varchar(20) not null,
     foto varchar(200) not null,
-    registro int(9) not null,
+    registro_aluno int(9) not null,
     nome varchar(200) not null,
     estado_civil varchar(20) not null,
     cep varchar(9) not null,
