@@ -11,12 +11,11 @@
  */
 class Imagem {
 
-    public $erro;
     
-    function Upload( $arr_file, $pasta = "images/fotos/", $largura = 460 ) {
+    static function upload( $arr_file, $pasta = "../images/fotos-aluno", $largura = 460 ) {
 
         try {
-
+            
             $destino = $arr_file['tmp_name'];
             $nome = $arr_file['name'];
             $tipo = $arr_file['type'];
@@ -63,13 +62,11 @@ class Imagem {
             }
             imagedestroy($imagem);
             imagedestroy($nova_imagem);
-
-            return true;
+            
+            return $nome;
             
         } catch (Exception $exc) {
-            $this->erro = $exc->getMessage();
-            
-            return false;
+            return $exc->getMessage();
         }
     }
 

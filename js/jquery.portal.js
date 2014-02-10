@@ -70,9 +70,21 @@ var portal = {
     
     onUpload: function (){
         
-        $(".portal-box-img-editar").on("click", function(){
+        $(":file", "#form-foto").on("change", function(){
+            $("#mask").hide();
+            $(".window").hide();
+            $(".portal-box-img-editar").hide();
             
+            var form = $(this).parent();
+            var box  = $(this).parents(".portal-box-img");
             
+            box.children("img").hide();
+            box.append("<iframe name=\"frame\" src=\"\"></iframe>");
+            
+            form.attr("action", "ajax/aluno-upload.php");
+            form.attr("enctype", "multipart/form-data");
+            form.attr("target", "frame");            
+            form.submit();            
         });
     },
     

@@ -8,26 +8,6 @@ if (Session::getAlunoLogado()) {
     $aluno->id = Session::getIdAluno();
     $aluno = $aluno->getObject();
 }
-//if ( Session::getIdAluno() ){
-//    
-//    $foto = isset($_FILES['foto']) ? $_FILES['foto'] : null;
-//    
-//    if ($foto){
-//        $path = FuncAux::Redimensionar($foto, 120, "_imagens/foto_alunos");
-//        
-//        $mysqli = DB::conectar();  
-//        
-//        $sql = "UPDATE aluno_main SET imagem = '$path' WHERE id = ".Session::getIdAluno();
-//        $mysqli->query($sql);
-//    }
-//    
-//    
-//    $mysqli = DB::conectar();    
-//
-//    $sql = "SELECT * FROM aluno_main WHERE id = ".Session::getIdAluno();
-//    $view->aluno = $mysqli->query($sql)->fetch_object();
-//    
-//}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +17,7 @@ if (Session::getAlunoLogado()) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
         <div id="main">    
@@ -75,13 +55,15 @@ if (Session::getAlunoLogado()) {
                                     
                                     <h1>Escolha uma foto no seu computador</h1>
                                     <br/>
-                                    <input type="file" value="Enviar" name="foto" />
+                                    <form action="#" method="post" id="form-foto">
+                                        <input type="file" value="Procurar" name="url" />
+                                    </form>
                                 </div>
                                 
                                 <div id="mask"></div><!-- Máscara para cobrir a tela -->
                                 <!-- fim do modal -->
                                 
-                                <img src="./images/sem-foto.jpg" alt="" />
+                                <img src="./images/<?php echo $aluno->foto ?>" alt="" />
                             </div>
                             <span>Último acesso: <br/><?php echo Session::getUltimoAcessoAluno() ?></span>
                         </div>

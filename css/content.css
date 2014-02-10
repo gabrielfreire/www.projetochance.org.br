@@ -360,38 +360,43 @@ object.banner {
     -webkit-border-radius: 4px;
     -o-border-radius: 4px;
     border-radius: 4px;
-    height: 160px;
     margin: 40px 0 20px 5px;
     padding: 9px 12px;
     float: left;
 }
 
+.portal-foto span {
+    font-size: 11px;   
+}
+
 .portal-box-img {
-    border:solid 1px #999;
+    max-height: 110px;
+    width: 130px;
+    margin-bottom: 35px;
+}
+
+.portal-box-img img {
     max-height: 110px;
     max-width: 110px;
-    padding: 5px;
-    margin-bottom: 35px;
+    margin: 9px;
+}
+
+.portal-box-img iframe { /* Iframe inserido pelo js */
+    max-height: 110px;
+    width: 127px;
+    overflow: hidden;
 }
 
 .portal-box-img-editar {
     background: #CCC;
     text-align: center;
     width: 110px;
-    padding: 10px 0;
+    margin: 8px;
+    padding: 7px 0;
     opacity: 0.7;
     cursor: pointer;
     position: absolute;
     display: none;
-}
-
-.portal-box-img img {
-    max-height: 110px;
-    max-width: 110px;
-}
-
-.portal-foto span {
-    font-size: 11px;   
 }
 /* Caixa de informações do aluno */
 .portal-info {

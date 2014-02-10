@@ -20,47 +20,47 @@
                     <h1>Fotos do projeto</h1>
                     
                     <div class="thumbnails">                    
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img1.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img1.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img1.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img1.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img2.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img2.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img2.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img2.jpg" alt="">
                         </a>                   
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img3.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img3.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img3.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img3.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img4.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img4.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img4.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img4.jpg" alt="">
                         </a>
                     </div>
                     
                     <div class="thumbnails"> 
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img5.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img5.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img5.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img5.jpg" alt="">
                         </a>                   
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img6.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img6.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img6.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img6.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img7.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img7.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img7.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img7.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img8.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img8.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img8.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img8.jpg" alt="">
                         </a>
                     </div>
                     
                     <div class="thumbnails">
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img9.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img9.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img9.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img9.jpg" alt="">
                         </a>                   
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img10.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img10.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img10.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img10.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img11.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img11.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img11.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img11.jpg" alt="">
                         </a>
-                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos/img12.jpg">
-                            <img data-src="holder.js/300x200" src="images/fotos/img12.jpg" alt="">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img12.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img12.jpg" alt="">
                         </a>
                     </div>
                     
