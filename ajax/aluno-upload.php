@@ -7,6 +7,8 @@ require_once "../classes/Imagem.class.php";
 
 $imagem = Imagem::upload( $_FILES['url'] );
 //$imagem = "1362393.jpg";
+
+//Aqui eu devo alterar a imagem na classe Aluno
 ?>
 
 <style type="text/css">
