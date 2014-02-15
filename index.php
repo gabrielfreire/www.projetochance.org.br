@@ -51,9 +51,7 @@
                     </object>
                     
                     
-                    <div id="artigos-lista">
-                        <div class="artigo-titulo">Artigos</div>
-
+                    <div id="home-artigos">
                         <div class="artigo">
                             <img src="./images/sem-imagem.gif" alt="" />
 
@@ -61,8 +59,10 @@
                                 <h3>Por que fazer cursinho?</h3>
                                 <div>
                                     Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
-                                    <a href="#">Leia mais!</a>
+                                    sonho de muitos jovens e pais...
+                                    
+                                    <br/><br/>
+                                    <strong>Leia mais!</strong>
                                 </div>
                             </blockquote>
                         </div>
@@ -75,8 +75,10 @@
                                 <h3>Por que fazer cursinho?</h3>
                                 <div>
                                     Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
-                                    <a href="#">Leia mais!</a>
+                                    sonho de muitos jovens e pais...
+                                    
+                                    <br/><br/>
+                                    <strong>Leia mais!</strong>
                                 </div>
                             </blockquote>
                         </div>
@@ -89,13 +91,51 @@
                                 <h3>Por que fazer cursinho?</h3>
                                 <div>
                                     Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais. No Brasil, muitos estudantes...
-                                    <a href="#">Leia mais!</a>
+                                    sonho de muitos jovens e pais...
+                                    
+                                    <br/><br/>
+                                    <strong>Leia mais!</strong>
                                 </div>
                             </blockquote>
                         </div>
                     
                     </div><!-- artigos lista -->
+                    
+                    
+                    
+                    <!-- vestibular -->
+                    <div id="home-vestibular">
+                        <div class="div-img-vestibular">
+                            <img src="images/home-fuvest.png" alt="" />
+                            <h4>Fuvest divulga 2ª Chamada</h4>
+                        </div>
+                        <div class="div-img-vestibular">
+                            <img src="images/home-unicamp.png" alt="" />
+                            <h4>Unicamp divulga 2ª Chamada</h4>
+                        </div>
+                        <div class="div-img-vestibular">                            
+                            <img src="images/home-vunesp.png" alt="" />
+                            <h4>Unesp divulga 2ª Chamada</h4>
+                        </div>                        
+                        <div class="div-img-vestibular">
+                            <img src="images/home-unifesp.png" alt="" />
+                            <h4>Unifesp divulga 2ª Chamada</h4>
+                        </div>
+                    </div><!-- fim de vestibular -->
+                    
+                    
+                    
+                    <!-- palavra presidente -->
+                    <div class="home-info">
+                        <h1>"É preciso acreditar, com educação, o Brasil tem chance..."</h1>
+                        <img src="#" alt="" />
+                        <div>Veja a palavra de <strong>Misael Silva</strong>, presidente do Projeto Chance.</div>
+                    </div>
+                    
+                    <div class="home-info">
+                        <h1>Nossa história</h1>
+                        <div>Conheça a história do Projeto...</div>
+                    </div>
                     
                 </div><!--sub-content-->        
             </div><!--content-->

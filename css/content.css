@@ -210,35 +210,26 @@ object.banner {
     height: 180px;
     float: right;
 }
-
-#artigos-lista {
+/* Home - Artigos */
+#home-artigos {
     /*border:solid 1px #CCC;*/
-    margin: 30px 0;
-    width: 320px;
+    margin: 5px 0;
+    width: 240px;
     float: right;
-}
-
-.artigo-titulo {
-    border-bottom: solid 1px #000;
-    padding-bottom: 5px;
-    width: 320px;
-    font-weight: bold;
-    font-size: 20px;
-    float: left;
 }
 
 .artigo {
     /*border:solid 1px #CCC;*/
-    border-bottom: solid 1px #017ec5;
-    width: 320px;
+    border-bottom: solid 1px #CCC;
+    border-bottom-style: dotted;
     margin: 8px 0;
     float: right;
 }
 
 .artigo blockquote {
     /*border:solid 1px #000;*/
-    width: 210px;
-    float: left;
+    width: 130px;
+    float: right;
 }
 
 .artigo img {
@@ -253,9 +244,62 @@ object.banner {
 
 .artigo div {
     /*border:solid 1px #000;*/
+    cursor: pointer;
+    font-size: 11px;
     margin: 10px;
 }
 
+.artigo div:hover {
+    text-decoration: underline;
+}
+/* Home - Vestibular */
+#home-vestibular {
+    /*border:solid 1px #CCC;*/
+    width: 350px;
+    margin: 5px 0 25px 1px;
+    float: left;
+}
+
+.div-img-vestibular {
+    border:solid 1px #CCC;
+    background: -moz-linear-gradient(#FFF, #efeded);
+    border-radius: 5px;
+    margin: 20px 8px 0 0;
+    padding: 5px;
+    height: 140px;
+    width: 150px;
+    cursor: pointer;
+    float: left;
+}
+
+.div-img-vestibular:hover {
+    background: -moz-linear-gradient(#efeded, #FFF);
+    color: #000;
+}
+/* Home - Palavra presidente e História */
+.home-info {
+    /*border: solid 1px #CCC;*/
+    height: 170px;
+    width: 325px;
+    float: left;
+}
+
+.home-info img {
+    /*border:solid 1px #000;*/
+}
+
+.home-info div {
+    /*border: solid 1px #CCC;*/
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    line-height: 25px;
+    
+}
+
+.home-info div:hover {
+    text-decoration: underline;
+}
 
 /* Matrícula */
 /****************************/
