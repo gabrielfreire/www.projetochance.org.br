@@ -242,16 +242,21 @@ object.banner {
     font-weight: bold !important;
 }
 
-.artigo div {
-    /*border:solid 1px #000;*/
-    cursor: pointer;
+.artigo a {    
+    text-decoration: none;
     font-size: 11px;
+    font-weight: normal !important;
+    color: #666 !important;
+}
+
+.artigo a:hover {
+    text-decoration: underline;
+}
+
+.artigo div {
     margin: 10px;
 }
 
-.artigo div:hover {
-    text-decoration: underline;
-}
 /* Home - Vestibular */
 #home-vestibular {
     /*border:solid 1px #CCC;*/
@@ -654,4 +659,12 @@ object.banner {
     font-style: italic;
     margin: 50px 8px;
     float: left;
+}
+
+/* Artigos */
+/****************************/
+.artigo-data {
+    margin: 0 0 25px 10px;
+    font-style: italic;
+    color: #999;
 }

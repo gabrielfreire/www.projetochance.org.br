@@ -1,8 +1,8 @@
 
 /**
- * Login
+ * Home
  * 
- * 1. Submit do formulário.
+ * 1. Submit do formulário de login.
  * 
  * IMPORTANTE: 
  * 1. script chamado em includes/footer.php
@@ -10,7 +10,7 @@
  */
 
 
-var login = {
+var home = {
     
     init: function (){  
         this.onLogout();

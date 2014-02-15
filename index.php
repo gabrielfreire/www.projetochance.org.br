@@ -57,13 +57,15 @@
 
                             <blockquote>
                                 <h3>Por que fazer cursinho?</h3>
-                                <div>
-                                    Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais...
-                                    
-                                    <br/><br/>
-                                    <strong>Leia mais!</strong>
-                                </div>
+                                <a href="porque-fazer-cursinho.html">
+                                    <div>
+                                        Ingressar em uma universidade pública ou privada de renome é o 
+                                        sonho de muitos jovens e pais...
+
+                                        <br/><br/>
+                                        <strong>Leia mais!</strong>
+                                    </div>
+                                </a>
                             </blockquote>
                         </div>
 
@@ -73,13 +75,15 @@
 
                             <blockquote>
                                 <h3>Por que fazer cursinho?</h3>
-                                <div>
-                                    Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais...
-                                    
-                                    <br/><br/>
-                                    <strong>Leia mais!</strong>
-                                </div>
+                                <a href="#">
+                                    <div>
+                                        Ingressar em uma universidade pública ou privada de renome é o 
+                                        sonho de muitos jovens e pais...
+
+                                        <br/><br/>
+                                        <strong>Leia mais!</strong>
+                                    </div>
+                                </a>
                             </blockquote>
                         </div>
 
@@ -89,13 +93,15 @@
 
                             <blockquote>
                                 <h3>Por que fazer cursinho?</h3>
-                                <div>
-                                    Ingressar em uma universidade pública ou privada de renome é o 
-                                    sonho de muitos jovens e pais...
-                                    
-                                    <br/><br/>
-                                    <strong>Leia mais!</strong>
-                                </div>
+                                <a href="#">
+                                    <div>
+                                        Ingressar em uma universidade pública ou privada de renome é o 
+                                        sonho de muitos jovens e pais...
+
+                                        <br/><br/>
+                                        <strong>Leia mais!</strong>
+                                    </div>
+                                </a>
                             </blockquote>
                         </div>
                     

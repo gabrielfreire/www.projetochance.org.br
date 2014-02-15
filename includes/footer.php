@@ -13,7 +13,7 @@
 
 <!-- javascript padrão (cabeçalho) -->
 <script type="text/javascript" src="js/jquery.min.js"></script>	
-<script type="text/javascript" src="js/jquery.login.js"></script>	
+<script type="text/javascript" src="js/jquery.home.js"></script>	
 <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
 <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
 <script type="text/javascript">
@@ -56,5 +56,5 @@
     /*
      * Iniciar login
      */
-    login.init();
+    home.init();
 </script>
