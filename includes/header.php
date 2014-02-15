@@ -26,8 +26,16 @@ require "./classes/Data.class.php";
                 </ul>
             </li>
             <li><a href="proposta-pedagogica.html">Proposta pedagógica</a></li>
+            <li><a href="#">Vestibulares</a>
+                <ul>
+                  <li><a href="historia-do-vestibular.html">História do vestibular</a></li>
+                  <li><a href="principais-vestibulares.html">Principais vestibulares</a></li>
+                  <!--<li><a href="agenda.html">Agenda</a></li>-->
+                  <!--<li><a href="leituras-obrigatorias.html">Leituras obrigatórias</a></li>-->
+                </ul>
+            </li>
             <li><a href="matricula.html">Matrícula</a></li>
-            <li><a href="aprovados.html">Aprovados</a></li>
+            <!--<li><a href="aprovados.html">Aprovados</a></li>-->
             <li><a href="galeria-de-fotos.html">Galeria de fotos</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>

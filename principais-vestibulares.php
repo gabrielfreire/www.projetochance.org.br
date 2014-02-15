@@ -61,6 +61,37 @@
                             junta-se as notas do ENEM e da UNIFESP, de acordo com os termos do edital.</p>
                     </div>
                     
+                    <div class="box-link">
+                        <h4>FATEC - Faculdade de Tecnologia</h4>
+                        <p>A FATEC é uma instituição de ensino superior publica mantida pelo Governo do Estado de 
+                        São Paulo. Tem como objetivo oferecer diversos cursos para atender o maior número de alunos.</p>
+                    </div>
+                    
+                    <div class="box-link">
+                        <h4>ITA – Instituto Tecnológico de Aeronáutica</h4>
+                        <p>O Instituto Tecnológico de Aeronáutica (ITA) é uma instituição de educação e ensino 
+                        superior da Aeronáutica, que oferece cursos de graduação e pós-graduação em 
+                        diversas áreas da engenharia, sobretudo ligadas ao setor aeroespacial. O ITA é 
+                        considerado o mais renomado centro de referência de engenharia do Brasil.</p>
+                    </div>
+                    
+                    <div class="box-link">
+                        <h4>Mackenzie – Universidade Presbiteriana Mackenzie</h4>
+                        <p>A Universidade Presbiteriana Mackenzie é uma instituição de ensino superior particular. 
+                        É considerada a melhor universidade não pública do Estado de São Paulo, segundo o Jornal 
+                        Folha de São Paulo através do RUF – Ranking Universitário Folha 2012. O Mackenzie se 
+                        destaca por suas pesquisas, qualidade de ensino, inovação. e avaliação de mercado.</p>
+                    </div>
+                    
+                    <div class="box-link">
+                        <h4>PUC – SP – Pontifícia Universidade Católica de São Paulo</h4>
+                        <p>A PUC está entre as 10 melhores faculdades do Brasil, segundo dados da 
+                        consultoria britânica Quacquarelli Symonds ( QS). Com destaque na 
+                        qualidade de ensino, corpo docente qualificado, gestão democrática por 
+                        meio da participação de alunos e professores. Além do compromisso com uma 
+                        formação mais humanista e alinhada as transformações do mundo.</p>
+                    </div>
+                    
                 </div><!--sub-content-->        
             </div><!--content-->
 

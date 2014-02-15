@@ -342,9 +342,14 @@ object.banner {
 }
 
 .box-link h4 {
-    border-bottom: solid 1px #CCC;
+    border-bottom: solid 1px #efeded;
+    -moz-box-shadow: 0 0 1px 0 #CCC;
+    -webkit-box-shadow: 0 0 1px 0 #CCC;
+    -o-box-shadow: 0 0 1px 0 #CCC;
+    box-shadow: 0 0 1px 0 #CCC;
     color: #999;
     padding: 5px;
+    text-align: center;
 }
 
 .box-link img {
