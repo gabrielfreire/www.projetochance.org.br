@@ -532,7 +532,7 @@ object.banner {
     float: left;
 }
 
-.box-new-depo div {
+.box-new-depo div {    
     background: #efeded;
     font-weight: bold;
     padding: 10px;
@@ -647,9 +647,9 @@ object.banner {
 
 .depo-data {
     color: #999;
-    width: 474px;
+    width: 435px;
     font-size: 11px;
-    padding: 10px 0;
+    padding: 0 0 10px 115px;
     margin-top: 10px;
     float: right;
 }
