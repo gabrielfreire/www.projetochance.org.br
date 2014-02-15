@@ -10,7 +10,7 @@ var portal = {
     
     init: function (){  
         this.onSubmit();
-        this.onMouseoverFoto();
+        this.onMouseoverEditarFoto();
         this.onUpload();
     },
     
@@ -56,7 +56,7 @@ var portal = {
         return true;        
     },
     
-    onMouseoverFoto: function (){
+    onMouseoverEditarFoto: function (){
         
         $("div.portal-box-img").on({
             mouseover: function (){

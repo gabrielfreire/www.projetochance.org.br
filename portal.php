@@ -48,7 +48,7 @@ if (Session::getAlunoLogado()) {
                             <div class="portal-box-img">
 
                                 <!-- modal -->
-                                <a href="#dialog" name="modal" class="portal-box-img-editar">Alterar foto</a>
+                                <a href="#dialog" name="modal" class="portal-box-img-editar">Editar</a>
                                 
                                 <div id="dialog" class="window">
                                     <a href="#" class="close">Fechar [X]</a>
