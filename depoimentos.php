@@ -43,7 +43,7 @@ $depoimentos = $depoimento->getObjects();
                         <!-- div novo depoimento -->
                         <div class="box-new-depo">
                             <div><?php echo $aluno->nome ?></div>
-                            <img src="images/<?php echo $aluno->foto ?>" alt="" title="<?php ?>" />
+                            <img src="images/fotos-aluno/<?php echo $aluno->foto ?>" alt="" title="<?php ?>" />
 
                             <textarea id="mensagem" placeholder="Escreva algo sobre o Projeto Chance..."></textarea>
                             <button id="btn-new-depo">Publicar</button>
@@ -73,7 +73,7 @@ $depoimentos = $depoimento->getObjects();
                                 <div class="box-depo">      
                                     <input type="hidden" name="id" value="<?php echo $depoimento->id_depo ?>" />
 
-                                    <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
+                                    <img src="images/fotos-aluno/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
 
                                     <div class="depo-nome"><?php echo $depoimento->nome ?></div>
                                     

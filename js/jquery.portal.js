@@ -71,20 +71,41 @@ var portal = {
     onUpload: function (){
         
         $(":file", "#form-foto").on("change", function(){
+            // Esconder modal
             $("#mask").hide();
             $(".window").hide();
-            $(".portal-box-img-editar").hide();
             
+            // Esconder edição da foto
+            $(".portal-box-img-editar").hide(function (){
+                $(this).remove();
+            });
+            
+            var box_img  = $(this).parents(".portal-box-img");
+            
+            // Esconde imagem atual
+            box_img.children("img").hide();
+            
+            // Mostrar carregamento e inserir o frame que será exibido 
+            box_img.append("\
+                <img src=\"images/ajax-loader.gif\" alt=\"\" />\n\
+                <iframe name=\"frame\" style=\"display:none\" src=\"\"></iframe>\n\
+            ");
+            
+            // Atribuir elementos para upload e enviar
             var form = $(this).parent();
-            var box  = $(this).parents(".portal-box-img");
-            
-            box.children("img").hide();
-            box.append("<iframe name=\"frame\" src=\"\"></iframe>");
-            
             form.attr("action", "ajax/aluno-upload.php");
             form.attr("enctype", "multipart/form-data");
             form.attr("target", "frame");            
-            form.submit();            
+            form.submit();     
+            
+            $("iframe").on("load", function (){
+                var me = $(this);
+                
+                // Esconder carregamento e mostrar frame
+                $(this).prev("img").fadeOut("slow", function (){
+                    me.fadeIn("slow");
+                });
+            });
         });
     },
     

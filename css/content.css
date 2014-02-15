@@ -424,6 +424,7 @@ object.banner {
 }
 
 .portal-box-img {
+    text-align: center;
     max-height: 110px;
     width: 130px;
     margin-bottom: 35px;
@@ -539,8 +540,8 @@ object.banner {
 }
 
 .box-new-depo img {
-    width: 90px;
-    height: 80px;
+    max-width: 110px;
+    max-height: 110px;
     margin: 10px;
     float: left;
 }
@@ -549,7 +550,7 @@ object.banner {
     border: solid 1px #CCC;
     margin-top: 10px;
     padding: 5px;
-    width: 426px;
+    width: 386px;
     height: 35px;
     resize: none;
     float: left;
@@ -573,8 +574,8 @@ object.banner {
 }
 
 .box-depo img {
-    width: 70px;
-    height: 60px;
+    max-width: 110px;
+    max-height: 110px;
     margin: 7px;
     float: left;
 }
@@ -620,7 +621,7 @@ object.banner {
     padding: 5px;
     height: 35px;
     resize: none;
-    width: 430px;   
+    width: 390px;   
     float: left;
 }
 

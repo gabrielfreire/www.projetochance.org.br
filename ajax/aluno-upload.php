@@ -4,11 +4,16 @@
  */
 
 require_once "../classes/Imagem.class.php";
+require_once "../classes/Aluno.class.php";
 
-$imagem = Imagem::upload( $_FILES['url'] );
-//$imagem = "1362393.jpg";
 
-//Aqui eu devo alterar a imagem na classe Aluno
+$aluno = new Aluno();
+$aluno->id = $_POST["id"];
+$aluno = $aluno->getObject();
+
+//$aluno->foto = "1362393.jpg";
+$aluno->foto = Imagem::upload( $_FILES['url'] );
+$aluno->update();
 ?>
 
 <style type="text/css">
@@ -18,4 +23,4 @@ $imagem = Imagem::upload( $_FILES['url'] );
         float: left;
     }
 </style>
-<img src="<?php echo "../images/fotos-aluno/{$imagem}" ?>" alt="" id="portal-img" />
+<img src="<?php echo "../images/fotos-aluno/{$aluno->foto}" ?>" alt="" id="portal-img" />

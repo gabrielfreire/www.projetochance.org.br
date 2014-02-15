@@ -47,6 +47,7 @@ if (Session::getAlunoLogado()) {
                         <div class="portal-foto">
                             <div class="portal-box-img">
 
+                                
                                 <!-- modal -->
                                 <a href="#dialog" name="modal" class="portal-box-img-editar">Editar</a>
                                 
@@ -56,6 +57,7 @@ if (Session::getAlunoLogado()) {
                                     <h1>Escolha uma foto no seu computador</h1>
                                     <br/>
                                     <form action="#" method="post" id="form-foto">
+                                        <input type="hidden" name="id" value="<?php echo $aluno->id ?>" />
                                         <input type="file" value="Procurar" name="url" />
                                     </form>
                                 </div>
@@ -63,11 +65,15 @@ if (Session::getAlunoLogado()) {
                                 <div id="mask"></div><!-- Máscara para cobrir a tela -->
                                 <!-- fim do modal -->
                                 
-                                <img src="./images/<?php echo $aluno->foto ?>" alt="" />
+                                
+                                
+                                
+                                <img src="./images/fotos-aluno/<?php echo $aluno->foto ?>" alt="" />
                             </div>
                             <span>Último acesso: <br/><?php echo Session::getUltimoAcessoAluno() ?></span>
                         </div>
 
+                        
                         
                         <!-- Dados e informações de atendimento -->
                         <div class="portal-dados">

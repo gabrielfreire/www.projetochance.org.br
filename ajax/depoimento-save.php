@@ -32,7 +32,7 @@ $depoimento = $depoimento->getObject();
 <div class="box-depo">                        
     <input type="hidden" name="id" value="<?php echo $depoimento->id_depo ?>" />
                             
-    <img src="images/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
+    <img src="images/fotos-aluno/<?php echo $depoimento->foto ?>" alt="" title="<?php echo $depoimento->nome ?>" />
 
     <div class="depo-nome"><?php echo $depoimento->nome ?></div>
     
