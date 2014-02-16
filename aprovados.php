@@ -16,7 +16,7 @@
                 <?php include "./includes/left.php"; ?>                
                 
                 <div id="sub-content">
-                    
+                    Em breve.
                 </div><!--sub-content-->        
             </div><!--content-->
 
