@@ -4,7 +4,7 @@
     <!-- Menu lateral -->
     <ol id="nav-left">
         <li><a href="enem.html">Enem</a></li>
-        <!--<li><a href="atualidades.html">Atualidades</a></li>-->
+        <li><a href="atualidades.html">Atualidades</a></li>
         <li><a href="depoimentos.html">Depoimentos</a></li>
         <li><a href="portal.html">Portal do aluno</a></li>
     </ol>

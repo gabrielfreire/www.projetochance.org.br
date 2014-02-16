@@ -550,10 +550,10 @@ object.banner {
     border: solid 1px #CCC;
     margin-top: 10px;
     padding: 5px;
-    width: 386px;
+    width: 400px;
     height: 35px;
     resize: none;
-    float: left;
+    float: right;
 }
 
 .box-new-depo button {
@@ -561,7 +561,7 @@ object.banner {
     background: #017ec5;
     color: #FFF;
     cursor: pointer;
-    margin: 4px 10px;
+    margin: 4px 0;
     padding: 1px 10px;
     float: right;
 }
