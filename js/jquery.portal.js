@@ -87,7 +87,7 @@ var portal = {
             
             // Mostrar carregamento e inserir o frame que será exibido 
             box_img.append("\
-                <img src=\"images/ajax-loader.gif\" alt=\"\" />\n\
+                <img src=\"images/ajax-loader.gif\" style=\"margin-left:27px\" alt=\"\" />\n\
                 <iframe name=\"frame\" style=\"display:none\" src=\"\"></iframe>\n\
             ");
             
