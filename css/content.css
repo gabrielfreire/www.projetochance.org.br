@@ -149,30 +149,24 @@
 /* Modal */
 /************************************************************/
 #mask {
-  position:absolute;
-  left:0;
-  top:0;
-  z-index:9000;
-  background-color:#000;
-  display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
 }
   
 .window {
-  position:absolute;
-  left:0;
-  top:0;
-  width:440px;
-  height:200px;
-  display:none;
-  z-index:9999;
-  padding:20px;
-}
-
-#dialog {
-  width:375px; 
-  height:203px;
-  padding:10px;
-  background-color:#ffffff;
+    background-color:#FFF;
+    position:absolute;
+    left:0;
+    top:0;
+    width:375px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding:20px;
 }
 
 .close {
@@ -276,10 +270,10 @@ object.banner {
 
 .home-link-vestibular {
     border:solid 1px #e1e0e0;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -o-border-radius: 7px;
-    border-radius: 7px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
     background: -moz-linear-gradient(#FFF, #efeded);
     margin: 20px 8px 0 0;
     padding: 5px;

@@ -14,6 +14,9 @@ var modal = {
         
         $("a[name=modal]").on("click", function(event) {
             event.preventDefault();
+            
+            // Máscara para cobrir a tela
+            $("#sub-content").append("<div id=\"mask\"></div>");
 
             var id = $(this).attr("href");
 
@@ -25,7 +28,7 @@ var modal = {
             $("#mask").fadeIn(50);	
             $("#mask").fadeTo("slow", 0.8);	
 
-            //Get the window height and width
+            // Resgatar altura e largura do browser
             var winH = $(window).height();
             var winW = $(window).width();
 
