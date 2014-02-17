@@ -64,6 +64,27 @@
                         </a>
                     </div>
                     
+                    <div class="thumbnails">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img13.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img13.jpg" alt="">
+                        </a>                   
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img14.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img14.jpg" alt="">
+                        </a>
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img15.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img15.jpg" alt="">
+                        </a>
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img16.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img16.jpg" alt="">
+                        </a>
+                    </div>                    
+                    
+                    <div class="thumbnails">
+                        <a class="rel thumbnail" data-fancybox-group="gallery" href="images/fotos-projeto/img17.jpg">
+                            <img data-src="holder.js/300x200" src="images/fotos-projeto/img17.jpg" alt="">
+                        </a>                   
+                    </div>
+                    
                 </div><!--sub-content-->        
             </div><!--content-->
 

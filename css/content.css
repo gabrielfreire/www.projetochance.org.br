@@ -220,31 +220,28 @@ object.banner {
 
 .artigo {
     /*border:solid 1px #CCC;*/
-    border-bottom: solid 1px #CCC;
-    border-bottom-style: dotted;
+    border-bottom: solid 2px #efeded;
+    /*border-bottom-style: dotted;*/
     margin: 8px 0;
     float: right;
 }
 
 .artigo blockquote {
     /*border:solid 1px #000;*/
-    width: 130px;
+    width: 210px;
+    margin-right: 12px;
     float: right;
 }
 
-.artigo img {
-    height: 100px;
-    width: 100px;
-    float: left;
-}
-
 .artigo h3 {
+    /*border:solid 1px #000;*/
     font-weight: bold !important;
 }
 
 .artigo a {    
     text-decoration: none;
     font-size: 11px;
+    line-height: 15px;
     font-weight: normal !important;
     color: #666 !important;
 }
@@ -253,10 +250,22 @@ object.banner {
     text-decoration: underline;
 }
 
+.artigo a img {
+    border-radius: 5px;
+    max-height: 100px;
+    max-width: 100px;
+    margin: 15px 10px 5px 10px;
+    float: left;
+}
+
 .artigo div {
     margin: 10px;
 }
 
+.img-divulgacao {
+    margin-top: 30px;
+    float: right;
+}
 /* Home - Vestibular */
 #home-vestibular {
     /*border:solid 1px #CCC;*/
@@ -265,45 +274,55 @@ object.banner {
     float: left;
 }
 
-.div-img-vestibular {
-    border:solid 1px #CCC;
+.home-link-vestibular {
+    border:solid 1px #e1e0e0;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
     background: -moz-linear-gradient(#FFF, #efeded);
-    border-radius: 5px;
     margin: 20px 8px 0 0;
     padding: 5px;
     height: 140px;
-    width: 150px;
-    cursor: pointer;
+    width: 150px;    
+    text-decoration: none;
     float: left;
 }
 
-.div-img-vestibular:hover {
+.home-link-vestibular:hover {
     background: -moz-linear-gradient(#efeded, #FFF);
-    color: #000;
+}
+
+.home-link-vestibular h4 {
+    color: #666;
+    font-weight: normal;
+    font-size: 14px;
 }
 /* Home - Palavra presidente e História */
 .home-info {
     /*border: solid 1px #CCC;*/
-    height: 170px;
-    width: 325px;
+    text-decoration: none;
+    width: 335px;
     float: left;
 }
 
 .home-info img {
     /*border:solid 1px #000;*/
+    float: left;
+}
+
+.home-info h4 {
+    color: #000;
 }
 
 .home-info div {
     /*border: solid 1px #CCC;*/
-    cursor: pointer;
+    font-weight: normal;
     margin: 10px;
-    font-size: 16px;
-    line-height: 25px;
-    
-}
-
-.home-info div:hover {
-    text-decoration: underline;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: italic;
+    color: #444;
 }
 
 /* Matrícula */
@@ -670,4 +689,14 @@ object.banner {
     margin: 0 0 25px 10px;
     font-style: italic;
     color: #999;
+}
+
+.fb-like {
+    margin: 20px 10px;
+    float: right;
+}
+
+.fb-comments {
+    margin: 40px 6px;
+    float: left;
 }

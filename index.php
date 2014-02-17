@@ -53,14 +53,16 @@
                     
                     <div id="home-artigos">
                         <div class="artigo">
-                            <img src="./images/sem-imagem.gif" alt="" />
 
                             <blockquote>
                                 <h3>Por que fazer cursinho?</h3>
+                                
                                 <a href="porque-fazer-cursinho.html">
+                                    <img src="./images/artigo1.jpg" alt="" />
                                     <div>
                                         Ingressar em uma universidade pública ou privada de renome é o 
-                                        sonho de muitos jovens e pais...
+                                        sonho de muitos jovens e pais. No Brasil, muitos estudantes que 
+                                        concluem o ensino médio não estão preparados ...
 
                                         <br/><br/>
                                         <strong>Leia mais!</strong>
@@ -70,34 +72,17 @@
                         </div>
 
 
-                        <div class="artigo">
-                            <img src="./images/sem-imagem.gif" alt="" />
+                        <div class="artigo">                            
 
                             <blockquote>
-                                <h3>Por que fazer cursinho?</h3>
-                                <a href="#">
+                                <h3>A importância de estudar</h3>
+                                
+                                
+                                <a href="a-importancia-de-estudar.html">
+                                    <img src="./images/artigo2.jpg" alt="" />
                                     <div>
-                                        Ingressar em uma universidade pública ou privada de renome é o 
-                                        sonho de muitos jovens e pais...
-
-                                        <br/><br/>
-                                        <strong>Leia mais!</strong>
-                                    </div>
-                                </a>
-                            </blockquote>
-                        </div>
-
-
-                        <div class="artigo">
-                            <img src="./images/sem-imagem.gif" alt="" />
-
-                            <blockquote>
-                                <h3>Por que fazer cursinho?</h3>
-                                <a href="#">
-                                    <div>
-                                        Ingressar em uma universidade pública ou privada de renome é o 
-                                        sonho de muitos jovens e pais...
-
+                                        Você já deve ter ouvido a frase: “você tem que estudar para ser alguém na vida”. Pois é...
+                                        Para muita gente, isso não passa de uma bobagem. ...
                                         <br/><br/>
                                         <strong>Leia mais!</strong>
                                     </div>
@@ -111,37 +96,47 @@
                     
                     <!-- vestibular -->
                     <div id="home-vestibular">
-                        <div class="div-img-vestibular">
+                        <a href="http://www.fuvest.br/b/chamada.php?anofuv=2014&chamada=3" target="_blank" class="home-link-vestibular">
+                            
                             <img src="images/home-fuvest.png" alt="" />
-                            <h4>Fuvest divulga 2ª Chamada</h4>
-                        </div>
-                        <div class="div-img-vestibular">
+                            <h4>Fuvest divulga 3ª Chamada</h4>
+                        </a>
+                        <a href="http://www.comvest.unicamp.br/vest2014/F2/aprova2/chamada2/chamada2.html" target="_blank" class="home-link-vestibular">
                             <img src="images/home-unicamp.png" alt="" />
                             <h4>Unicamp divulga 2ª Chamada</h4>
-                        </div>
-                        <div class="div-img-vestibular">                            
+                        </a>
+                        <a href="http://vestibular.unesp.br/" target="_blank" class="home-link-vestibular">                      
                             <img src="images/home-vunesp.png" alt="" />
-                            <h4>Unesp divulga 2ª Chamada</h4>
-                        </div>                        
-                        <div class="div-img-vestibular">
+                            <h4>Unesp divulga 3ª Chamada</h4>
+                        </a>                        
+                        <a href="http://vestibular.unifesp.br/" target="_blank" class="home-link-vestibular">
                             <img src="images/home-unifesp.png" alt="" />
-                            <h4>Unifesp divulga 2ª Chamada</h4>
-                        </div>
+                            <h4>Unifesp divulga 3ª Chamada</h4>
+                        </a>
                     </div><!-- fim de vestibular -->
                     
                     
                     
-                    <!-- palavra presidente -->
-                    <div class="home-info">
-                        <h1>"É preciso acreditar, com educação, o Brasil tem chance..."</h1>
-                        <img src="#" alt="" />
-                        <div>Veja a palavra de <strong>Misael Silva</strong>, presidente do Projeto Chance.</div>
-                    </div>
                     
-                    <div class="home-info">
-                        <h1>Nossa história</h1>
-                        <div>Conheça a história do Projeto...</div>
-                    </div>
+                    <!-- palavra presidente -->
+                    <a href="palavra-do-presidente.html" class="home-info">
+                        <img src="./images/misael.jpg" alt="" />
+                        <h1>Palavra do presidente</h1>
+                        <h4>"É preciso acreditar, com educação, o Brasil tem chance..."</h4>
+                        
+                        
+                        <div>
+                            Misael Silva é diretor do Projeto Chance, uma instituição sem fins 
+                            lucrativos que tem o objetivo de unir educação e inclusão social.
+                        </div>
+                    </a>
+                    
+                    
+                    <!-- banner de divulgação -->
+                    <a href="matricula.html">
+                        <img src="images/divulgacao.jpg" alt="" class="img-divulgacao">
+                    </a>
+                    
                     
                 </div><!--sub-content-->        
             </div><!--content-->

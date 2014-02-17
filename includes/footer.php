@@ -27,7 +27,7 @@
         $("input:text", "#box-buscar").on({
             focus: function (){
                 $(this).animate({
-                    width: "80px"
+                    width: "70px"
                 }, 250);
             },
             focusout: function (){

@@ -17,9 +17,12 @@
                 
                 <div id="sub-content">
                     
+                    <!-- curtir e compartilhar no facebook -->
+                    <div class="fb-like" data-href="http://www.projetochance.org.br/v2/porque-fazer-cursinho.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    
+                    
                     <h1>Porque fazer cursinho?</h1>
                     <div class="artigo-data">Escrito em 02/02/2014</div>
-                    
                     
                     <p>Ingressar em uma universidade pública ou privada de renome é o sonho de muitos 
                     jovens e pais. No Brasil, muitos estudantes que concluem o ensino médio não 
@@ -48,11 +51,20 @@
                     <p>Misael Silva é diretor do Projeto Chance, uma instituição sem fins lucrativos que tem o objetivo 
                     de unir educação e inclusão social.</p>
                     
+                    <br/><br/>
+                    <p><em><strong>Misael Silva</strong> é diretor do Projeto Chance, uma instituição sem fins 
+                    lucrativos que tem o objetivo de unir educação e inclusão social.</em></p>
+                    
+                    <!-- comentar com facebook -->
+                    <div class="fb-comments" data-href="http://www.projetochance.org.br/v2/porque-fazer-cursinho.html" data-width="585" data-numposts="5" data-colorscheme="light"></div>
+                    
                 </div><!--sub-content-->        
             </div><!--content-->
 
 
             <?php include "./includes/footer.php"; ?>            
         </div>
+        
+        <script type="text/javascript" src="js/jquery.facebook-plugin.js"></script>
     </body>
 </html>
