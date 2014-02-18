@@ -32,7 +32,7 @@ body {
 
 /* Topo */
 /************************************************************/
-header {
+.header {
     background: transparent;
     height: 164px;
 }
@@ -55,7 +55,7 @@ img#logo {
 
 /* Menu principal */
 /************************************************************/
-nav { 
+.nav { 
   height: 44px;
   width: 928px;
   float: right;
