@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -15,7 +14,7 @@ if (!Session::getIdUsuario()) {
 }
 
 
-$id_contato = isset($_GET["id"])  ? $_GET["id"] : null;
+$id_contato = isset($_GET["id"]) ? $_GET["id"] : null;
 
 
 # Conexao
@@ -23,28 +22,30 @@ $pdo = DBpdo::connection();
 
 
 if ($id_contato) {
-    $sql  = "SELECT * FROM contato WHERE id = ?";
-    
+    $sql = "SELECT * FROM contato WHERE id = ?";
+
     $stmte = $pdo->prepare($sql);
     $stmte->bindParam(1, $id_contato, PDO::PARAM_INT);
     $stmte->execute();
-    
+
     $contato = $stmte->fetch(PDO::FETCH_OBJ);
 }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>..: Projeto Chance :..</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-	
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>..: Projeto Chance :..</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
     <body>
 
+        <div class="data">Registrado em <?php echo $contato->data ?></div>
+
         <h4>Contato</h4>
-        <table class="table-contato">      
+        <table class="table-contato">
             <tr>
                 <td><label>*Nome</label></td>
                 <td><input type="text" name="nome" id="nome" value="<?php echo $contato->nome ?>" /></td>
@@ -68,7 +69,7 @@ if ($id_contato) {
             <tr>
                 <td colspan="2">
                     <a href="mailto:<?php echo $contato->email ?>">Responder</a>
-                </td>                
+                </td>
             </tr>
         </table>
     </body>

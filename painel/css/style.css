@@ -69,8 +69,8 @@ label {
 #caixa{
     border: solid 5px #CCC;
     border-style: dotted;
-    height: 400px;
-    width: 800px;    
+    height: 450px;
+    width: 700px;    
     float: left;
 }
 
@@ -82,7 +82,6 @@ ul{
 }
 
 ul li{
-    background: #CCC;
     font-size: 14px;
     text-align: center;
     border:solid 1px #CCC; 
@@ -94,13 +93,16 @@ ul li{
 }
 
 ul li a{
-    color:#FFF;
+    color:#017ec5;
     height: 30px;
     font-weight: bold;
     display: block;
 }
 
-ul li a:hover{
+.active {
+    height: 32px;
+    margin-top:-2px;
+    background: #efeded;
 }
 
 #logout{
@@ -158,6 +160,12 @@ a.link{
 
 #table_lista tfoot{
     background: #CCC;
+}
+
+.data {
+    color: #999;
+    font-style: italic;
+    float: right;
 }
 
 .pag{

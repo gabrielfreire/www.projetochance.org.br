@@ -1,7 +1,6 @@
 <?php
-
 /*
- * 
+ *
  */
 session_start();
 require_once './classes/Session.class.php';
@@ -13,7 +12,7 @@ if (!Session::getIdUsuario()) {
 }
 
 
-$id_aluno = isset($_GET["id"])  ? $_GET["id"] : null;
+$id_aluno = isset($_GET["id"]) ? $_GET["id"] : null;
 
 
 # Conexao
@@ -21,30 +20,31 @@ $pdo = DBpdo::connection();
 
 
 if ($id_aluno) {
-    $sql  = "SELECT * FROM aluno WHERE id = ?";
-    
+    $sql = "SELECT * FROM aluno WHERE id = ?";
+
     $stmte = $pdo->prepare($sql);
     $stmte->bindParam(1, $id_aluno, PDO::PARAM_INT);
     $stmte->execute();
-    
+
     $aluno = $stmte->fetch(PDO::FETCH_OBJ);
 }
- 
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>..: Projeto Chance :..</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-	
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>..: Projeto Chance :..</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
     <body>
-                
+
+        <div class="data">Registrado em <?php echo $aluno->data ?></div>
+
         <!-- primeira parte -->
         <h4>Dados pessoais</h4>
-        <table class="table-matricula">      
+        <table class="table-matricula">
             <tr>
                 <td><label>*Nome completo</label></td>
                 <td><input type="text" name="nome" id="nome" value="<?php echo $aluno->nome; ?>" /></td>
@@ -64,7 +64,7 @@ if ($id_aluno) {
             <tr>
                 <td><label>*Nº</label></td>
                 <td><input type="text" name="numero" id="numero" value="<?php echo $aluno->numero; ?>" /></td>
-            </tr>                           
+            </tr>
             <tr>
                 <td><label>*Bairro</label></td>
                 <td><input type="text" name="bairro" id="bairro" value="<?php echo $aluno->bairro; ?>" /></td>
@@ -73,7 +73,7 @@ if ($id_aluno) {
                 <td><label>*Cidade</label></td>
                 <td><input type="text" name="cidade" id="cidade" value="<?php echo $aluno->cidade; ?>" /></td>
             </tr>
-            <tr>         
+            <tr>
                 <td><label>*Estado</label></td>
                 <td><input type="text" name="estado" id="estado" value="<?php echo $aluno->estado; ?>" /></td>
             </tr>
@@ -104,11 +104,11 @@ if ($id_aluno) {
             <tr>
                 <td><label>*Confirme sua senha</label></td>
                 <td><input type="password" name="confirmar-senha" id="confirmar-senha" value="<?php echo $aluno->senha; ?>" /></td>
-            </tr>        
+            </tr>
         </table>
 
         <br/><br/>
-        
+
         <!-- segunda parte -->
         <h4>Pesquisa (opcional)</h4>
         <table class="table-matricula">
@@ -123,11 +123,11 @@ if ($id_aluno) {
             <tr>
                 <td><label>Instituição que estuda/estudou no Ensino Médio:</label></td>
                 <td><input type="text" name="nome-inst" value="<?php echo $aluno->nome_inst; ?>" /></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><label>Você já estudou em cursinho? Se sim, Qual?</label></td>
                 <td><input type="text" name="nome-cursinho" value="<?php echo $aluno->nome_cursinho; ?>" /></td>
-            </tr> 
+            </tr>
         </table>
     </body>
 </html>
