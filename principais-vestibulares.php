@@ -27,16 +27,7 @@
                             conhecimento. A USP oferece 246 cursos! O acesso ocorre por meio de provas, 
                             organizado anualmente pela FUVEST, Fundação para o Vestibular.</p>
                     </div>
-                    
-                    <div class="box-link">
-                        <h4>UNICAMP</h4>
-                        <img src="images/unicamp.gif" alt="" />
-                        <p>A UNICAMP, Universidade de Campinas se destaca por responder por 15% da 
-                            pesquisa acadêmica do Brasil e também pelo número de artigos publicados 
-                            anualmente. Seu vestibular é organizado pela COMVEST, Comissão Permanente 
-                            para os vestibulares.</p>
-                    </div>
-                    
+                                        
                     <div class="box-link">
                         <h4>UNESP</h4>
                         <img src="images/unesp.jpg" alt="" />
@@ -45,6 +36,15 @@
                             ensino, pesquisa e na extensão de serviços à comunidade. O processo 
                             seletivo é realizado pela VUNESP, Fundação para o Vestibular da 
                             Universidade Paulista.</p>
+                    </div>
+                    
+                    <div class="box-link">
+                        <h4>UNICAMP</h4>
+                        <img src="images/unicamp.gif" alt="" />
+                        <p>A UNICAMP, Universidade de Campinas se destaca por responder por 15% da 
+                            pesquisa acadêmica do Brasil e também pelo número de artigos publicados 
+                            anualmente. Seu vestibular é organizado pela COMVEST, Comissão Permanente 
+                            para os vestibulares.</p>
                     </div>
                     
                     <div class="box-link">
@@ -63,12 +63,14 @@
                     
                     <div class="box-link">
                         <h4>FATEC - Faculdade de Tecnologia</h4>
+                        <img src="images/fatec.png" alt="" />
                         <p>A FATEC é uma instituição de ensino superior publica mantida pelo Governo do Estado de 
                         São Paulo. Tem como objetivo oferecer diversos cursos para atender o maior número de alunos.</p>
                     </div>
                     
                     <div class="box-link">
                         <h4>ITA – Instituto Tecnológico de Aeronáutica</h4>
+                        <img src="images/ita.gif" alt="" />
                         <p>O Instituto Tecnológico de Aeronáutica (ITA) é uma instituição de educação e ensino 
                         superior da Aeronáutica, que oferece cursos de graduação e pós-graduação em 
                         diversas áreas da engenharia, sobretudo ligadas ao setor aeroespacial. O ITA é 
@@ -77,6 +79,7 @@
                     
                     <div class="box-link">
                         <h4>Mackenzie – Universidade Presbiteriana Mackenzie</h4>
+                        <img src="images/mackenzie.png" alt="" />
                         <p>A Universidade Presbiteriana Mackenzie é uma instituição de ensino superior particular. 
                         É considerada a melhor universidade não pública do Estado de São Paulo, segundo o Jornal 
                         Folha de São Paulo através do RUF – Ranking Universitário Folha 2012. O Mackenzie se 
@@ -85,6 +88,7 @@
                     
                     <div class="box-link">
                         <h4>PUC – SP – Pontifícia Universidade Católica de São Paulo</h4>
+                        <img src="images/puc.jpg" alt="" />
                         <p>A PUC está entre as 10 melhores faculdades do Brasil, segundo dados da 
                         consultoria britânica Quacquarelli Symonds ( QS). Com destaque na 
                         qualidade de ensino, corpo docente qualificado, gestão democrática por 

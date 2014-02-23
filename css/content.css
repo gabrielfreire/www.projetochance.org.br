@@ -378,6 +378,8 @@ object.banner {
 
 .box-link img {
     margin: 20px 15px;
+    max-height: 140px;
+    max-width: 140px;
     float: left;
 }
 
