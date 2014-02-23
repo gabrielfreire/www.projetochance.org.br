@@ -18,7 +18,7 @@
                 <div id="sub-content">
                     
                     <!-- curtir e compartilhar no facebook -->
-                    <div class="fb-like" data-href="http://www.projetochance.org.br/v2/a-importancia-de-estudar.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <div class="fb-like" data-href="http://www.projetochance.org.br/a-importancia-de-estudar.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                     
                     
                     <h1>A importância de estudar</h1>
@@ -53,7 +53,7 @@
                     lucrativos que tem o objetivo de unir educação e inclusão social.</em></p>
                     
                     <!-- comentar com facebook -->
-                    <div class="fb-comments" data-href="http://www.projetochance.org.br/v2/a-importancia-de-estudar.html" data-width="585" data-numposts="5" data-colorscheme="light"></div>
+                    <div class="fb-comments" data-href="http://www.projetochance.org.br/a-importancia-de-estudar.html" data-width="585" data-numposts="5" data-colorscheme="light"></div>
                     
                 </div><!--sub-content-->        
             </div><!--content-->
