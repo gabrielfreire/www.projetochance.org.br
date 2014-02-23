@@ -2,7 +2,7 @@
     Estilos do rodapé
 */
 
-footer { 
+.footer { 
   width: 928px;
   font: 120% 'News Cycle', arial, sans-serif;
   height: 30px;
@@ -20,7 +20,7 @@ footer {
   border: 1px solid #017ec5;
 }
 
-footer p { 
+.footer p { 
   line-height: 1.7em;
   padding: 0 0 10px 0;
 }

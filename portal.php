@@ -20,70 +20,53 @@ if (Session::getAlunoLogado()) {
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
-        <div id="main">    
+        <div id="main">
             <?php include "./includes/header.php"; ?>
 
 
-            <div id="content">                              
-                <?php include "./includes/left.php"; ?>                
+            <div id="content">
+                <?php include "./includes/left.php"; ?>
 
                 <div id="sub-content">
                     <h1>Portal do aluno</h1>
-                    
 
-                    <?php if ( Session::getAlunoLogado() ): ?>
-                        
+
+                    <?php if (Session::getAlunoLogado()): ?>
+
                         <!-- Informações do aluno e boas vindas -->
                         <div class="portal-info">
                             <a href="#" id="sair">Sair</a>
 
                             <label><?php echo Data::getSaudacao() . " " . $aluno->nome ?></label>
-                            <div><span>Email:</span> <?php echo $aluno->email ?></div>                            
+                            <div><span>Email:</span> <?php echo $aluno->email ?></div>
                             <div><span>RA:</span> <?php echo $aluno->registro_aluno ?></div>
                         </div>
 
-                        
+
                         <!-- Caixa de foto do aluno -->
                         <div class="portal-foto">
                             <div class="portal-box-img">
 
-                                
-                                <!-- modal -->
-                                <a href="#dialog" name="modal" class="portal-box-img-editar">Editar</a>
-                                
-                                <div id="dialog" class="window">
-                                    <a href="#" class="close">Fechar [X]</a>
-                                    
-                                    <h1>Escolha uma foto no seu computador</h1>
-                                    <br/>
-                                    <form action="#" method="post" id="form-foto">
-                                        <input type="hidden" name="id" value="<?php echo $aluno->id ?>" />
-                                        <input type="file" value="Procurar" name="url" />
-                                    </form>
-                                </div>
-                                
-                                <div id="mask"></div><!-- Máscara para cobrir a tela -->
-                                <!-- fim do modal -->
-                                
-                                
-                                
-                                
+                                <!-- Exibir modal -->
+                                <a href="#upload" name="modal" class="portal-box-img-editar">Editar</a>
+
+                                <!-- Foto do aluno -->
                                 <img src="./images/fotos-aluno/<?php echo $aluno->foto ?>" alt="" />
                             </div>
                             <span>Último acesso: <br/><?php echo Session::getUltimoAcessoAluno() ?></span>
                         </div>
 
-                        
-                        
+
+
                         <!-- Dados e informações de atendimento -->
                         <div class="portal-dados">
                             <div class="portal-dados-titulo">Atendimento</div>
 
-                            <div class="portal-dados-item"><a href="#">Notas e faltas</a></div>
-                            <div class="portal-dados-item"><a href="#">Planos de ensino</a></div>
-                            <div class="portal-dados-item"><a href="#">Horário de aulas</a></div>
-                            <div class="portal-dados-item"><a href="#">Documentos pendentes</a></div>
-                            <div class="portal-dados-item"><a href="#">Palestras</a></div>
+                            <!--<div class="portal-dados-item"><a href="#">Notas e faltas</a></div>-->
+                            <!--<div class="portal-dados-item"><a href="#">Documentos pendentes</a></div>-->
+                            <div class="portal-dados-item"><a href="#planos-ensino" name="modal">Planos de ensino</a></div>
+                            <div class="portal-dados-item"><a href="#horario-aulas" name="modal">Horário de aulas</a></div>
+                            <div class="portal-dados-item"><a href="#simulados" name="modal">Simulados</a></div>
                             <div class="portal-dados-item"><a href="matricula.html">Alterar dados cadastrais</a></div>
                         </div>
 
@@ -137,11 +120,48 @@ if (Session::getAlunoLogado()) {
 
                     <?php endif; ?>
 
-                </div><!--sub-content-->        
+
+
+                    <!-- Janelas de modal utilizadas na página -->
+                    <div id="upload" class="window">
+                        <a href="#" class="close">Fechar [X]</a>
+
+                        <h1>Escolha uma foto no seu computador</h1>
+                        <br/>
+                        <form action="#" method="post" id="form-foto">
+                            <input type="hidden" name="id" value="<?php echo $aluno->id ?>" />
+                            <input type="file" value="Procurar" name="url" />
+                        </form>
+                    </div>
+
+                    <div id="planos-ensino" class="window">
+                        <a href="#" class="close">Fechar [X]</a>
+
+                        <h1>Planos de ensino</h1>
+                        <p><strong>Estará disponível para 8 de março, aguarde!</strong></p>
+                    </div>
+
+                    <div id="horario-aulas" class="window">
+                        <a href="#" class="close">Fechar [X]</a>
+
+                        <h1>Horário de aulas</h1>
+                        <p>Das 8h às 19h.</p>
+                    </div>
+
+                    <div id="simulados" class="window">
+                        <a href="#" class="close">Fechar [X]</a>
+
+                        <h1>Simulados</h1>
+                        <p><strong>Em breve.</strong></p>
+                    </div>
+                    <!-- Fim das janelas de modal -->
+
+
+                </div><!--sub-content-->
             </div><!--content-->
 
 
-            <?php include "./includes/footer.php"; ?>            
+            <?php include "./includes/footer.php"; ?>
         </div>
 
         <script type="text/javascript" src="js/jquery.portal.js"></script>
