@@ -11,7 +11,7 @@ require "./classes/Data.class.php";
         <?php echo ucfirst(Data::getDiaSemana()) . ", " . Data::getDia() . " de " . Data::getMes() . " de " . Data::getAno() ?>
     </label>
 
-    <a href="index.html">
+    <a href="http://www.projetochance.org.br">
         <img src="./images/logo-original.png" alt="Logotipo" title="Projeto Chance" id="logo" />
     </a>
 
