@@ -180,7 +180,7 @@
 /* Busca */
 /****************************/
 .box-search {
-    border-bottom:solid 1px #017ec5;
+    border-bottom:solid 2px #efeded;
     margin: 30px 8px;
 }
 
@@ -192,9 +192,8 @@
     text-decoration: underline;
 }
 
-.box-search p {
-    font-weight: normal;
-    
+.box-search i, .box-search p {
+    font-weight: normal; 
 }
 
 /* Home */
