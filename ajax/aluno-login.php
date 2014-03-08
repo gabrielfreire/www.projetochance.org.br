@@ -10,7 +10,7 @@ require_once "../classes/Aluno.class.php";
 
 $aluno = new Aluno();
 $aluno->email = $_POST["email"];
-$aluno->senha = $_POST["senha"];
+$aluno->senha = sha1($_POST["senha"]);
 $aluno = $aluno->login();
 
 
