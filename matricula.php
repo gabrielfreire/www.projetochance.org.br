@@ -111,11 +111,11 @@ if ( Session::getIdAluno() ) {
                             </tr>
                             <tr>
                                 <td><label>*Senha do portal</label></td>
-                                <td><input type="password" name="senha" id="senha" value="<?php echo $aluno->senha; ?>" class="text text-medium" /></td>
+                                <td><input type="password" name="senha" id="senha" value="" class="text text-medium" /></td>
                             </tr>
                             <tr>
                                 <td><label>*Confirme sua senha</label></td>
-                                <td><input type="password" name="confirmar-senha" id="confirmar-senha" value="<?php echo $aluno->senha; ?>" class="text text-medium" /></td>
+                                <td><input type="password" name="confirmar-senha" id="confirmar-senha" value="" class="text text-medium" /></td>
                             </tr>        
                         </table>
 
