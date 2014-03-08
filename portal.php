@@ -108,6 +108,9 @@ if (Session::getAlunoLogado()) {
                                     <tr>
                                         <td colspan="2"><input type="submit" value="Entrar" class="btn" /></td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="2"><a href="#esqueci-senha" name="modal" class="link-esqueci-senha">Esqueci a senha!</a></td>
+                                    </tr>
                                 </table>
                             </form>
                         </div>
@@ -123,6 +126,22 @@ if (Session::getAlunoLogado()) {
 
 
                     <!-- Janelas de modal utilizadas na página -->
+                    <div id="esqueci-senha" class="window">
+                        <a href="#" class="close">Fechar [X]</a>
+
+                        <h2>Digite seu email, enviareamos uma solicitação para redefinir sua senha.</h2>
+                        <br/>
+                        <form action="#" method="post" id="form-esqueci-senha">
+                            <input type="text" name="email" class="text text-large" />
+                            <input type="submit" value="OK" class="btn" />
+                            
+                            <!-- mensagens -->
+                            <p class="status1 p-msg">Enviado! Verifique sua caixa de entrada.</p>
+                            <p class="status2 p-msg">Falha no envio, tente novamente.</p>
+                            <p class="status3 p-msg">Email não cadastrado.</p>
+                        </form>
+                    </div>
+                    
                     <div id="upload" class="window">
                         <a href="#" class="close">Fechar [X]</a>
 

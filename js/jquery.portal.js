@@ -9,9 +9,49 @@
 var portal = {
     
     init: function (){  
+        this.onRedefinirSenha();
         this.onSubmit();
         this.onMouseoverEditarFoto();
         this.onUpload();
+    },
+    
+    onRedefinirSenha: function () {
+        
+        $("#form-esqueci-senha").on("submit", function(event){
+            event.preventDefault();
+            
+            var foo = $(this);
+            
+            
+            $.post("ajax/aluno-redefinir-senha.php", $(this).serialize(), function (status){                    
+
+                // esconde mensagens já existentes (se houver)
+                $(".p-msg").hide();
+
+                // 1 = email enviado
+                // 2 = falha ao enviar
+                // 3 = email não cadastrado
+                switch (status) {
+                    case "1":
+                        foo.find("input").hide(function (){                                
+                            $(".status1").show();
+                        });
+                        break;
+
+                    case "2":
+                        $(".status2").show();
+                        break;
+
+                    case "3":
+                        $(".status3").show();
+                        break;
+                }
+
+
+            }).fail(function (){
+                alert("error");
+            });             
+        });
     },
     
     onSubmit: function (){

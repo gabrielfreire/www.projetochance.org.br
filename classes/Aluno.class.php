@@ -48,6 +48,15 @@ class Aluno {
         return (integer) ( date("Y") . $arr[0] );
     }
 
+    public function checkEmail() {
+        $pdo = DBpdo::connection();
+        $sql = $pdo->prepare("SELECT * FROM aluno WHERE email = ?");
+        $sql->bindParam(1, $this->email);
+        $sql->execute();
+        
+        return $sql->fetch();
+    }
+
     public function login() {
         $pdo = DBpdo::connection();
         $sql = $pdo->prepare("SELECT * FROM aluno WHERE email = ? && senha = ?");

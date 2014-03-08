@@ -146,6 +146,10 @@
     margin-bottom: 25px;
 }
 
+.p-msg {
+    display: none;
+}
+
 /* Modal */
 /************************************************************/
 #mask {
@@ -420,6 +424,22 @@ object.banner {
 
 .portal-login table label {
     padding: 5px;
+}
+
+#form-esqueci-senha {
+    margin: 15px;
+    padding-right: 42px;
+    float: left;
+}
+
+a.link-esqueci-senha {
+    color: #017ec5;
+    text-decoration: none;
+    float: left;
+}
+
+a.link-esqueci-senha:hover {
+    text-decoration: underline;
 }
 /* Caixa de foto do aluno */
 .portal-foto {
