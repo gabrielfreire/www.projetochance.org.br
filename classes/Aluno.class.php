@@ -54,7 +54,28 @@ class Aluno {
         $sql->bindParam(1, $this->email);
         $sql->execute();
         
-        return $sql->fetch();
+        return $sql->fetchObject( get_class($this) );
+    }
+    
+    public function checkHash_redefinirSenha( $token ) {
+        if ( $token ) {
+            $arr = explode("$.", $token);
+
+            if ( count($arr) === 2 ) {
+                $email_hash = $arr[0];
+                $id_aluno = (int)$arr[1] - 11;
+
+                $this->id = $id_aluno;
+                $object = $this->getObject();
+
+                $email = $object ? $object->email : null;
+
+                if ( sha1($email) === $email_hash ) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public function login() {

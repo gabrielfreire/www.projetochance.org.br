@@ -13,7 +13,7 @@ $to = $_POST["email"];
 
 $aluno = new Aluno();
 $aluno->email = $to;
-$email_existe = $aluno->checkEmail();
+$aluno_existente = $aluno->checkEmail();
 
 # 1 = email enviado
 # 2 = falha ao enviar
@@ -21,10 +21,16 @@ $email_existe = $aluno->checkEmail();
 $status = 0;
 
 
-if ( $email_existe ) {
+if ( $aluno_existente ) {
+    
+    $id = $aluno_existente->id;    
+    $token = sha1($to)."$.".$id+11;
+    
+    $link = "http://www.projetochance.org.br/r-senha.html?t=".$token;
     
     $subject = "Redefinir senha do portal";
-    $message = "";
+    $message = "<p>Olá $aluno_existente->nome</p>"
+            . "<p>Para redefinir sua senha, clique neste link: $link</p>";
 
     if ( Email::send($to, $message, $subject) ) 
         $status = 1;

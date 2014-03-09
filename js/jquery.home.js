@@ -13,22 +13,10 @@
 var home = {
     
     init: function (){  
-        this.onLogout();
-        this.onSubmit();
+        this.onSubmit_login();
     },
     
-    onLogout: function (){
-      
-        $("#sair").on("click", function(event) {
-            event.preventDefault();
-            
-            $.post("ajax/aluno-logout.php", function (){
-                window.location.href = "portal.html";
-            });
-        });
-    },
-    
-    onSubmit: function (){
+    onSubmit_login: function (){
         
         var me = this;
         $("a", "#form-login").on("click", function(event){
@@ -36,7 +24,7 @@ var home = {
                         
             if ( me.validateFields() ) { 
                 
-                $.post("ajax/aluno-login.php", $("#form-login").serialize(), function (login){                    
+                $.post("ajax/aluno-logar.php", $("#form-login").serialize(), function (login){                    
                     if (login === "true") {
                         $("#form-login").submit();
                     }

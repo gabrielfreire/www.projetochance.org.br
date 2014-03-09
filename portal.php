@@ -35,7 +35,7 @@ if (Session::getAlunoLogado()) {
 
                         <!-- Informações do aluno e boas vindas -->
                         <div class="portal-info">
-                            <a href="#" id="sair">Sair</a>
+                            <a href="action/logout.php" id="sair">Sair</a>
 
                             <label><?php echo Data::getSaudacao() . " " . $aluno->nome ?></label>
                             <div><span>Email:</span> <?php echo $aluno->email ?></div>
@@ -120,10 +120,12 @@ if (Session::getAlunoLogado()) {
                             <p>Para efetuar sua matrícula no Projeto Chance <a href="matricula.html">clique aqui</a>.</p>
                         </div>
 
-
                     <?php endif; ?>
 
 
+                        
+                        
+                        
 
                     <!-- Janelas de modal utilizadas na página -->
                     <div id="esqueci-senha" class="window">

@@ -715,3 +715,20 @@ a.link-esqueci-senha:hover {
     margin: 40px 6px;
     float: left;
 }
+
+/* Redefinir senha */
+/****************************/
+#box-r-senha {
+    width: 100%;
+    padding: 25px;
+    float: left;
+}
+
+#box-r-senha form {
+    width: 410px;
+    float: left;
+}
+
+#box-r-senha input {
+    float: left;
+}

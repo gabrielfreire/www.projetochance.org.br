@@ -10,7 +10,7 @@ var portal = {
     
     init: function (){  
         this.onRedefinirSenha();
-        this.onSubmit();
+        this.onSubmit_login();
         this.onMouseoverEditarFoto();
         this.onUpload();
     },
@@ -23,7 +23,7 @@ var portal = {
             var foo = $(this);
             
             
-            $.post("ajax/aluno-redefinir-senha.php", $(this).serialize(), function (status){                    
+            $.post("ajax/aluno-email-senha.php", $(this).serialize(), function (status){                    
 
                 // esconde mensagens já existentes (se houver)
                 $(".p-msg").hide();
@@ -54,7 +54,7 @@ var portal = {
         });
     },
     
-    onSubmit: function (){
+    onSubmit_login: function (){
         
         var me = this;
         $("#form-portal").on("submit", function(event){
@@ -62,7 +62,7 @@ var portal = {
                         
             if ( me.validateFields() ) {     
                 
-                $.post("ajax/aluno-login.php", $(this).serialize(), function (login){                    
+                $.post("ajax/aluno-logar.php", $(this).serialize(), function (login){                    
                     if (login === "true") {
                         window.location.href = "portal.html";
                     }
