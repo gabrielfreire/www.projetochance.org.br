@@ -32,7 +32,7 @@ if ($acesso_permitido === false) {
         <div id="box-r-senha">
             <form action="action/redefinir-senha.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $aluno->id ?>" />
-                <input type="password" name="senha-nova" class="text text-xlarge" />
+                <input type="password" name="senha-nova" class="text text-xlarge" placeholder="Digite sua nova senha..." />
                 <input type="submit" value="Redefinir senha" class="btn" />
             </form>
         </div>

@@ -21,9 +21,9 @@ var portal = {
             event.preventDefault();
             
             var foo = $(this);
+            var email = $(this).find(":text").val();
             
-            
-            $.post("ajax/aluno-email-senha.php", $(this).serialize(), function (status){                    
+            $.post("ajax/aluno-email-senha.php", "email="+email, function (status){                    
 
                 // esconde mensagens já existentes (se houver)
                 $(".p-msg").hide();
