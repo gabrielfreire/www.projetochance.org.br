@@ -21,7 +21,7 @@
                     <div class="fb-like" data-href="http://www.projetochance.org.br/porque-fazer-cursinho.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                     
                     
-                    <h1>Porque fazer cursinho?</h1>
+                    <h1>PORQUE FAZER CURSINHO?</h1>
                     <div class="artigo-data">Escrito em 02/02/2014</div>
                     
                     <p>Ingressar em uma universidade pública ou privada de renome é o sonho de muitos 

@@ -52,13 +52,31 @@
                     
                     
                     <div id="home-artigos">
+                        
                         <div class="artigo">
+                            <blockquote>
+                                <h3>A importância da leitura na vida de um povo</h3>
+                                
+                                <a href="a-importancia-da-leitura.html">
+                                    <img src="./images/artigo3.jpg" alt="" />
+                                    <div>
+                                        Você gosta de ler? Se a sua resposta for sim, parabéns, você é um 
+                                        cidadão que está incluído no mundo, transforma, faz diferença ...
 
+                                        <br/><br/>
+                                        <strong>Leia mais!</strong>
+                                    </div>
+                                </a>
+                            </blockquote>
+                        </div>
+                        
+                        
+                        <div class="artigo">
                             <blockquote>
                                 <h3>Por que fazer cursinho?</h3>
                                 
                                 <a href="porque-fazer-cursinho.html">
-                                    <img src="./images/artigo1.jpg" alt="" />
+                                    <img src="./images/artigo2.jpg" alt="" />
                                     <div>
                                         Ingressar em uma universidade pública ou privada de renome é o 
                                         sonho de muitos jovens e pais. No Brasil, muitos estudantes que 
@@ -72,14 +90,13 @@
                         </div>
 
 
-                        <div class="artigo">                            
-
+<!--                        <div class="artigo">                            
                             <blockquote>
                                 <h3>A importância de estudar</h3>
                                 
                                 
                                 <a href="a-importancia-de-estudar.html">
-                                    <img src="./images/artigo2.jpg" alt="" />
+                                    <img src="./images/artigo1.jpg" alt="" />
                                     <div>
                                         Você já deve ter ouvido a frase: “você tem que estudar para ser alguém na vida”. Pois é...
                                         Para muita gente, isso não passa de uma bobagem. ...
@@ -88,7 +105,7 @@
                                     </div>
                                 </a>
                             </blockquote>
-                        </div>
+                        </div>-->
                     
                     </div><!-- artigos lista -->
                     
@@ -124,7 +141,6 @@
                         <h1>Palavra do presidente</h1>
                         <h4>"É preciso acreditar, com educação, o Brasil tem chance..."</h4>
                         
-                        
                         <div>
                             Misael Silva é diretor do Projeto Chance, uma instituição sem fins 
                             lucrativos que tem o objetivo de unir educação e inclusão social.
@@ -133,8 +149,8 @@
                     
                     
                     <!-- banner de divulgação -->
-                    <a href="matricula.html">
-                        <img src="images/divulgacao.jpg" alt="" class="img-divulgacao">
+                    <a href="matricula.html" class="link-divulgacao">
+                        <img src="images/divulgacao.jpg" alt="">
                     </a>
                     
                     

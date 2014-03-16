@@ -21,7 +21,7 @@
                     <div class="fb-like" data-href="http://www.projetochance.org.br/a-importancia-de-estudar.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                     
                     
-                    <h1>A importância de estudar</h1>
+                    <h1>A IMPORTÂNCIA DE ESTUDAR</h1>
                     <div class="artigo-data">Escrito em 02/02/2014</div>
                     
                     <p>Você já deve ter ouvido a frase: “você tem que estudar para ser alguém na vida”. 
