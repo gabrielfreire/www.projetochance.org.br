@@ -36,7 +36,7 @@ $pagina = isset($_GET['pg']) ? $_GET['pg'] : null;
 
             <a href="logout.php" id="logout">Logout</a>
 
-            <iframe id="caixa" src="<?php echo $pagina ?>" scrolling="auto"></iframe>
+            <iframe id="frame" src="<?php echo $pagina ?>" scrolling="auto"></iframe>
         </div>
 
     </body>

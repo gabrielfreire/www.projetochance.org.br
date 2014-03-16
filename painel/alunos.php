@@ -31,7 +31,7 @@ if ($busca) {
     $ra = $_POST['ra'];
 
 
-    $sql = "SELECT * FROM aluno WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND registro LIKE '%{$ra}%'";
+    $sql = "SELECT * FROM aluno WHERE nome LIKE '%{$nome}%' AND email LIKE '%{$email}%' AND registro_aluno LIKE '%{$ra}%'";
     $stmte = $pdo->prepare($sql);
     $stmte->bindParam(1, $nome, PDO::PARAM_STR);
     $stmte->bindParam(2, $email, PDO::PARAM_STR);
