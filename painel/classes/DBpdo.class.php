@@ -10,10 +10,10 @@ abstract class DBpdo {
     private static $pdo;
 
     static function connection() {
-        $base = "projeorg_dbase";
+        $base = "projeorg_chance";
         $host = "localhost";
-        $user = "root";
-        $pass = "mysql";
+        $user = "projeorg_root";
+        $pass = "Pr0jet0_Ch@nce";
 
         # if não há conexão...
         if (empty(self::$pdo)) {
